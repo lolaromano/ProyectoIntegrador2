@@ -1,10 +1,10 @@
-let agregarProducto = require ('../data/productos')
+let agregarProducto = require ('../data/productos');
 
 let agregarproductoController = {
 
     index: (req, res) =>{
-        res.render('product-add',{"product-add":agregarProducto})
+        res.render('product-add',{"product-add": agregarProducto});
     },
 }
 
-module.exports =agregarproductoController
+module.exports =agregarproductoController;

@@ -8,6 +8,7 @@ let productos = {
             imagen: "imagen",
 
         },
+        
     ]
 }
 
