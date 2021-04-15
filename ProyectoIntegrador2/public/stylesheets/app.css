@@ -66,13 +66,6 @@ hr {
 
 
 /*====== Main Header ======*/
-.logo{
-  height: 250px;
-  width: 250px;
-  margin-left: 0%;
-  margin-right: 0%;
-
-}
 .main-header {
   padding: 15px 0;
   background-color: white;
@@ -177,10 +170,6 @@ hr {
 }
 
 
-div.col-12{
-  text-align: center;
-}
-
 .products-title {
   font-size: 20px;
   font-weight: 400;
@@ -194,10 +183,6 @@ div.col-12{
   overflow: hidden;
   transition: 300ms;
   margin: 20px 0;
-  width: 300px;
-  height: 450px;
-  display: flex;
-  flex-direction: row;
 }
 
 .product-box a {
@@ -206,7 +191,8 @@ div.col-12{
 
 .product-box_image {
   border-bottom: 1px solid var(--light-gray);
-
+  width: 200px;
+  height: 200px;
 }
 
 .product-box_data {
