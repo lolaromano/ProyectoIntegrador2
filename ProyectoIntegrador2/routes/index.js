@@ -13,7 +13,7 @@ router.get ('/register', homeController.register);
 
 router.get ('/login', homeController.login);
 
-router.get ('/product', homeController.product);
+router.get ('/product', homeController.product); 
 
 router.get ('/headerLogueado', homeController.headerLogueado);
 
