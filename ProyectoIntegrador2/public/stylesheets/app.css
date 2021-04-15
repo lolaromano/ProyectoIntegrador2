@@ -68,7 +68,8 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: var(--yellow);
+  background-color: white;
+  /*var(--yellow); */
 }
 
 .main-header_home-link,
@@ -168,10 +169,12 @@ hr {
   margin-bottom: 30px;
 }
 
+
 .products-title {
-  font-size: 2.4em;
+  font-size: 20px;
   font-weight: 400;
   color: var(--gray);
+  
 }
 
 .product-box {
@@ -188,6 +191,8 @@ hr {
 
 .product-box_image {
   border-bottom: 1px solid var(--light-gray);
+  width: 200px;
+  height: 200px;
 }
 
 .product-box_data {

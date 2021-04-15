@@ -1,9 +1,12 @@
 <!-- Header -->
+<%- include("partials/header.ejs") %> 
+
+
 <header class="main-header">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-5 col-md-2">
-				<a href="index.html" class="main-header_home-link">
+				<a href="index.ejs" class="main-header_home-link">
 					<img src="./images/jordan/JORDY.png">
 				</a>
 			</div>
@@ -29,7 +32,7 @@
 
 		<nav class="main-navbar">
 			<ul class="left-navbar">
-				<li><a href="index.html">Todos los productos</a></li>
+				<li><a href="index.ejs">Todos los productos</a></li>
 				<!-- solo logueado <li><a href="">Cargar productos</a></li> -->
 			</ul>
 
@@ -50,7 +53,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="login.html">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+					<a href="login.ejs">Ingresá <i class="fas fa-sign-in-alt"></i></a>
 				</li>
 			</ul>
 		</nav>
@@ -60,7 +63,7 @@
 
 <!-- Banner -->
 <div class="banner">
-	<img src="images/img-home-banner.jpg" alt="Banner de ofertas">
+	<img src="images/jordan/banner.png" alt="Banner de ofertas">
 </div>
 <!-- /Banner -->
 
@@ -73,28 +76,16 @@
 		<!-- Show the "ultimos" products -->
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="product.html">
-					<figure class="product-box_image">
-						<img src="images/jordan/jordan-blue.png" alt="jordan">
-					</figure>
-					<article class="product-box_data">
-						<h2>Nombre del producto</h2>
-						<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
-						<p>Comentarios: 12</p>
-					</article>
-				</a>
-			</section>
-		</div>
-		<div class="col-12 col-sm-6 col-lg-3">
-			<section class="product-box">
-				<a href="product.html">
+				<a href="product.ejs">
 					<figure class="product-box_image">
 						<img src="images/jordan/jordan-blue.png" alt="cafetera moulinex">
 					</figure>
 					<article class="product-box_data">
-						<h2>Nombre del producto</h2>
-						<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
-							delectus ex</p>
+						<h2>BLUE JORDAN</h2>
+						<p>La Blue Jordan presenta una parte superior de cuero completamente azul con inserciones de
+							cuero perforado gris en los cordones y el tobillo. Las insignias tradicionales de Jumpman cubren el talón.
+							
+							</p>
 						<p>Comentarios: 12</p>
 					</article>
 				</a>
@@ -102,14 +93,15 @@
 		</div>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="product.html">
+				<a href="product.ejs">
 					<figure class="product-box_image">
 						<img src="images/jordan/jordan-classic.png" alt="cafetera moulinex">
 					</figure>
 					<article class="product-box_data">
-						<h2>Nombre del producto</h2>
-						<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
-							delectus ex</p>
+						<h2>CLASSIC JORDAN</h2>
+						<p>Su diseño, clásico y sobrio, está hecho completamente en la parte superior de piel blanca y toques de 'plata pura'
+							sobre el Swoosh, la plantilla y la suela. También cuenta con perforaciones de ventilación en la puntera,
+							una lengüeta de malla transpirable y un acolchado alrededor del tobillo para mayor comodidad.</p>
 						<p>Comentarios: 12</p>
 					</article>
 				</a>
@@ -117,14 +109,15 @@
 		</div>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="product.html">
+				<a href="product.ejs">
 					<figure class="product-box_image">
 						<img src="images/jordan/jordan-green.png" alt="cafetera moulinex">
 					</figure>
 					<article class="product-box_data">
-						<h2>Nombre del producto</h2>
-						<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
-							delectus ex</p>
+						<h2>GREEN JORDAN</h2>
+						<p>Esta edición canaliza el estilo de la vieja escuela con una silueta de corte alto y un look retro
+							compuesto por un upper de piel de flor, una lengüeta de malla y una mediasuela de espuma
+							que ofrece una amortiguación ligera y eficaz.</p>
 						<p>Comentarios: 12</p>
 					</article>
 				</a>
@@ -142,13 +135,14 @@
 		<!-- Show the "ultimos" products -->
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="product.html">
+				<a href="product.ejs">
 					<figure class="product-box_image">
 						<img src="images/jordan/jordan-high.png" alt="cafetera moulinex">
 					</figure>
 					<article class="product-box_data">
-						<h2>Nombre del producto</h2>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
+						<h2>HIGH JORDAN</h2>
+						<p>La puntera y la lengüeta tienen un color negro oscuro, que se acentúa aparte de
+							los tonos blancos del perfil, la entresuela y el parche con la marca.</p>
 						<p>Comentarios: 12</p>
 					</article>
 				</a>
@@ -156,13 +150,14 @@
 		</div>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="product.html">
+				<a href="product.ejs">
 					<figure class="product-box_image">
 						<img src="images/jordan/jordan-jbalvin.png" alt="cafetera moulinex">
 					</figure>
 					<article class="product-box_data">
-						<h2>Nombre del producto</h2>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
+						<h2>HIGH BALVIN</h2>
+						<p>Los gráficos personalizables (incluida la cara sonriente característica de Balvin)
+							le dan un giro distintivo a la lengüeta, con imágenes similares que adornan la plantilla y el talón del calzado.</p>
 						<p>Comentarios: 12</p>
 					</article>
 				</a>
@@ -170,13 +165,15 @@
 		</div>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="product.html">
+				<a href="product.ejs">
 					<figure class="product-box_image">
 						<img src="images/jordan/jordan-pink.png" alt="cafetera moulinex">
 					</figure>
 					<article class="product-box_data">
-						<h2>Nombre del producto</h2>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
+						<h2>PINK JORDAN</h2>
+						<p>Está detallado en la lengüeta y el interior con ilustraciones de fresas y limones que hacen
+							alusión a su nombre. Además, proporciona la misma amortiguación ligera
+							de las Pink Jordan gracias a la tecnología Air.</p>
 						<p>Comentarios: 12</p>
 					</article>
 				</a>
@@ -184,13 +181,14 @@
 		</div>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="product.html">
+				<a href="product.ejs">
 					<figure class="product-box_image">
 						<img src="images/jordan/jordan-retro.png" alt="cafetera moulinex">
 					</figure>
 					<article class="product-box_data">
-						<h2>Nombre del producto</h2>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
+						<h2>RETRO JORDAN</h2>
+						<p>Las Retro Jordan estan compuestas por una parte superior de cuero blanco
+							con superposiciones de gamuza gris y un panel de tobillo de cuero rojo.</p>
 						<p>Comentarios: 12</p>
 					</article>
 				</a>
@@ -198,13 +196,15 @@
 		</div>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="product.html">
+				<a href="product.ejs">
 					<figure class="product-box_image">
 						<img src="images/jordan/jordan-snake.png" alt="cafetera moulinex">
 					</figure>
 					<article class="product-box_data">
-						<h2>Nombre del producto</h2>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
+						<h2>SNAKE JORDAN</h2>
+						<p>Este Jordan consta de una parte superior de cuero blanco y rojo con lengüeta y forro de satin rojo. Los
+							detalles de piel de serpiente sintética negra también aparecen en la parte superior. Una entresuela blanca,
+							suela roja y un gráfico tradicional de Jordan Wings en el tobillo completan el diseño.</p>
 						<p>Comentarios: 12</p>
 					</article>
 				</a>
@@ -212,13 +212,16 @@
 		</div>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="product.html">
+				<a href="product.ejs">
 					<figure class="product-box_image">
 						<img src="images/jordan/jordan-violeta.png" alt="cafetera moulinex">
 					</figure>
 					<article class="product-box_data">
-						<h2>Nombre del producto</h2>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
+						<h2>VIOLET JORDAN</h2>
+						<p>Las famosas líneas del calzado se han mantenido sin cambios desde su inicio en el 85,
+							pero esta versión modificada del clásico tiene una unidad Zoom Air en el talón
+							y una lengüeta acolchada para que puedas navegar cómodamente. Materiales de primera calidad y una
+							combinación de colores de muselina añaden un elemento moderno a esta silueta baja.</p>
 						<p>Comentarios: 12</p>
 					</article>
 				</a>
@@ -226,13 +229,16 @@
 		</div>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="product.html">
+				<a href="product.ejs">
 					<figure class="product-box_image">
 						<img src="images/jordan/jordan-yellow.png" alt="cafetera moulinex">
 					</figure>
 					<article class="product-box_data">
-						<h2>Nombre del producto</h2>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
+						<h2>YELLOW JORDAN</h2>
+						<p>Inspiradas en uno de los equipos deportivos con más historia en el mundo universitario, estas zapatillas
+							proporcionan el mejor estilo y comodidad a través de los colores insignia de los Wolverines y elementos
+							clásicos de la serie Dunk, como la parte superior de piel ligera, la lengüeta de malla
+							y la mediasuela de espuma.</p>
 						<p>Comentarios: 12</p>
 					</article>
 				</a>
@@ -241,3 +247,5 @@
 	</div>
 </div>
 <!-- /Más comentados -->
+
+<%- include("partials/footer.ejs") %> 
