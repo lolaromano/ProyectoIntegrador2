@@ -66,9 +66,17 @@ hr {
 
 
 /*====== Main Header ======*/
+.logo{
+  height: 250px;
+  width: 250px;
+  margin-left: 0%;
+  margin-right: 0%;
+
+}
 .main-header {
   padding: 15px 0;
-  background-color: var(--yellow);
+  background-color: white;
+  /*var(--yellow); */
 }
 
 .main-header_home-link,
@@ -168,10 +176,16 @@ hr {
   margin-bottom: 30px;
 }
 
+
+div.col-12{
+  text-align: center;
+}
+
 .products-title {
-  font-size: 2.4em;
+  font-size: 20px;
   font-weight: 400;
   color: var(--gray);
+  
 }
 
 .product-box {
@@ -180,6 +194,10 @@ hr {
   overflow: hidden;
   transition: 300ms;
   margin: 20px 0;
+  width: 300px;
+  height: 450px;
+  display: flex;
+  flex-direction: row;
 }
 
 .product-box a {
@@ -188,6 +206,7 @@ hr {
 
 .product-box_image {
   border-bottom: 1px solid var(--light-gray);
+
 }
 
 .product-box_data {
