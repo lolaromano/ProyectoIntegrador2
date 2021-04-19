@@ -30,7 +30,7 @@ body {
 body {
   font-family: var(--base-font-family);
   font-weight: 300;
-  background-color: var(--light-gray);
+  background-color: none;
 }
 
 ul,
@@ -127,6 +127,21 @@ hr {
 .main-navbar {
   margin-top: 20px;
   display: none;
+  font-style: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: white;
+}
+
+a.main-header_credit-link {
+  text-decoration: none;
+  color: rgb(73, 82, 82);
+  font-weight: bold;
+}
+
+.main-navbar a {
+  text-decoration: none;
+  color: rgb(73, 82, 82);
 }
 
 .left-navbar,
@@ -173,8 +188,8 @@ hr {
 
 .products-title {
   font-size: 20px;
-  font-weight: 400;
-  color: var(--gray);
+  font-weight: bold;
+  color: rgb(73, 82, 82);
   
 }
 
@@ -188,6 +203,7 @@ hr {
 
 .product-box a {
   display: block;
+  text-decoration: none;
 }
 
 .product-box_image {
@@ -205,9 +221,11 @@ hr {
 }
 
 .product-box_data h2 {
-  font-size: 2.4em;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: bold;
   margin: 0;
+  color: rgb(73, 82, 82);
+  text-decoration: none;
 }
 
 .product-box_data span {
