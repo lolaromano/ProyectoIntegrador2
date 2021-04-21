@@ -2,7 +2,7 @@ let productos = require ('../data/productos');
 
 let productosController = {
     productos: function (req, res) {
-        res.render ('productos', {"productos":productos})
+        res.render ('productos', {productos:productos})
     },
 
     nombre: (req,res) =>{
@@ -14,7 +14,7 @@ let productosController = {
             }
         };
 
-        res.render('nombre', { "productos":respuesta})
+        res.render('nombre', { productos:respuesta})
 }, 
 
     modelo: (req,res) =>{
@@ -25,9 +25,9 @@ let productosController = {
                 respuesta.push(productos[i]);
             }
         };
-        res.render('modelo', { "productos":respuesta})
+        res.render('modelo', { productos:respuesta})
     }, 
 
 }
 
-module.exports = productosController
+module.exports = productosController 

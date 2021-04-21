@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get ('/index', indexController.index);
+router.get ('/', indexController.index);
 
 router.get ('/headerLogueado', headerLogueadoController.headerLogueado);
 

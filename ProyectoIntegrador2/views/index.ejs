@@ -152,27 +152,27 @@
 		<div class="col-12">
 			<h2 class="products-title">MÁS COMENTADOS</h2>
 		</div>
-		<!-- Show the "ultimos" products -->
+	<!-- 	Show the "ultimos" products -->
 		<% for (let i=0; i<productos.lista.length; i+=1 ) { %>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
 			 <a href="/productos <% productos[i].nombre %>"> 
 					<figure class="product-box_image">
-					<!--<img src="<% productos.lista[i].imagen %>"> -->
-					</figure>
+			 	<!-- 	<img src="<% productos.lista[i].imagen %>"> -->
+					</figure> 
 					<article class="product-box_data">
 						<h2> <%= productos[i].nombre %> </h2>
 						<p> <%= productos[i].modelo %> </p> 
 					
-					<!--	Jordan 1 High Tie Dye. Talle 38.
+		<!-- 			Jordan 1 High Tie Dye. Talle 38.
 						La puntera y la lengüeta tienen un color negro oscuro, que se acentúa aparte de los tonos blancos del perfil, la entresuela y el parche con la marca.</p>
 						<p>Comentarios: 12</p>  -->
 					</article>
 				</a>
 			</section> 
 		</div> 
-		<%}%>
-		<!-- <div class="col-12 col-sm-6 col-lg-3">
+		<%}%> 
+<!-- 		 <div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
 				<a href="/product">
 					<figure class="product-box_image">
@@ -256,7 +256,6 @@
 				</a>
 			</section>
 		</div>
-<<<<<<< HEAD
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
 				<a href="/product">
@@ -275,8 +274,6 @@
 				</a>
 			</section>
 		</div> -->
-=======
->>>>>>> 7435c61c733a26dc4816f56833b66d1838dc018f
 	</div>
 </div> 
 <!-- /Más comentados -->
