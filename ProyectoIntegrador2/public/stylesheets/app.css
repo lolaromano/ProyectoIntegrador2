@@ -25,12 +25,15 @@ body {
   min-height: 100vh;
   margin: 0;
   font-size: 10px;
+  background-color: var(--light-gray);
+
 }
 
 body {
   font-family: inherit;
   font-weight: 300;
-  background-color: red;
+  background-color: var(--light-gray);
+  margin: 0;
 }
 
 ul,
@@ -69,7 +72,7 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: white;
+  background-color: var(--light-gray);
   /*var(--yellow); */
 }
 
@@ -168,7 +171,7 @@ a.main-header_credit-link {
 
 /*====== Banner ======*/
 .banner {
-  background-image: url(/images/img-home-banner.jpg);
+  background-image: url(images/JORDYS.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -186,12 +189,13 @@ a.main-header_credit-link {
 .products-title {
   font-size: 20px;
   font-weight: bold;
+  font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
   color: rgb(73, 82, 82);
   
 }
 
 .product-box {
-  background-color: #ffffff;
+  background-color: var(--light-gray);
   border-radius: 5px;
   overflow: hidden;
   transition: 300ms;
