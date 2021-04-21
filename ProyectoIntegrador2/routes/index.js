@@ -10,7 +10,7 @@ let productAddController = require('../controllers/productAddController');
 let profileController = require ('../controllers/profileController');
 let searchResultsController = require('../controllers/searchResultsController');
 let profileEditController = require('../controllers/profileEditController');
-
+let productosController = require ('../controllers/productosController')
 
 
 /* GET home page. */
@@ -35,6 +35,8 @@ router.get ('/profile', profileController.profile);
 router.get ('/profileEdit', profileEditController.profileEdit);
 
 router.get ('/searchResults', searchResultsController.searchResults);
+
+router.get ('/productos', productosController.productos)
 
 
 module.exports = router;

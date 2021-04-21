@@ -28,9 +28,9 @@ body {
 }
 
 body {
-  font-family: var(--base-font-family);
+  font-family: inherit;
   font-weight: 300;
-  background-color: none;
+  background-color: red;
 }
 
 ul,
@@ -104,7 +104,6 @@ hr {
   position: absolute;
   right: 2px;
   height: 60%;
-  background-color: #ffffff;
   border: none;
   border-left: solid 1px var(--light-gray);
   color: var(--gray);
@@ -115,7 +114,6 @@ hr {
 /*====== Main Navbar ======*/
 .btn-toggle-navbar {
   background-color: var(--dark-blue);
-  color: #ffffff;
   font-size: 1.5em;
   border: none;
   border-radius: 4px;
@@ -130,7 +128,6 @@ hr {
   font-style: inherit;
   font-weight: bold;
   text-decoration: none;
-  background-color: white;
 }
 
 a.main-header_credit-link {
@@ -157,7 +154,7 @@ a.main-header_credit-link {
 }
 
 .logout:hover{
-  color: #1259c3;
+  color: grey;
 }
 
 .left-navbar a,
@@ -212,6 +209,11 @@ a.main-header_credit-link {
   height: 200px;
 }
 
+.product-box_image img {
+  width: 500px;
+
+}
+
 .product-box_data {
   padding: 15px;
   position: relative;
@@ -243,6 +245,7 @@ a.main-header_credit-link {
   height: 0;
   transition: 300ms;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .product-box_data i {
@@ -256,7 +259,6 @@ a.main-header_credit-link {
   position: absolute;
   top: -15px;
   right: 15px;
-  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,16 +271,21 @@ a.main-header_credit-link {
 
 .product-box:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
 }
-
+.product-box:hover h2 {
+  text-decoration: none;
+}
 .product-box:hover p {
   height: 36px;
   margin-top: 15px;
+  text-decoration: none;
 }
 
 .product-box:hover i {
   transform: rotate(360deg);
   box-shadow: 0 0 5px var(--green);
+  text-decoration: none;
 }
 
 /*====== Footer ======*/
@@ -299,13 +306,13 @@ a.main-header_credit-link {
 
 .footer-data h2 {
   color: var(--gray);
-  font-size: 2.4em;
+  font-size: 25px;
   font-weight: 400;
 }
 
 .footer-data p {
   color: var(--gray);
-  font-size: 1.5em;
+  font-size: 15px;
   font-weight: 300;
 }
 
@@ -323,7 +330,6 @@ a.main-header_credit-link {
 
 /*====== Product Detail ======*/
 .product-detail {
-  background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -395,7 +401,6 @@ a.main-header_credit-link {
 .buy-now-button {
   background-color: var(--light-blue);
   font-size: 1.6em;
-  color: #ffffff;
   padding: 15px;
   border-radius: 8px;
   border: none;
@@ -406,7 +411,6 @@ a.main-header_credit-link {
   border: none;
   border-radius: 8px;
   font-size: 1.2em;
-  color: #ffffff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
