@@ -51,6 +51,7 @@ a {
   display: inline-block;
   text-decoration: none;
   color: white;
+  font-family: 'Segoe UI';
 }
 
 figure {
@@ -83,6 +84,8 @@ hr {
 .main-header_home-link,
 .main-header_credit-link {
   display: block;
+  color: white;
+  font-family: 'Segoe UI';
 }
 
 .main-header_credit-link {
@@ -136,6 +139,7 @@ hr {
   font-weight: bold;
   text-decoration: none;
   color: white;
+  font-family: 'Segoe UI';
 }
 
 a.main-header_credit-link {
@@ -145,6 +149,8 @@ a.main-header_credit-link {
 
 .main-navbar a {
   text-decoration: none;
+  color: white;
+  font-family: 'Segoe UI';
 }
 
 .left-navbar,
@@ -192,9 +198,8 @@ a.main-header_credit-link {
 .products-title {
   font-size: 20px;
   font-weight: bold;
-  font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Segoe UI';
   color:white;
-  
 }
 
 .product-box {
@@ -313,21 +318,23 @@ a:hover{
 
 .footer-data {
   text-align: center;
+  color: white;
 }
 
 .footer-data i {
   font-size: 3.5em;
-  color: var(--light-gray);
+  color: white;
 }
 
 .footer-data h2 {
   color: var(--gray);
   font-size: 25px;
   font-weight: 400;
+  color: white;
 }
 
 .footer-data p {
-  color: var(--gray);
+  color: white;
   font-size: 15px;
   font-weight: 300;
 }
