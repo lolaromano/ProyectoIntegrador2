@@ -25,12 +25,15 @@ body {
   min-height: 100vh;
   margin: 0;
   font-size: 10px;
+  background-color: var(--light-gray);
+
 }
 
 body {
-  font-family: var(--base-font-family);
+  font-family: inherit;
   font-weight: 300;
-  background-color: none;
+  background-color: var(--light-gray);
+  margin: 0;
 }
 
 ul,
@@ -69,7 +72,7 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: white;
+  background-color: var(--light-gray);
   /*var(--yellow); */
 }
 
@@ -104,7 +107,6 @@ hr {
   position: absolute;
   right: 2px;
   height: 60%;
-  background-color: #ffffff;
   border: none;
   border-left: solid 1px var(--light-gray);
   color: var(--gray);
@@ -115,7 +117,6 @@ hr {
 /*====== Main Navbar ======*/
 .btn-toggle-navbar {
   background-color: var(--dark-blue);
-  color: #ffffff;
   font-size: 1.5em;
   border: none;
   border-radius: 4px;
@@ -130,7 +131,6 @@ hr {
   font-style: inherit;
   font-weight: bold;
   text-decoration: none;
-  background-color: white;
 }
 
 a.main-header_credit-link {
@@ -157,7 +157,7 @@ a.main-header_credit-link {
 }
 
 .logout:hover{
-  color: #1259c3;
+  color: grey;
 }
 
 .left-navbar a,
@@ -171,7 +171,7 @@ a.main-header_credit-link {
 
 /*====== Banner ======*/
 .banner {
-  background-image: url(/images/img-home-banner.jpg);
+  background-image: url(images/JORDYS.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -189,12 +189,13 @@ a.main-header_credit-link {
 .products-title {
   font-size: 20px;
   font-weight: bold;
+  font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
   color: rgb(73, 82, 82);
   
 }
 
 .product-box {
-  background-color: #ffffff;
+  background-color: var(--light-gray);
   border-radius: 5px;
   overflow: hidden;
   transition: 300ms;
@@ -210,6 +211,11 @@ a.main-header_credit-link {
   border-bottom: 1px solid var(--light-gray);
   width: 200px;
   height: 200px;
+}
+
+.product-box_image img {
+  width: 500px;
+
 }
 
 .product-box_data {
@@ -258,7 +264,6 @@ a.main-header_credit-link {
   position: absolute;
   top: -15px;
   right: 15px;
-  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,10 +277,15 @@ a.main-header_credit-link {
 
 .product-box:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+<<<<<<< HEAD
   font-size: 14px;
+=======
   text-decoration: none;
 }
-
+.product-box:hover h2 {
+>>>>>>> 7c75a1c982cfaf1ef317efdad1e58c5f5433eebf
+  text-decoration: none;
+}
 .product-box:hover p {
   height: 36px;
   margin-top: 15px;
@@ -333,7 +343,6 @@ a:hover{
 
 /*====== Product Detail ======*/
 .product-detail {
-  background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -405,7 +414,6 @@ a:hover{
 .buy-now-button {
   background-color: var(--light-blue);
   font-size: 1.6em;
-  color: #ffffff;
   padding: 15px;
   border-radius: 8px;
   border: none;
@@ -416,7 +424,6 @@ a:hover{
   border: none;
   border-radius: 8px;
   font-size: 1.2em;
-  color: #ffffff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
