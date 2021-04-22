@@ -8,10 +8,10 @@ let usersController = {
         res.render ('register')
     },
 
-    profileEdit : (req, res) => {
+    profileEdit: (req, res) => {
         res.render ('profileEdit')
     },
-    
+
     profile: (req, res) => {
         res.render ('profile')
     }

@@ -214,6 +214,8 @@ a.main-header_credit-link {
 }
 
 .product-box_image img {
+  display: flex;
+  align-items: center;
   width: 500px;
 
 }
@@ -277,13 +279,7 @@ a.main-header_credit-link {
 
 .product-box:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-<<<<<<< HEAD
   font-size: 14px;
-=======
-  text-decoration: none;
-}
-.product-box:hover h2 {
->>>>>>> 7c75a1c982cfaf1ef317efdad1e58c5f5433eebf
   text-decoration: none;
 }
 .product-box:hover p {
@@ -295,6 +291,10 @@ a.main-header_credit-link {
 .product-box:hover i {
   transform: rotate(360deg);
   box-shadow: 0 0 5px var(--green);
+  text-decoration: none;
+}
+
+.product-box_data:hover {
   text-decoration: none;
 }
 

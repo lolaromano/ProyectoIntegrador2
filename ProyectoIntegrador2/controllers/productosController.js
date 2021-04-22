@@ -1,10 +1,10 @@
 let productos = require ('../data/productos');
 
 let productosController = {
-    productos: function (req, res) {
-        res.render ('productos', {productos:productos})
+    products: function (req, res) {
+        res.render ('products', {productos:productos})
     },
-    
+
     productAdd: (req, res) => {
         res.render ('productAdd')
     },
