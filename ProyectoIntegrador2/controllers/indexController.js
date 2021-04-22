@@ -1,8 +1,14 @@
+let data = require ('../data/productos');
+
 let indexController = {
 
     index: (req, res) => {
-        res.render ('index', {title: 'Mercado Liebre'})
+        res.render ('index', {productos:data})
     },
+
+    search : (req, res) => {
+        res.render ('searchResults')
+    }
 
 };
 
