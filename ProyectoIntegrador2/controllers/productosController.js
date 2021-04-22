@@ -9,29 +9,10 @@ let productosController = {
         res.render ('productAdd')
     },
 
-    nombre: (req,res) =>{
-        let nombre = req.params.nombre;
-        let respuesta = [];
-        for (let i = 0; i < productos.lista.length; i+=1) {
-            if (productos[i].nombre == nombre) {
-                respuesta.push(productos[i]);
-            }
-        };
-
-        res.render('nombre', { productos:respuesta})
-}, 
-
-    modelo: (req,res) =>{
-        let modelo = req.params.modelo;
-        let respuesta = [];
-        for (let i = 0; i < productos.lista.length; i+=1) {
-            if (productos[i].modelo == modelo) {
-                respuesta.push(productos[i]);
-            }
-        };
-        res.render('modelo', { productos:respuesta})
-    }, 
+    allProducts: (req,res) => {
+        res.render ('allProducts')
+    },
 
 }
 
-module.exports = productosController 
+module.exports = productosController;

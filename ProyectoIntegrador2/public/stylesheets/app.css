@@ -25,15 +25,19 @@ body {
   min-height: 100vh;
   margin: 0;
   font-size: 10px;
-  background-color: var(--light-gray);
+  background-color: black;
 
 }
 
 body {
   font-family: inherit;
   font-weight: 300;
-  background-color: var(--light-gray);
+  background-color: black;
   margin: 0;
+}
+
+body#dummybodyid {
+  background-color: black;
 }
 
 ul,
@@ -46,7 +50,7 @@ ol {
 a {
   display: inline-block;
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
 figure {
@@ -72,7 +76,7 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: var(--light-gray);
+  background-color: black;
   /*var(--yellow); */
 }
 
@@ -131,17 +135,16 @@ hr {
   font-style: inherit;
   font-weight: bold;
   text-decoration: none;
+  color: white;
 }
 
 a.main-header_credit-link {
   text-decoration: none;
-  color: rgb(73, 82, 82);
   font-weight: bold;
 }
 
 .main-navbar a {
   text-decoration: none;
-  color: rgb(73, 82, 82);
 }
 
 .left-navbar,
@@ -190,7 +193,7 @@ a.main-header_credit-link {
   font-size: 20px;
   font-weight: bold;
   font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
-  color: rgb(73, 82, 82);
+  color:white;
   
 }
 
@@ -303,7 +306,7 @@ a:hover{
 }
 /*====== Footer ======*/
 .main-footer {
-  background-color: #ffffff;
+  background-color:black;
   padding: 20px 0;
   margin-top: 80px;
 }
@@ -313,8 +316,8 @@ a:hover{
 }
 
 .footer-data i {
-  color: var(--light-blue);
   font-size: 3.5em;
+  color: var(--light-gray);
 }
 
 .footer-data h2 {
@@ -511,7 +514,7 @@ textarea.form-input {
 }
 
 .btn{
-  background-color: #1259c3;
+  background-color: black;
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
