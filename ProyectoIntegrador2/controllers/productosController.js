@@ -4,6 +4,10 @@ let productosController = {
     productos: function (req, res) {
         res.render ('productos', {productos:productos})
     },
+    
+    productAdd: (req, res) => {
+        res.render ('productAdd')
+    },
 
     nombre: (req,res) =>{
         let nombre = req.params.nombre;

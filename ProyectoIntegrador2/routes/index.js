@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 // CONTROLLERS //
 let indexController = require('../controllers/indexController');
-let searchResultsController = require('../controllers/searchResultsController');
 
 
 /* GET home page. */
