@@ -86,20 +86,6 @@ let productos = {
 
         {
             id: 8,
-<<<<<<< HEAD
-=======
-            nombre: "JORDAN BLUE",
-            modelo: "Air Jordan 3 Retro",
-            anio: 2019,
-            color: "Azul",
-            describirse: function(){
-                return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
-            },
-            imagen: "/images/jordan/jordan-blue.png",
-        },
-        {
-            id: 9,
->>>>>>> 2cbca344205ff2e458c9ee1fa8e1a1aaf13fa643
             nombre: "JORDAN SNAKE",
             modelo: "Satin",
             anio: 2021,
