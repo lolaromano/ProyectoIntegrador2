@@ -7,7 +7,7 @@
 :root {
   --yellow: #EAC926;
   --dark-blue: #03264C;
-  --light-blue: #1259c3;
+  --light-blue: #1259c3; 
   --gray: #666666;
   --light-gray: #ebebeb;
   --green: #39b54a;
@@ -224,6 +224,7 @@ a.main-header_credit-link {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  text-decoration: none;
 }
 
 .product-box_data h2 {
@@ -267,6 +268,7 @@ a.main-header_credit-link {
   justify-content: center;
   align-items: center;
   transition: 300ms;
+  text-decoration: none;
 }
 
 .noproducts {
@@ -275,9 +277,13 @@ a.main-header_credit-link {
 
 .product-box:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+<<<<<<< HEAD
+  font-size: 14px;
+=======
   text-decoration: none;
 }
 .product-box:hover h2 {
+>>>>>>> 7c75a1c982cfaf1ef317efdad1e58c5f5433eebf
   text-decoration: none;
 }
 .product-box:hover p {
@@ -292,6 +298,9 @@ a.main-header_credit-link {
   text-decoration: none;
 }
 
+a:hover{
+  text-decoration: none;
+}
 /*====== Footer ======*/
 .main-footer {
   background-color: #ffffff;

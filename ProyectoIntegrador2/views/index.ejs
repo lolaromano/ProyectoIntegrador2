@@ -73,6 +73,7 @@
 		<div class="col-12">
 			<h2 class="products-title">NOVEDADES</h2>
 		</div>
+<<<<<<< HEAD
 
 	<!-- 	Show the "ultimos" products -->
 		<% for (let i=0; i<4; i+=1 ) { %>
@@ -93,6 +94,79 @@
 			</div> 
 			<%}%> 
 	
+=======
+		<!-- Show the "ultimos" products -->
+		<div class="col-12 col-sm-6 col-lg-3">
+			<section class="product-box">
+				<a href="/product">
+					<figure class="product-box_image">
+						<img src="./images/jordan/jordan-blue.png" alt="BLUE JORDAN">
+					</figure>
+					<article class="product-box_data">
+						<h2>BLUE JORDAN</h2>
+						<p>Jordan 1 Royal Blue Premium
+							La Blue Jordan presenta una parte superior de cuero completamente azul con inserciones de
+							cuero perforado gris en los cordones y el tobillo. Las insignias tradicionales de Jumpman cubren el talón.
+						</p>
+						<p>Comentarios: 12</p>
+					</article>
+				</a>
+			</section>
+		</div>
+		<div class="col-12 col-sm-6 col-lg-3">
+			<section class="product-box">
+				<a href="/product">
+					<figure class="product-box_image">
+						<img src="images/jordan/jordan-classic.png" alt="CLASSIC JORDAN">
+					</figure>
+					<article class="product-box_data">
+						<h2>CLASSIC JORDAN</h2>
+						<p>Jordan 1 Retro Triple White
+							Su diseño, clásico y sobrio, está hecho completamente en la parte superior de piel blanca y toques de 'plata pura'
+							sobre el Swoosh, la plantilla y la suela. También cuenta con perforaciones de ventilación en la puntera,
+							una lengüeta de malla transpirable y un acolchado alrededor del tobillo para mayor comodidad.</p>
+						<p>Comentarios: 12</p>
+					</article>
+				</a>
+			</section>
+		</div>
+		<div class="col-12 col-sm-6 col-lg-3">
+			<section class="product-box">
+				<a href="/product">
+					<figure class="product-box_image">
+						<img src="images/jordan/jordan-yellow.png" alt="YELLOW JORDAN">
+					</figure>
+					<article class="product-box_data">
+						<h2>YELLOW JORDAN</h2>
+						<p>Jordan 1 Laser Yellow
+							Inspiradas en uno de los equipos deportivos con más historia en el mundo universitario, estas zapatillas
+							proporcionan el mejor estilo y comodidad a través de los colores insignia de los Wolverines y elementos
+							clásicos de la serie Dunk, como la parte superior de piel ligera, la lengüeta de malla
+							y la mediasuela de espuma.</p>
+						<p>Comentarios: 12</p>
+					</article>
+				</a>
+			</section>
+		</div> 
+		<div class="col-12 col-sm-6 col-lg-3">
+			<section class="product-box">
+				<a href="/product">
+					<figure class="product-box_image">
+						<img src="images/jordan/jordan-violeta.png" alt="VIOLET JORDAN">
+					</figure>
+					<article class="product-box_data">
+						<h2>VIOLET JORDAN</h2>
+						<p>Nike Air Jordan 1 Low Court Purple
+							Las famosas líneas del calzado se han mantenido sin cambios desde su inicio en el 85,
+							pero esta versión modificada del clásico tiene una unidad Zoom Air en el talón
+							y una lengüeta acolchada para que puedas navegar cómodamente. Materiales de primera calidad y una
+							combinación de colores de muselina añaden un elemento moderno a esta silueta baja.</p>
+						<p>Comentarios: 12</p>
+					</article>
+				</a>
+			</section>
+		</div>
+>>>>>>> 2cbca344205ff2e458c9ee1fa8e1a1aaf13fa643
 	</div>
 </div>
 <!-- /Novedades -->
@@ -108,7 +182,7 @@
 			<section class="product-box">
 				<a href="/products">
 					<figure class="product-box_image">
-			 	<!-- 	<img src="<% //productos.lista[i].imagen %>"> -->
+						<img src="<%= productos.lista[i].imagen %>">
 					</figure> 
 					<article class="product-box_data">
 						<h2> <%= productos.lista[i].nombre %> </h2>
