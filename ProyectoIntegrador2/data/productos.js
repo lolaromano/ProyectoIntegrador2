@@ -76,7 +76,7 @@ let productos = {
                 {
                     usuario: 'M. Campitelli',
                     comentario: 'Hola, buenas noches. Tradeas? Si te interesa tengo unas Yeezy 380 Onyx, 10us, que sería aprox el mismo calce en cm. También soy de Ros, saludos',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario5",
                 },
             ]
         },
@@ -97,12 +97,12 @@ let productos = {
                 {
                     usuario: 'D. Cardona',
                     comentario: 'Hola como va consulta, como viene el productos?. Con la caja original, y los sellos en la misma caja, que dicta la serie del producto y eso?. Desde ya gracias.',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario6",
                 },
                 {
                     usuario: 'T. Del Pino',
                     comentario: 'Hola cuantos cm son? donde nos podemos encontrar?',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario7",
                 },
             ]
         },
@@ -123,12 +123,12 @@ let productos = {
                 {
                     usuario: 'G. Corti',
                     comentario: 'Hola permutas por un Ferrari? Si me quedo corto le puedo sumar un una RAM',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario8",
                 },
                 {
                     usuario: 'C. Ortiz Quirno',
                     comentario: 'Hola son de oro los cordones?',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario9",
                 },
             ]
         },
@@ -149,12 +149,12 @@ let productos = {
                 {
                     usuario: 'B. Gimenez',
                     comentario: 'Hola podes subir una foto de las suelas?',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario10",
                 },
                 {
                     usuario: 'J. Lipson',
                     comentario: 'Estas zapatillas son icónicas. Mi hijo es deportista y está encantado con su regalo de cumpleaños 46.',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario11",
                 },
             ]
         },
@@ -175,12 +175,12 @@ let productos = {
                 {
                     usuario: 'L. Romano',
                     comentario: 'Muy buen producto, unico que la caja estaba en mal estado.',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario12",
                 },
                 {
                     usuario: 'L. Nazar Anchorena',
                     comentario: 'Muy pikadas pa. No se que decir porque no me alcanzan los caracteres si no pero muy pikadas.',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario13",
                 },
             ]
         },
@@ -202,12 +202,12 @@ let productos = {
                 {
                     usuario: 'R. Castelo',
                     comentario: 'Hola! Vi que en los comentarios tenías unas de 25 cm. Las seguís teniendo? Gracias!',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario14",
                 },
                 {
                     usuario: 'J.P. Ascani',
                     comentario: 'Es verdad que según el color varía el precio, lo que no me parece correcto es que las cobres a ese precio sin mínimamente entregarlas con su caja original . Si vas a pedir eso dámelas igual que como me las darían en una tienda en Estados Unidos.',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario15",
                 },
             ]
         },
@@ -228,12 +228,12 @@ let productos = {
                 {
                     usuario: 'S. De Pellegrin',
                     comentario: 'Hola ayer te hable por las zapatillas las voy a comprar tenes un numero como para comunicarme asi arreglamos lo del talle',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario16",
                 },
                 {
                     usuario: 'J. Sterinzon',
                     comentario: 'Hola tenes las 8,5? Tengo 14000 de contado',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario17",
                 },
             ]
         },
@@ -254,12 +254,12 @@ let productos = {
                 {
                     usuario: 'P. Correa',
                     comentario: 'La iba a comprar y me la subiste mas rapido que el dolar',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario18",
                 },
                 {
                     usuario: 'T. Mihailovich',
                     comentario: 'Si el pie mide 22cm a que nro corresponde?',
-                    imagenUsuario: "/images/users/imagenUsuario4",
+                    imagenUsuario: "/images/users/imagenUsuario19",
                 },
             ]
         },
