@@ -120,6 +120,11 @@ hr {
   cursor: pointer;
 }
 
+div.col {
+  padding: 0px;
+}
+
+
 
 /*====== Main Navbar ======*/
 .btn-toggle-navbar {
@@ -269,7 +274,7 @@ a.main-header_credit-link {
 }
 
 .product-box_data p {
-  font-size: 1.5em;
+  font-size: 15px;
   width: 100%;
   color: var(--gray);
   margin-left: 50px;
@@ -521,6 +526,11 @@ display: grid;
 .form-label {
   font-size: 20px;
   margin: 10px 0;
+  color: white;
+}
+
+.form-check-label { 
+  color: white;
 }
 
 .error{
