@@ -360,12 +360,15 @@ a:hover{
   padding: 15px 0;
 }
 
-.nombres {
+h2.nombres {
   display: flex;
   align-items: center;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
+  padding-top: 60px;
+  padding-left: 270px;
 }
+
 
 /*====== Product Detail ======*/
 .product-detail {
