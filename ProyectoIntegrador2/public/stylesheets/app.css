@@ -51,7 +51,7 @@ a {
   display: inline-block;
   text-decoration: none;
   color: white;
-  font-family: 'Segoe UI';
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 figure {
@@ -85,7 +85,7 @@ hr {
 .main-header_credit-link {
   display: block;
   color: white;
-  font-family: 'Segoe UI';
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .main-header_credit-link {
@@ -139,7 +139,7 @@ hr {
   font-weight: bold;
   text-decoration: none;
   color: white;
-  font-family: 'Segoe UI';
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 a.main-header_credit-link {
@@ -150,7 +150,7 @@ a.main-header_credit-link {
 .main-navbar a {
   text-decoration: none;
   color: white;
-  font-family: 'Segoe UI';
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .left-navbar,
@@ -198,7 +198,7 @@ a.main-header_credit-link {
 .products-title {
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Segoe UI';
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   color:white;
 }
 
@@ -378,6 +378,7 @@ a:hover{
   padding: 15px 15px 15px 40px;
   font-size: 1.8em;
   line-height: 1.5;
+  color: white;
 }
 
 .product-detail-price {
@@ -469,6 +470,7 @@ a:hover{
 .comments p{
   font-size: 1.5em;
   margin-top: 0;
+  color: white;
 }
 .comments .user{
   font-size: 1.7em;
@@ -537,6 +539,7 @@ textarea.form-input {
 
   .banner {
     height: 320px;
+    width: 100%;
   }
 
   .btn-toggle-navbar {
