@@ -229,6 +229,10 @@ a.main-header_credit-link {
   border-bottom: 1px solid var(--light-gray);
   width: 200px;
   height: 200px;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+
 }
 
 .product-box_image img {
@@ -250,7 +254,9 @@ a.main-header_credit-link {
 .product-box_data h2 {
   font-size: 20px;
   font-weight: bold;
-  margin: 0;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
   color: rgb(73, 82, 82);
   text-decoration: none;
 }
@@ -266,7 +272,9 @@ a.main-header_credit-link {
   font-size: 1.5em;
   width: 100%;
   color: var(--gray);
-  margin: 0;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
   height: 0;
   transition: 300ms;
   overflow: hidden;
@@ -363,10 +371,19 @@ a:hover{
 h2.nombres {
   display: flex;
   align-items: center;
-  font-size: 25px;
+  font-size: 10px;
   color: white;
-  padding-top: 60px;
-  padding-left: 270px;
+  padding-top: 50px;
+  padding-left: 70px;
+}
+
+h2.nombres1 {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: white;
+  padding-top: 0px;
+  padding-left: 70px;
 }
 
 
