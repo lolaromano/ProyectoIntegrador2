@@ -1,9 +1,13 @@
+<%- include("partials/head.ejs") %> 
+
 <%- include("partials/header.ejs") %> 
 
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title">Nombre del producto</h2> 
+			<h2 class="products-title">
+				<%= productos[idSearch].nombre + ' ' %> Modelo <%= productos[idSearch].modelo %>
+			</h2> 
 			<p class="product-detail-description">
 				<a href="/productAdd/:id">Editar</a>
 			</p>
@@ -11,8 +15,11 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="images/jordan/jordan-retro.png" alt="" class="product-detail-img">
-					<p class="product-detail-description"> Las Retro Jordan estan compuestas por una parte superior de cuero blanco con superposiciones de gamuza gris y un panel de tobillo de cuero rojo.</p>
+					<img src="<%= productos[idSearch].imagen %>"  alt="" class="product-detail-img">
+					<p class="product-detail-description"> 
+						<!-- Las Retro Jordan estan compuestas por una parte superior de cuero blanco con superposiciones de gamuza gris y un panel de tobillo de cuero rojo.-->
+					<%= productos[idSearch].descripcion %> 
+					</p> 
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">

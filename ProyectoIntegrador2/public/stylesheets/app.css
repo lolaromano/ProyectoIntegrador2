@@ -49,9 +49,9 @@ ol {
 
 a {
   display: inline-block;
-  text-decoration: none;
   color: white;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-decoration: none;
 }
 
 figure {
@@ -562,7 +562,7 @@ textarea.form-input {
 
   .left-navbar a:hover,
   .right-navbar a:hover {
-    color: var(--light-blue);
+    color: white;
   }
 
   .left-navbar li {

@@ -1,3 +1,5 @@
+<%- include("partials/head.ejs") %> 
+
 <%- include("partials/header.ejs") %> 
 
 <div class="banner">
@@ -18,10 +20,10 @@
 		</div>
 
 	<!-- 	Show the "ultimos" products -->
-		<% for (let i=0; i<4; i+=1 ) { %>
+		<% for (let i=0; i < 4; i+=1 ) { %>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/products">
+					<a href="/products/<%= productos.lista[i].id %>">
 						<figure class="product-box_image">
 							<img src="<%= productos.lista[i].imagen %>">
 						</figure> 
@@ -34,7 +36,7 @@
 					</a>
 				</section> 
 			</div> 
-			<%}%> 
+			<% } %> 
 	
 	</div>
 </div>
