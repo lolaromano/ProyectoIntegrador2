@@ -89,7 +89,7 @@ hr {
 }
 
 .main-header_credit-link {
-  font-size: 1.5em;
+  font-size: 1.0em;
   margin-top: 20px;
   text-align: center;
 }
@@ -133,7 +133,7 @@ hr {
 }
 
 .main-navbar {
-  margin-top: 20px;
+  margin-top: 0px;
   display: none;
   font-style: inherit;
   font-weight: bold;
@@ -155,7 +155,13 @@ a.main-header_credit-link {
 
 .left-navbar,
 .right-navbar {
-  font-size: 1.5em;
+  font-size: 1.3em;
+ 
+}
+
+.right-navbar ul {
+  display: flex;
+  justify-content: space-between;
 }
 
 .logout{
@@ -174,6 +180,10 @@ a.main-header_credit-link {
   display: block;
   padding: 5px 0;
   border-bottom: solid 1px var(--gray);
+}
+
+.unite {
+  padding-left: 45px;
 }
 
 
@@ -477,22 +487,14 @@ a:hover{
 }
 
 /*====== Formularios ======*/
-.form-label {
-  display: inline-block;
-  font-size: 1.6em;
-  margin: 10px 0;
+.row-g-3-needs-validation {
+display: grid;
 }
 
-.form-input {
-  display: block;
-  width: 100%;
-  height: 45px;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-  border-radius: 8px;
-  border: none;
-  border: solid 1px var(--gray);
-  padding: 0 15px;
+
+.form-label {
+  font-size: 1.6em;
+  margin: 10px 0;
 }
 
 .error{
@@ -500,11 +502,6 @@ a:hover{
   font-size: 1.4em;
 }
 
-textarea.form-input {
-  min-height: 140px;
-  resize: vertical;
-  padding: 15px;
-}
 
 /*====== Profile ======*/
 .info-usuario{
