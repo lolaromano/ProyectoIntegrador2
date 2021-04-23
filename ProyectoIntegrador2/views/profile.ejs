@@ -10,7 +10,7 @@
 		</div>
 		<div class="data-container col-6">
 			<div class="d-flex align-items-center ">
-				<h1 class="main-title"> Lolipop Romanini
+				<h1 class="main-title"> Lola Romano
 					<a href="/profileEdit">
 						<i class="fas fa-cog"></i>
 					</a>
@@ -36,132 +36,23 @@
 			<h2 class="products-title">Mis productos</h2>
 		</div>
 		<!-- Show mis productos -->
-		<div class="col-12 col-sm-6 col-lg-3">
-			<section class="product-box">
-				<a href="/products">
-					<figure class="product-box_image">
-						<img src="images/jordan/jordan-blue.png" alt="cafetera moulinex">
-					</figure>
-					<article class="product-box_data">
-						<h2>BLUE JORDAN</h2>
-						<p>La Blue Jordan presenta una parte superior de cuero completamente azul con inserciones de
-							cuero perforado gris en los cordones y el tobillo. Las insignias tradicionales de Jumpman cubren el talón.
-						</p>
-						<p>Comentarios: 12</p>
-					</article>
-				</a>
-			</section>
-		</div>
-		<div class="col-12 col-sm-6 col-lg-3">
-			<section class="product-box">
-				<a href="/products">
-					<figure class="product-box_image">
-						<img src="images/jordan/jordan-classic.png" alt="cafetera moulinex">
-					</figure>
-					<article class="product-box_data">
-						<h2>CLASSIC JORDAN</h2>
-						<p>Su diseño, clásico y sobrio, está hecho completamente en la parte superior de piel blanca y toques de 'plata pura'
-							sobre el Swoosh, la plantilla y la suela. También cuenta con perforaciones de ventilación en la puntera,
-							una lengüeta de malla transpirable y un acolchado alrededor del tobillo para mayor comodidad.</p>
-						<p>Comentarios: 12</p>
-					</article>
-				</a>
-			</section>
-		</div>
-		<div class="col-12 col-sm-6 col-lg-3">
-			<section class="product-box">
-				<a href="/products">
-					<figure class="product-box_image">
-						<img src="images/jordan/jordan-green.png" alt="cafetera moulinex">
-					</figure>
-					<article class="product-box_data">
-						<h2>GREEN JORDAN</h2>
-						<p>Esta edición canaliza el estilo de la vieja escuela con una silueta de corte alto y un look retro
-							compuesto por un upper de piel de flor, una lengüeta de malla y una mediasuela de espuma
-							que ofrece una amortiguación ligera y eficaz.</p>
-						<p>Comentarios: 12</p>
-					</article>
-				</a>
-			</section>
-		</div>
-		<div class="col-12 col-sm-6 col-lg-3">
-			<section class="product-box">
-				<a href="/products">
-					<figure class="product-box_image">
-						<img src="images/jordan/jordan-high.png" alt="cafetera moulinex">
-					</figure>
-					<article class="product-box_data">
-						<h2>HIGH JORDAN</h2>
-						<p>La puntera y la lengüeta tienen un color negro oscuro, que se acentúa aparte de
-							los tonos blancos del perfil, la entresuela y el parche con la marca.</p>
-						<p>Comentarios: 12</p>
-					</article>
-				</a>
-			</section>
-		</div>
-		<div class="col-12 col-sm-6 col-lg-3">
-			<section class="product-box">
-				<a href="/products">
-					<figure class="product-box_image">
-						<img src="images/jordan/jordan-jbalvin.png"  alt="cafetera moulinex">
-					</figure>
-					<article class="product-box_data">
-						<h2>HIGH BALVIN</h2>
-						<p>Los gráficos personalizables (incluida la cara sonriente característica de Balvin)
-							le dan un giro distintivo a la lengüeta, con imágenes similares que adornan la plantilla y el talón del calzado.</p>
-						<p>Comentarios: 12</p>
-					</article>
-				</a>
-			</section>
-		</div>
-		<div class="col-12 col-sm-6 col-lg-3">
-			<section class="product-box">
-				<a href="/products">
-					<figure class="product-box_image">
-						<img src="images/jordan/jordan-pink.png" alt="cafetera moulinex">
-					</figure>
-					<article class="product-box_data">
-						<h2>PINK JORDAN</h2>
-						<p>Está detallado en la lengüeta y el interior con ilustraciones de fresas y limones que hacen
-							alusión a su nombre. Además, proporciona la misma amortiguación ligera
-							de las Pink Jordan gracias a la tecnología Air.</p>
-						<p>Comentarios: 12</p>
-					</article>
-				</a>
-			</section>
-		</div>
-		<div class="col-12 col-sm-6 col-lg-3">
-			<section class="product-box">
-				<a href="/products">
-					<figure class="product-box_image">
-						<img src="images/jordan/jordan-retro.png" alt="cafetera moulinex">
-					</figure>
-					<article class="product-box_data">
-						<h2>RETRO JORDAN</h2>
-						<p>Las Retro Jordan estan compuestas por una parte superior de cuero blanco
-							con superposiciones de gamuza gris y un panel de tobillo de cuero rojo.</p>
-						<p>Comentarios: 12</p>
-					</article>
-					</article>
-				</a>
-			</section>
-		</div>
-		<div class="col-12 col-sm-6 col-lg-3">
-			<section class="product-box">
-				<a href="/products">
-					<figure class="product-box_image">
-						<img  src="images/jordan/jordan-snake.png"alt="cafetera moulinex">
-					</figure>
-					<article class="product-box_data">
-						<h2>SNAKE JORDAN</h2>
-						<p>Este Jordan consta de una parte superior de cuero blanco y rojo con lengüeta y forro de satin rojo. Los
-							detalles de piel de serpiente sintética negra también aparecen en la parte superior. Una entresuela blanca,
-							suela roja y un gráfico tradicional de Jordan Wings en el tobillo completan el diseño.</p>
-						<p>Comentarios: 12</p>
-					</article>
-				</a>
-			</section>
-		</div>
+	
+		<% for (let i = 0; i < productos[i].length ; i++ ) { %>
+			<div class="col-12 col-sm-6 col-lg-3">
+				<section class="product-box">
+					<a href="/products">
+						<figure class="product-box_image">
+							<img src="<%= productos.lista[i].imagen %>">
+						</figure> 
+						<article class="product-box_data">
+							<h2> <%= productos.lista[i].nombre %> </h2>
+							<p> <%= productos.lista[i].modelo %> </p> 
+						</article>
+					</a>
+				</section> 
+			</div> 
+		<% } %> 
+					
 	</div>
 </div>
 <!-- /Mis productos -->

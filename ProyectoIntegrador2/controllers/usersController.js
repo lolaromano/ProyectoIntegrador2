@@ -1,8 +1,12 @@
+let productos = require ("../data/productos");
+let users = require ("../data/users");
+
 let usersController = {
 
-    login: (req, res) => {
-        res.render ('login')
-    }, 
+    profile: (req, res) => {
+        let id = req.params.id
+        return res.render ('profile', {productos: productos.lista, users: users.lista, idSearch: id})
+    },
     
     register: (req, res) => {
         res.render ('register')
@@ -12,8 +16,8 @@ let usersController = {
         res.render ('profileEdit')
     },
 
-    profile: (req, res) => {
-        res.render ('profile')
+    login: (req, res) => {
+        res.render ('login')
     }
 
 };

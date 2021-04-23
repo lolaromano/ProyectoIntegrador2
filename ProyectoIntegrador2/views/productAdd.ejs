@@ -9,11 +9,21 @@
 			<h2 class="products-title">Agregar productos</h2>
 		</div>
 		<!-- Show the "ultimos" products -->
-		<h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá va el formulario para agregar prodcutos al catálogo. <br>
-		Debe cumplir con los puntos de la consigna y ser coherente con la tabla de la base de datos. <br>
-		Eliminen estás líneas y coloquen el formulario. <br>
-		Recuerden todo lo que necesita tanto la etiqueta form como los campos input para operar correctamtente</i> <br>
-		////////////////
+		<h2 class="col-12"> 
+			<div class="col-md-4">
+				<label for="validationCustom01" class="form-label">Nombre de usuario</label>
+				<input type="text" class="form-control" id="validationCustom01" required>
+				<div class="valid-feedback">
+				  Nombre de usuario valido
+				</div>
+				<div class="input-group mb-3">
+					<input type="file" class="form-control" id="inputGroupFile02">
+					<label class="input-group-text" for="inputGroupFile02">Nombre del producto</label>
+				  </div>
+			<div class="form-floating">
+				<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+				<label for="floatingTextarea">Descripcion del producto</label>
+			  </div>
 		</h2>
 	</div>
 </div>
