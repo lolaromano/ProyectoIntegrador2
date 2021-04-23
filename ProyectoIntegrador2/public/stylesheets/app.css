@@ -513,13 +513,13 @@ h2.nombres1 {
 }
 
 /*====== Formularios ======*/
+
 .row-g-3-needs-validation {
 display: grid;
 }
 
-
 .form-label {
-  font-size: 1.6em;
+  font-size: 20px;
   margin: 10px 0;
 }
 

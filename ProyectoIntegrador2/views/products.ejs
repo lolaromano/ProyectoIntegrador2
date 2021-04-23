@@ -9,7 +9,7 @@
 				<%= productos[idSearch].nombre + ' ' %> Modelo <%= productos[idSearch].modelo %>
 			</h2> 
 			<p class="product-detail-description">
-				<a href="/productAdd/:id">Agregar producto</a>
+				<a href="/products/productAdd/:id">Agregar producto</a>
 			</p>
 		</div>
 		<div class="product-detail">
@@ -30,7 +30,7 @@
 								<img src="<%= productos[idSearch].comentarios[i].imagenUsuario %>" alt="">
 								<div class="data">
 									<p class="user">
-										<strong> <a href="/profile"> <%= productos[idSearch].comentarios[i].usuario %> </a> </strong>
+										<strong> <a href="/users/profile"> <%= productos[idSearch].comentarios[i].usuario %> </a> </strong>
 										<%= productos[idSearch].comentarios[i].comentario %>
 									</p>
 								</div>
@@ -41,6 +41,7 @@
 
 					<form class="form" action="" method="POST">
 						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+						<br>
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
 
