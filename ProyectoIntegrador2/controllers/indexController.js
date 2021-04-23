@@ -1,12 +1,13 @@
 let data = require ('../data/productos');
+const { json } = require ('express')
 
 let indexController = {
 
-    index: (req, res) => {
-        res.render ('index', { productos: data})
+    index : function(req, res) {
+        return res.render ('index', { productos: data})
     },
 
-    search : (req, res) => {
+    search : function(req, res) {
         res.render ('searchResults')
     }
 
