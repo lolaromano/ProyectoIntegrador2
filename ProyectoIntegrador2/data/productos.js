@@ -7,7 +7,8 @@ let productos = {
             anio: 2019,
             color: "Azul",
             descripcion: "La Blue Jordan presenta una parte superior de cuero completamente azul con inserciones de cuero perforado gris en los cordones y el tobillo. Las insignias tradicionales de Jumpman cubren el talón.",
-           
+            fecha_creacion: 2019-01-01,
+
             describirse: function(){
                 return `Hola soy ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
@@ -34,7 +35,8 @@ let productos = {
             anio: 2019,
             color: "Blanco",
             descripcion: "Su diseño, clásico y sobrio, está hecho completamente en la parte superior de piel blanca y toques de 'plata pura' sobre el Swoosh, la plantilla y la suela. También cuenta con perforaciones de ventilación en la puntera, una lengüeta de malla transpirable y un acolchado alrededor del tobillo para mayor comodidad.",
-           
+            fecha_creacion: 2019-02-01,
+
             describirse: function(){
                 return `Hola soy ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
@@ -61,7 +63,8 @@ let productos = {
             anio: 2020,
             color: "Verde",
             descripcion: 'Esta edición canaliza el estilo de la vieja escuela con una silueta de corte alto y un look retro compuesto por un upper de piel de flor, una lengüeta de malla y una mediasuela de espuma que ofrece una amortiguación ligera y eficaz.',
-           
+            fecha_creacion: 2020-03-01,
+
             describirse: function(){
                 return `Hola soy ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
@@ -87,7 +90,8 @@ let productos = {
             anio: 2019,
             color: "Verde Guerra",
             descripcion: "La puntera y la lengüeta tienen un color negro oscuro, que se acentúa aparte de los tonos blancos del perfil, la entresuela y el parche con la marca.",
-           
+            fecha_creacion: 2019-04-01,
+
             describirse: function(){
                 return `Hola soy ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
@@ -113,7 +117,8 @@ let productos = {
             anio: 2019,
             color: "Multicolor",
             descripcion: "Los gráficos personalizables (incluida la cara sonriente característica de Balvin) le dan un giro distintivo a la lengüeta, con imágenes similares que adornan la plantilla y el talón del calzado.",
-            
+            fecha_creacion: 2019-05-01,
+
             describirse: function(){
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
@@ -139,7 +144,8 @@ let productos = {
             anio: 2020,
             color: "Rosa",
             descripcion: "Está detallado en la lengüeta y el interior con ilustraciones de fresas y limones que hacen alusión a su nombre. Además, proporciona la misma amortiguación ligera de las Pink Jordan gracias a la tecnología Air.",
-           
+            fecha_creacion: 2020-06-01,
+
             describirse: function(){
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
@@ -149,12 +155,12 @@ let productos = {
                 {
                     usuario: 'B. Gimenez',
                     comentario: 'Hola podes subir una foto de las suelas?',
-                    imagenUsuario: "/images/users/imagenUsuario0.png",
+                    imagenUsuario: "/images/users/imagenUsuario1.png",
                 },
                 {
                     usuario: 'J. Lipson',
                     comentario: 'Estas zapatillas son icónicas. Mi hijo es deportista y está encantado con su regalo de cumpleaños 46.',
-                    imagenUsuario: "/images/users/imagenUsuario1.png",
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
                 },
             ]
         },
@@ -165,7 +171,8 @@ let productos = {
             anio: 2019,
             color: "Gris y Rojo",
             descripcion: "Las Retro Jordan estan compuestas por una parte superior de cuero blanco con superposiciones de gamuza gris y un panel de tobillo de cuero rojo.",
-            
+            fecha_creacion: 2019-07-01,
+
             describirse: function(){
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
@@ -175,12 +182,12 @@ let productos = {
                 {
                     usuario: 'L. Romano',
                     comentario: 'Muy buen producto, unico que la caja estaba en mal estado.',
-                    imagenUsuario: "/images/users/imagenUsuario2.png",
+                    imagenUsuario: "/images/users/imagenUsuario3.png",
                 },
                 {
                     usuario: 'L. Nazar Anchorena',
                     comentario: 'Muy pikadas pa. No se que decir porque no me alcanzan los caracteres si no pero muy pikadas.',
-                    imagenUsuario: "/images/users/imagenUsuario3.png",
+                    imagenUsuario: "/images/users/imagenUsuario4.png",
                 },
             ]
         },
@@ -192,7 +199,8 @@ let productos = {
             anio: 2021,
             color: "Rojo, Negro y Blanco",
             descripcion: "Este Jordan consta de una parte superior de cuero blanco y rojo con lengüeta y forro de satin rojo. Los detalles de piel de serpiente sintética negra también aparecen en la parte superior. Una entresuela blanca, suela roja y un gráfico tradicional de Jordan Wings en el tobillo completan el diseño.",
-           
+            fecha_creacion: 2021-08-01,
+
             describirse: function(){
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
@@ -202,12 +210,12 @@ let productos = {
                 {
                     usuario: 'R. Castelo',
                     comentario: 'Hola! Vi que en los comentarios tenías unas de 25 cm. Las seguís teniendo? Gracias!',
-                    imagenUsuario: "/images/users/imagenUsuario4.png",
+                    imagenUsuario: "/images/users/imagenUsuario1.png",
                 },
                 {
                     usuario: 'J.P. Ascani',
                     comentario: 'Es verdad que según el color varía el precio, lo que no me parece correcto es que las cobres a ese precio sin mínimamente entregarlas con su caja original . Si vas a pedir eso dámelas igual que como me las darían en una tienda en Estados Unidos.',
-                    imagenUsuario: "/images/users/imagenUsuario0.png",
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
                 },
             ]
         },
@@ -218,7 +226,8 @@ let productos = {
             anio: 2020,
             color: "Violeta",
             descripcion: "Las famosas líneas del calzado se han mantenido sin cambios desde su inicio en el 85, pero esta versión modificada del clásico tiene una unidad Zoom Air en el talón y una lengüeta acolchada para que puedas navegar cómodamente. Materiales de primera calidad y una combinación de colores de muselina añaden un elemento moderno a esta silueta baja.",
-            
+            fecha_creacion: 2020-09-01,
+
             describirse: function(){
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
@@ -228,12 +237,12 @@ let productos = {
                 {
                     usuario: 'S. De Pellegrin',
                     comentario: 'Hola ayer te hable por las zapatillas las voy a comprar tenes un numero como para comunicarme asi arreglamos lo del talle',
-                    imagenUsuario: "/images/users/imagenUsuario1.png",
+                    imagenUsuario: "/images/users/imagenUsuario3.png",
                 },
                 {
                     usuario: 'J. Sterinzon',
                     comentario: 'Hola tenes las 8,5? Tengo 14000 de contado',
-                    imagenUsuario: "/images/users/imagenUsuario2.png",
+                    imagenUsuario: "/images/users/imagenUsuario4.png",
                 },
             ]
         },
@@ -244,7 +253,8 @@ let productos = {
             anio: 2021,
             color: "Amarillas",
             descripcion: "Inspiradas en uno de los equipos deportivos con más historia en el mundo universitario, estas zapatillas proporcionan el mejor estilo y comodidad a través de los colores insignia de los Wolverines y elementos clásicos de la serie Dunk, como la parte superior de piel ligera, la lengüeta de malla y la mediasuela de espuma.",
-            
+            fecha_creacion: 2021-10-01,
+
             describirse: function(){
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
@@ -254,12 +264,12 @@ let productos = {
                 {
                     usuario: 'P. Correa',
                     comentario: 'La iba a comprar y me la subiste mas rapido que el dolar',
-                    imagenUsuario: "/images/users/imagenUsuario3.png",
+                    imagenUsuario: "/images/users/imagenUsuario1.png",
                 },
                 {
                     usuario: 'T. Mihailovich',
                     comentario: 'Si el pie mide 22cm a que nro corresponde?',
-                    imagenUsuario: "/images/users/imagenUsuario4.png",
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
                 },
             ]
         },

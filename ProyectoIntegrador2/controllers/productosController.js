@@ -4,7 +4,7 @@ let productosController = {
 
     products: function (req, res) {
         let id = req.params.id
-        return res.render ('products', {productos: productos.lista, idSearch:id})
+        return res.render ('products', {productos: productos.lista, idSearch: id})
     },
 
     productAdd: (req, res) => {
