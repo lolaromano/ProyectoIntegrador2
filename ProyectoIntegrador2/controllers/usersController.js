@@ -18,18 +18,10 @@ let usersController = {
 
     login: (req, res) => {
         res.render ('login')
-    }
-
-};
-
-let indexController = {
-
-    index : function(req, res) {
-        return res.render ('index', { productos: data})
     },
 
-    search : function(req, res) {
-        res.render ('searchResults')
+    headerLogueado: (req, res) => {
+        res.render ('headerLogueado')
     }
 
 };

@@ -14,4 +14,6 @@ router.get ('/profile', usersController.profile);
 
 router.get ('/profileEdit', usersController.profileEdit);
 
+router.get ('/headerLogueado', usersController.headerLogueado);
+
 module.exports = router;
