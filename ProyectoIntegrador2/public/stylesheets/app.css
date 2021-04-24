@@ -152,18 +152,21 @@ div.col {
   font-weight: bold;
   text-decoration: none;
   color: white;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
 }
 
 a.main-header_credit-link {
   text-decoration: none;
   font-weight: bold;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 35px;
 }
 
 .main-navbar a {
   text-decoration: none;
   color: white;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .left-navbar,
@@ -227,8 +230,9 @@ a.main-header_credit-link {
 .products-title {
   font-size: 20px;
   font-weight: bold;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Bebas Neue', cursive;
   color:white;
+  font-size: 25px;
 }
 
 .product-box {
@@ -393,7 +397,7 @@ h2.nombres {
   font-size: 10px;
   color: white;
   padding-top: 50px;
-  padding-left: 70px;
+  padding-left: 30px;
 }
 
 h2.nombres1 {
@@ -402,7 +406,7 @@ h2.nombres1 {
   font-size: 10px;
   color: white;
   padding-top: 0px;
-  padding-left: 70px;
+  padding-left: 30px;
 }
 
 
@@ -529,7 +533,7 @@ h2.nombres1 {
   color: white;
 }
 .comments .user{
-  font-size: 1.7em;
+  font-size: 20px;
   text-align: justify;
 }
 
@@ -543,6 +547,7 @@ display: grid;
   font-size: 20px;
   margin: 10px 0;
   color: white;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .form-label1 {
@@ -550,6 +555,7 @@ display: grid;
   margin: 10px 0;
   color: white;
   padding-left: 20px;
+  font-family: 'Bebas Neue', cursive;
 }
 
 div#col-md-4 {
