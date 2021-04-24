@@ -1,10 +1,11 @@
 let productos = require ('../data/productos');
+const users = require('../data/users');
 
 let productosController = {
 
     products: function (req, res) {
         let id = req.params.id
-        return res.render ('products', {productos: productos.lista, idSearch: id})
+        return res.render ('products', {productos: productos.lista, idSearch: id, users: users.lista})
     },
 
     productAdd: (req, res) => {

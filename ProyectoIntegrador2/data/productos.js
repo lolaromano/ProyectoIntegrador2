@@ -16,12 +16,14 @@ let productos = {
             imagen: "/images/jordan/jordan-blue.png",
             comentarios: [
                 {
+                    idUsuario: 0,
                     usuario: 'M. Ramirez',
                     comentario: 'Compré medio punto más de lo que calzo porque tengo otras air max que cuando camino me toca el dedo en la punta y es doloroso. Con medio punto más quedan perfectas! son menos rosadas que en la foto pero hermosasss!!!.',
                     imagenUsuario: "/images/users/imagenUsuario0.png",
                 },
 
                 {
+                    idUsuario: 1,
                     usuario: 'F. Lopez',
                     comentario: 'De aspecto muy lindas, el talle me fue bien según la tabla de talles, pero a pesar de tener camara de aire son bastante duras, esperaba que sean mas cómodas. La caja vino toda aplastada , y me pareció re desagradable que adentro de la caja le pusieron basura, tenia 1 cajita de chicles vacia y los rellenos y etiqueta de una zapatilla puma para niños.',
                     imagenUsuario: "/images/users/imagenUsuario1.png",

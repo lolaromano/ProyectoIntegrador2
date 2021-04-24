@@ -4,7 +4,9 @@ var router = express.Router();
 let usersController = require('../controllers/usersController');
 
 
+
 /* GET users listing. */
+router.get ('/profileOthers/:id', usersController.profileOthers);
 
 router.get ('/register', usersController.register);
 

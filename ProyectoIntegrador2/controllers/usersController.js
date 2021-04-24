@@ -1,11 +1,17 @@
 let productos = require ("../data/productos");
 let users = require ("../data/users");
 
+
 let usersController = {
 
-    profile: (req, res) => {
-        let id = req.params.id
-        return res.render ('profile', {productos: productos.lista, users: users.lista, idSearch: id})
+    profile: (req, res) => 
+    { let id = req.params.id;
+        return res.render ('profile', {productos: productos.lista, idSearch: id})
+    },
+
+    profileOthers: function (req, res) {
+        
+        return res.render ('profileOthers', {users: users.lista})
     },
     
     register: (req, res) => {

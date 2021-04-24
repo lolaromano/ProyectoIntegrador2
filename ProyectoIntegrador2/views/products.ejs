@@ -27,11 +27,14 @@
 						
 						<% for (i = 0; i < productos[idSearch].comentarios.length; i++ ) { %>
 							<article>
+								<h2> <%= users[i].id %> </h2>
+								<a href="/users/profileOthers/ <%= users [i].id %> ">
 								<img src="<%= productos[idSearch].comentarios[i].imagenUsuario %>" alt="">
+								</a>
 								<div class="data">
 									<p class="user">
-										<strong> <a href="/users/profile"> <%= productos[idSearch].comentarios[i].usuario %> </a> </strong>
-										<%= productos[idSearch].comentarios[i].comentario %>
+										<strong> <a href="/users/profileOthers/ <%= users[i].id %>" > <%= productos[idSearch].comentarios[i].usuario %></a> </strong>
+										<%= productos[idSearch].comentarios[i].comentario %> 
 									</p>
 								</div>
 							</article>
