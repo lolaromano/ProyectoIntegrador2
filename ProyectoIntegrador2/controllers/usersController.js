@@ -10,8 +10,8 @@ let usersController = {
     },
 
     profileOthers: function (req, res) {
-        
-        return res.render ('profileOthers', {users: users.lista})
+        let id = req.params.id;
+        return res.render ('profileOthers', {users: users.lista, productos: productos.lista, idSearch: id })
     },
     
     register: (req, res) => {
