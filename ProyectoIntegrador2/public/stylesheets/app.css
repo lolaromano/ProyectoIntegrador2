@@ -197,6 +197,12 @@ a.main-header_credit-link {
 
 .unite {
   padding-left: 45px;
+  padding-right: 10px;
+}
+
+.unite2 {
+  padding-left: 45px;
+  padding-right: 40px;
 }
 
 
@@ -567,6 +573,10 @@ div#col-md-4 {
 #form-control1 {
   width: 402px;
   height: 40px;
+}
+
+#enviar2 {
+  padding: 0px;
 }
 
 .error{
