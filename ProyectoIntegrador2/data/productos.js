@@ -28,6 +28,19 @@ let productos = {
                     comentario: 'De aspecto muy lindas, el talle me fue bien según la tabla de talles, pero a pesar de tener camara de aire son bastante duras, esperaba que sean mas cómodas. La caja vino toda aplastada , y me pareció re desagradable que adentro de la caja le pusieron basura, tenia 1 cajita de chicles vacia y los rellenos y etiqueta de una zapatilla puma para niños.',
                     imagenUsuario: "/images/users/imagenUsuario1.png",
                 },
+                {
+                    idUsuario: 2,
+                    usuario: 'T. Alvarez',
+                    comentario: 'Hola. Las zapatillas me quedaron grandes las compare con otras nike q tengo x eso pedí ese número pero son te grandes nada que ver. Y otra cosa que me pasa es que cuando llueve y salgo con esas zapatillas me resbaló no se xq se resbalan como si fuera sintético. Pero bueno ya está.',
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
+                },
+
+                {
+                    idUsuario: 3,
+                    usuario: 'M. Rangogni',
+                    comentario: 'Muy lindas las zapatillas, lastima el correo andreani de san justo (calle mendoza) q miente que no encontraron el domicilio, miles de paquetes vuelven, porque les da lo mismo. Tuve que salir a buscarla,gastar en remis, arriesgarme con la situación en la que estamos. El producto 10 puntos.',
+                    imagenUsuario: "/images/users/imagenUsuario3.png",
+                },
             ]
         },
         {
@@ -45,19 +58,30 @@ let productos = {
 
             imagen: "/images/jordan/jordan-classic.png",
             comentarios: [
-                {
-                    idUsuario: 2,
-                    usuario: 'T. Alvarez',
-                    comentario: 'Hola. Las zapatillas me quedaron grandes las compare con otras nike q tengo x eso pedí ese número pero son te grandes nada que ver. Y otra cosa que me pasa es que cuando llueve y salgo con esas zapatillas me resbaló no se xq se resbalan como si fuera sintético. Pero bueno ya está.',
-                    imagenUsuario: "/images/users/imagenUsuario2.png",
-                },
-
-                {
-                    idUsuario: 3,
-                    usuario: 'M. Rangogni',
-                    comentario: 'Muy lindas las zapatillas, lastima el correo andreani de san justo (calle mendoza) q miente que no encontraron el domicilio, miles de paquetes vuelven, porque les da lo mismo. Tuve que salir a buscarla,gastar en remis, arriesgarme con la situación en la que estamos. El producto 10 puntos.',
-                    imagenUsuario: "/images/users/imagenUsuario3.png",
-                },
+            {
+                idUsuario: 4,
+                usuario: 'J. Cukier Holmberg',
+                comentario: 'En la publicación las zapatillas aparecen con la capellána color beige y la goma de la planta amarilla y me gustó esa combinación pero resulta que cuando recibí y vi el calzado vinieron con zuela. Color beige también no me gustó para nada.',
+                imagenUsuario: "/images/users/imagenUsuario4.png",
+            },
+            {
+                idUsuario: 5,
+                usuario: 'M. Campitelli',
+                comentario: 'Hola, buenas noches. Tradeas? Si te interesa tengo unas Yeezy 380 Onyx, 10us, que sería aprox el mismo calce en cm. También soy de Ros, saludos',
+                imagenUsuario: "/images/users/imagenUsuario0.png",
+            },
+            {
+                idUsuario: 6,
+                usuario: 'D. Cardona',
+                comentario: 'Hola como va consulta, como viene el productos?. Con la caja original, y los sellos en la misma caja, que dicta la serie del producto y eso?. Desde ya gracias.',
+                imagenUsuario: "/images/users/imagenUsuario1.png",
+            },
+            {
+                idUsuario: 7,
+                usuario: 'T. Del Pino',
+                comentario: 'Hola cuantos cm son? donde nos podemos encontrar?',
+                imagenUsuario: "/images/users/imagenUsuario2.png",
+            },
             ]
         },
         {
@@ -76,16 +100,28 @@ let productos = {
             imagen: "/images/jordan/jordan-green.png",
             comentarios: [
                 {
-                    idUsuario: 4,
-                    usuario: 'J. Cukier Holmberg',
-                    comentario: 'En la publicación las zapatillas aparecen con la capellána color beige y la goma de la planta amarilla y me gustó esa combinación pero resulta que cuando recibí y vi el calzado vinieron con zuela. Color beige también no me gustó para nada.',
+                    idUsuario: 8,
+                    usuario: 'G. Corti',
+                    comentario: 'Hola permutas por un Ferrari? Si me quedo corto le puedo sumar un una RAM',
+                    imagenUsuario: "/images/users/imagenUsuario3.png",
+                },
+                {
+                    idUsuario: 9,
+                    usuario: 'C. Ortiz Quirno',
+                    comentario: 'Hola son de oro los cordones?',
                     imagenUsuario: "/images/users/imagenUsuario4.png",
                 },
                 {
-                    idUsuario: 5,
-                    usuario: 'M. Campitelli',
-                    comentario: 'Hola, buenas noches. Tradeas? Si te interesa tengo unas Yeezy 380 Onyx, 10us, que sería aprox el mismo calce en cm. También soy de Ros, saludos',
-                    imagenUsuario: "/images/users/imagenUsuario0.png",
+                    idUsuario: 10,
+                    usuario: 'B. Gimenez',
+                    comentario: 'Hola podes subir una foto de las suelas?',
+                    imagenUsuario: "/images/users/imagenUsuario1.png",
+                },
+                {
+                    idUsuario: 11,
+                    usuario: 'J. Lipson',
+                    comentario: 'Estas zapatillas son icónicas. Mi hijo es deportista y está encantado con su regalo de cumpleaños 46.',
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
                 },
             ]
         },
@@ -105,15 +141,27 @@ let productos = {
             imagen: "/images/jordan/jordan-high.png",
             comentarios: [
                 {
-                    idUsuario: 6,
-                    usuario: 'D. Cardona',
-                    comentario: 'Hola como va consulta, como viene el productos?. Con la caja original, y los sellos en la misma caja, que dicta la serie del producto y eso?. Desde ya gracias.',
+                    idUsuario: 12,
+                    usuario: 'L. Romano',
+                    comentario: 'Muy buen producto, unico que la caja estaba en mal estado.',
+                    imagenUsuario: "/images/users/imagenUsuario3.png",
+                },
+                {
+                    idUsuario: 13,
+                    usuario: 'L. Nazar Anchorena',
+                    comentario: 'Muy pikadas pa. No se que decir porque no me alcanzan los caracteres si no pero muy pikadas.',
+                    imagenUsuario: "/images/users/imagenUsuario4.png",
+                },
+                {
+                    idUsuario: 14,
+                    usuario: 'R. Castelo',
+                    comentario: 'Hola! Vi que en los comentarios tenías unas de 25 cm. Las seguís teniendo? Gracias!',
                     imagenUsuario: "/images/users/imagenUsuario1.png",
                 },
                 {
-                    idUsuario: 7,
-                    usuario: 'T. Del Pino',
-                    comentario: 'Hola cuantos cm son? donde nos podemos encontrar?',
+                    idUsuario: 15,
+                    usuario: 'J.P. Ascani',
+                    comentario: 'Es verdad que según el color varía el precio, lo que no me parece correcto es que las cobres a ese precio sin mínimamente entregarlas con su caja original . Si vas a pedir eso dámelas igual que como me las darían en una tienda en Estados Unidos.',
                     imagenUsuario: "/images/users/imagenUsuario2.png",
                 },
             ]
@@ -134,16 +182,28 @@ let productos = {
             imagen: "/images/jordan/jordan-jbalvin.png",
             comentarios: [
                 {
-                    idUsuario: 8,
-                    usuario: 'G. Corti',
-                    comentario: 'Hola permutas por un Ferrari? Si me quedo corto le puedo sumar un una RAM',
+                    idUsuario: 16,
+                    usuario: 'S. De Pellegrin',
+                    comentario: 'Hola ayer te hable por las zapatillas las voy a comprar tenes un numero como para comunicarme asi arreglamos lo del talle',
                     imagenUsuario: "/images/users/imagenUsuario3.png",
                 },
                 {
-                    idUsuario: 9,
-                    usuario: 'C. Ortiz Quirno',
-                    comentario: 'Hola son de oro los cordones?',
+                    idUsuario: 17,
+                    usuario: 'J. Sterinzon',
+                    comentario: 'Hola tenes las 8,5? Tengo 14000 de contado',
                     imagenUsuario: "/images/users/imagenUsuario4.png",
+                },
+                {
+                    idUsuario: 18,
+                    usuario: 'P. Correa',
+                    comentario: 'La iba a comprar y me la subiste mas rapido que el dolar',
+                    imagenUsuario: "/images/users/imagenUsuario1.png",
+                },
+                {
+                    idUsuario: 19,
+                    usuario: 'T. Mihailovich',
+                    comentario: 'Si el pie mide 22cm a que nro corresponde?',
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
                 },
             ]
         },
@@ -163,15 +223,27 @@ let productos = {
             imagen: "/images/jordan/jordan-pink.png",
             comentarios: [
                 {
-                    idUsuario: 10,
-                    usuario: 'B. Gimenez',
-                    comentario: 'Hola podes subir una foto de las suelas?',
+                    idUsuario: 20,
+                    usuario: 'J. Perez',
+                    comentario: 'Hola que talle seria?',
                     imagenUsuario: "/images/users/imagenUsuario1.png",
                 },
                 {
-                    idUsuario: 11,
-                    usuario: 'J. Lipson',
-                    comentario: 'Estas zapatillas son icónicas. Mi hijo es deportista y está encantado con su regalo de cumpleaños 46.',
+                    idUsuario: 21,
+                    usuario: 'P. Kaan',
+                    comentario: 'Y mira, yo soy de nogues, queda bastante lejos, a lo sumo podemos buscar un punto de encuentro pero es bastante complicado.',
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
+                },
+                {
+                    idUsuario: 22,
+                    usuario: 'T. Sanchez',
+                    comentario: 'fua estas re loco, no pasan los 300 dolares en stockX',
+                    imagenUsuario: "/images/users/imagenUsuario1.png",
+                },
+                {
+                    idUsuario: 23,
+                    usuario: 'L. Gonzalez',
+                    comentario: 'Permutas por un Lamborghini huracán?',
                     imagenUsuario: "/images/users/imagenUsuario2.png",
                 },
             ]
@@ -192,16 +264,28 @@ let productos = {
             imagen: "/images/jordan/jordan-retro.png",
             comentarios: [
                 {
-                    idUsuario: 12,
-                    usuario: 'L. Romano',
-                    comentario: 'Muy buen producto, unico que la caja estaba en mal estado.',
+                    idUsuario: 24,
+                    usuario: 'C. Ferroni',
+                    comentario: 'Yo tengo un par de esas del mismo modelo y me gustaría venderlas , si te interesa avísame',
                     imagenUsuario: "/images/users/imagenUsuario3.png",
                 },
                 {
-                    idUsuario: 13,
-                    usuario: 'L. Nazar Anchorena',
-                    comentario: 'Muy pikadas pa. No se que decir porque no me alcanzan los caracteres si no pero muy pikadas.',
+                    idUsuario: 25,
+                    usuario: 'J. Brancateli',
+                    comentario: 'Las que vos traes que procedencia son',
                     imagenUsuario: "/images/users/imagenUsuario4.png",
+                },
+                {
+                    idUsuario: 26,
+                    usuario: 'M. Cerro',
+                    comentario: 'Los cordones son de cuero de lampalagua africana?',
+                    imagenUsuario: "/images/users/imagenUsuario1.png",
+                },
+                {
+                    idUsuario: 27,
+                    usuario: 'I. Rojas',
+                    comentario: 'no tradeas por otro par que no sea Jordan?',
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
                 },
             ]
         },
@@ -222,15 +306,27 @@ let productos = {
             imagen: "/images/jordan/jordan-snake.png",
             comentarios: [
                 {
-                    idUsuario: 14,
-                    usuario: 'R. Castelo',
-                    comentario: 'Hola! Vi que en los comentarios tenías unas de 25 cm. Las seguís teniendo? Gracias!',
+                    idUsuario: 28,
+                    usuario: 'L. Patiño',
+                    comentario: 'hola tenes dos pares?',
                     imagenUsuario: "/images/users/imagenUsuario1.png",
                 },
                 {
-                    idUsuario: 15,
-                    usuario: 'J.P. Ascani',
-                    comentario: 'Es verdad que según el color varía el precio, lo que no me parece correcto es que las cobres a ese precio sin mínimamente entregarlas con su caja original . Si vas a pedir eso dámelas igual que como me las darían en una tienda en Estados Unidos.',
+                    idUsuario: 29,
+                    usuario: 'M. Carr',
+                    comentario: 'Hola te intereza cambiar por 2 jordan 1 low ds ?',
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
+                },
+                {
+                    idUsuario: 30,
+                    usuario: 'A. Ruiz',
+                    comentario: 'Cuánto mide la plantilla de la 35 son originales o réplicaDenunciar',
+                    imagenUsuario: "/images/users/imagenUsuario1.png",
+                },
+                {
+                    idUsuario: 31,
+                    usuario: 'I. Stewart',
+                    comentario: 'buen dia! son de hombre o de mujer?',
                     imagenUsuario: "/images/users/imagenUsuario2.png",
                 },
             ]
@@ -251,16 +347,28 @@ let productos = {
             imagen: "/images/jordan/jordan-violeta.png",
             comentarios: [
                 {
-                    idUsuario: 16,
-                    usuario: 'S. De Pellegrin',
-                    comentario: 'Hola ayer te hable por las zapatillas las voy a comprar tenes un numero como para comunicarme asi arreglamos lo del talle',
+                    idUsuario: 32,
+                    usuario: 'F. Taboada',
+                    comentario: 'Hola buenas noches quiero las zapatillas Me las puedo probar??',
                     imagenUsuario: "/images/users/imagenUsuario3.png",
                 },
                 {
-                    idUsuario: 17,
-                    usuario: 'J. Sterinzon',
-                    comentario: 'Hola tenes las 8,5? Tengo 14000 de contado',
+                    idUsuario: 33,
+                    usuario: 'S. Ghilotti',
+                    comentario: 'Hola. Tendrás más modelos ?',
                     imagenUsuario: "/images/users/imagenUsuario4.png",
+                },
+                {
+                    idUsuario: 34,
+                    usuario: 'J. Strauss',
+                    comentario: 'Hola tenés tabla de talles',
+                    imagenUsuario: "/images/users/imagenUsuario1.png",
+                },
+                {
+                    idUsuario: 35,
+                    usuario: 'P. Kovacic',
+                    comentario: 'Ok, el precio es el publicado? Están ubicados en CABA?',
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
                 },
             ]
         },
@@ -280,15 +388,27 @@ let productos = {
             imagen: "/images/jordan/jordan-yellow.png",
             comentarios: [
                 {
-                    idUsuario: 18,
-                    usuario: 'P. Correa',
-                    comentario: 'La iba a comprar y me la subiste mas rapido que el dolar',
+                    idUsuario: 36,
+                    usuario: 'M. Gomes',
+                    comentario: 'los q critican no entienden nd de zapas, me imagino si les pones una jordan 1 de off white o unas dior xd',
                     imagenUsuario: "/images/users/imagenUsuario1.png",
                 },
                 {
-                    idUsuario: 19,
-                    usuario: 'T. Mihailovich',
-                    comentario: 'Si el pie mide 22cm a que nro corresponde?',
+                    idUsuario: 37,
+                    usuario: 'M. Lopez',
+                    comentario: 'Hola. Cual es el talle más chico q viene?',
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
+                },
+                {
+                    idUsuario: 38,
+                    usuario: 'R. Leiva',
+                    comentario: 'Hola, ¿se puede comprar en cuotas fijas?',
+                    imagenUsuario: "/images/users/imagenUsuario1.png",
+                },
+                {
+                    idUsuario: 39,
+                    usuario: 'F. Ortiz',
+                    comentario: 'Reformuló la pregunta para que me envíes un talle 11 Us qué talla debo ofertar en la publicación????',
                     imagenUsuario: "/images/users/imagenUsuario2.png",
                 },
             ]
