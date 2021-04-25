@@ -73,13 +73,6 @@ hr {
   border-bottom: solid 1px var(--light-gray);
 }
 
-.profileinfo {
-  color: white;
-}
-
-#profileinfo {
-  color: white;
-}
 
 
 /*====== Main Header ======*/
@@ -330,26 +323,26 @@ a.main-header_credit-link {
 .product-box:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   font-size: 14px;
-  text-decoration: none;
+  text-decoration: none ;
 }
 .product-box:hover p {
   height: 36px;
   margin-top: 15px;
-  text-decoration: none;
+  text-decoration: none ;
 }
 
 .product-box:hover i {
   transform: rotate(360deg);
   box-shadow: 0 0 5px var(--green);
-  text-decoration: none;
+  text-decoration: none ;
 }
 
 .product-box_data:hover {
-  text-decoration: none;
+  text-decoration: none ;
 }
 
 a:hover{
-  text-decoration: none;
+  text-decoration: none ;
 }
 /*====== Footer ======*/
 .main-footer {
@@ -360,6 +353,8 @@ a:hover{
 
 .footer-data {
   text-align: center;
+  font-family: var(--secondary-font);
+  font-weight: 1000;
   color: white;
 }
 
@@ -371,14 +366,16 @@ a:hover{
 .footer-data h2 {
   color: var(--gray);
   font-size: 25px;
-  font-weight: 400;
+  font-family: var(--secondary-font);
+  font-weight: 600;
   color: white;
 }
 
 .footer-data p {
   color: white;
   font-size: 15px;
-  font-weight: 300;
+  font-family: var(--secondary-font);
+  font-weight: 500;
 }
 
 .sub-footer {
@@ -399,6 +396,8 @@ h2.nombres {
   color: white;
   padding-top: 50px;
   padding-left: 30px;
+  font-family: var(--secondary-font);
+  font-weight: 700;
 }
 
 h2.nombres1 {
@@ -408,6 +407,8 @@ h2.nombres1 {
   color: white;
   padding-top: 0px;
   padding-left: 30px;
+  font-family: var(--secondary-font);
+  font-weight: 700;
 }
 
 
@@ -592,6 +593,14 @@ div.col-12 {
   padding-left: 0px;
 }
 
+#exampleInputPassword1 {
+  width: 400px;
+}
+
+#exampleInputEmail1 {
+  width: 400px;
+}
+
 .error{
   color: rgb(209, 0, 0);
   font-size: 1.4em;
@@ -620,6 +629,15 @@ div.col-12 {
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
+}
+
+
+.profileinfo {
+  color: white;
+}
+
+#profileinfo {
+  color: white;
 }
 
 
@@ -656,6 +674,7 @@ div.col-12 {
   .left-navbar a:hover,
   .right-navbar a:hover {
     color: white;
+    text-decoration: none;
   }
 
   .left-navbar li {
