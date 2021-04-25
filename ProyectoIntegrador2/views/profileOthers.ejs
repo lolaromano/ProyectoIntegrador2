@@ -2,18 +2,22 @@
 
 <%- include("partials/header.ejs") %> 
 
-<!-- Datos del usuario -->
+	<!-- Datos del usuario -->
 <section class="info-usuario container products-wrapper">
 	<div class="row">
+
 		<div class="img-container offset-3 col-2">
 			<img src="<%= users[idSearch].imagenUsuario %>" alt="foto de perfil" class="foto-perfil">
 		</div>
+
 		<div class="data-container col-6">
+
 			<div class="d-flex align-items-center ">
 				<h1 class="profileinfo"> <%= users[idSearch].nombre + " " + users[idSearch].apellido %> 
 				</h1 >
 				<a class="btn mt-3 ml-4" id="profileinfo" href="">SEGUIR</a>
 			</div>
+
 			<div>
 				<ul class="profileinfo">
 					<li>4 productos</li>
@@ -21,19 +25,22 @@
 					<li>100 comentarios</li>
 				</ul>
 			</div>
+
 		</div>
+
 	</div>
 </section>
 
 
-<!-- Mis productos -->
+	<!-- Sus productos -->
 <div class="container products-wrapper">
 	<div class="row">
+
 		<div class="col-12">
 			<h2 class="products-title">Sus productos</h2>
 		</div>
-		<!-- Show mis productos -->
-	
+
+	<!-- Show sus productos -->
 		<% for (i = 4; i < 8; i++ ) { %>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
@@ -54,7 +61,5 @@
 					
 	</div>
 </div>
-
-
 
 <%- include("partials/footer.ejs") %> 

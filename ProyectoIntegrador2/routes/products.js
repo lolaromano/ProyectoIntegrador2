@@ -3,13 +3,13 @@ var router = express.Router();
 
 let productosController = require('../controllers/productosController');
 
-/* GET home page. */
+/* GET products */
 
+router.get ('/:id', productosController.products); //devuelve el index
 
-router.get ('/:id', productosController.products); //devuelve todos los productos
+router.get ('/productAdd/:id', productosController.productAdd); //devuelve el form de agregar productos
 
-router.get ('/productAdd/:id', productosController.productAdd); //muestra el form
+router.get ('/allProducts/:id', productosController.allProducts); //devuelve todos los productos
 
-router.get ('/allProducts/:id', productosController.allProducts); 
 
 module.exports = router;

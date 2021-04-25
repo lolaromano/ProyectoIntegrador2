@@ -2,24 +2,20 @@
 
 <%- include("partials/header.ejs") %> 
 
+	<!-- Index-->
 <div class="banner">
 	<img src="images/jordan/bannerNuevo.jpg" alt="Banner de ofertas"> 
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!-- Novedades -->
+</div> <br><br><br><br><br><br><br>
+
+	<!-- Novedades -->
 <div class="container products-wrapper">
 	<div class="row">
+
 		<div class="col-12">
 			<h2 class="products-title">NOVEDADES</h2>
 		</div>
 
-	<!-- 	Show the "ultimos" products -->
+	<!-- Show novedades -->
 		<% for (let i=0; i < 4; i+=1 ) { %>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
@@ -41,13 +37,15 @@
 	</div>
 </div>
 
-<!-- Más comentados -->
+	<!-- Más comentados -->
 <div class="container products-wrapper">
 	<div class="row">
+
 		<div class="col-12">
 			<h2 class="products-title">MÁS COMENTADOS</h2>
 		</div>
-	<!-- 	Show the "ultimos" products -->
+
+	<!-- Show mas comentados -->
 		<% for (let i=4; i < 8; i+=1 ) { %>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
@@ -58,16 +56,14 @@
 					<article class="product-box_data">
 						<h2> <%= productos.lista[i].nombre %> </h2>
 						<p> <%= productos.lista[i].modelo %> </p> 
-					
-	
 					</article>
 				</a>
 			</section> 
 		</div> 
 		<%}%> 
+
 	</div>
 </div> 
-
 
 <%- include("partials/footer.ejs") %> 
 

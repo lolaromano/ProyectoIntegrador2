@@ -2,39 +2,46 @@
 
 <%- include("partials/headerLogueado.ejs") %> 
 
-<!-- Novedades -->
+	<!-- Editar perfil -->
 <div class="container products-wrapper">
 	<div class="row">
+
 		<div class="col-12">
 			<h2 class="products-title">Editar mi perfil</h2>
 		</div>
-		<!-- Show the "ultimos" products -->
-		<form>
-			<br>
+
+	<!-- Formulario editar perfil -->
+		<form> <br>
+
 			<div class="mb-3">
 			  <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
 			  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 			  <div id="emailHelp" class="form-text">No compartiremos tu correo electronico con nadie.</div>
 			</div>
+
 			<div class="mb-3">
 			  <label for="exampleInputPassword1" class="form-label">Contraseña </label>
 			  <input type="password" class="form-control" id="exampleInputPassword1">
-			</div>
-			<br>
+			</div> <br>
+
 			<div class="mb-3">
 				<label for="exampleInputPassword1" class="form-label">Nueva contraseña</label>
 				<input type="password" class="form-control" id="exampleInputPassword1">
 			</div>
+
 			<div class="mb-3 form-check">
 			  <input type="checkbox" class="form-check-input" id="exampleCheck1">
 			  <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones.</label>
 			</div>
+
 			<div class="col-12" id="enviar2">
 				<a href="/users/profile" class="btn btn-primary" type="submit">
 				Enviar
 				</a>
 			</div>
+
 		</form>
+
 	</div>
 </div>
 

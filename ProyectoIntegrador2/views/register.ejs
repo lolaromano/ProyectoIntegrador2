@@ -2,65 +2,60 @@
 
 <%- include("partials/header.ejs") %> 
 
-<!-- Novedades -->
+	<!-- Registrarse -->
 <div class="container products-wrapper">
 	<div class="row">
+
 		<div class="col-12">
 			<h2 class="products-title">Registrate</h2>
-		</div>
-		<br>
-		<br>
-		<!-- Show the "ultimos" products -->
+		</div> <br><br>
+
+	<!-- Formulario -->
 		<form class="row-g-3-needs-validation" novalidate>
+
 			<div class="col-md-4">
 			  <label for="validationCustom01" class="form-label">Nombre de usuario</label>
 			  <input type="text" class="form-control" id="validationCustom01" required>
 			  <div class="valid-feedback">
 				Nombre de usuario valido
-			  </div>
-			</div>
-			<br>
-			<br>
+				</div>
+			</div> <br><br>
+
 			<div class="col-md-4">
 			  <label for="validationCustom02" class="form-label">Contraseña</label>
 			  <input type="text" class="form-control" id="validationCustom02"  required>
 			  <div class="valid-feedback">
 				Contraseña válida
-			  </div>
-			  <br>
-			  <br>
+			  </div> <br><br>
 			</div>
-			<label for="validationCustom03" class="form-label1">Teléfono</label>
-				<div class="input-group mb-3" id="telefono">
+
+			<div class="input-group mb-3" id="telefono">
+				<label for="validationCustom03" class="form-label1">Teléfono</label>
 					<span class="input-group-text" id="inputgroup1">+</span>
 					<span class="input-group-text">54</span>
-				
-					<input type="text" class="form-control" id="validationCustom03"  required>
-				  </div>
-				  <br>
+				<input type="text" class="form-control" id="validationCustom03"  required>
+			</div> <br>
+
 			<div class="col-md-4" id="col-md-4">
-			  <label for="validationCustom04" class="form-label" id="formlabel2">Fecha de nacimiento</label>
-			  <br>
+			  <label for="validationCustom04" class="form-label" id="formlabel2">Fecha de nacimiento</label> <br>
 				<input type="date" id="form-control1" id="validationCustom03" required>
 				<div class="invalid-feedback">
 				  Elige una fecha de nacimiento.
 				</div>
-			</div>
-			<br>
-			<br>
+			</div> <br><br>
+
 			<div class="col-12">
 			  <div class="form-check">
 				<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
 				<label class="form-check-label" for="invalidCheck">
 				Acepta términos y condiciones para registrarte.
-				</label>
-				<br>
-				<br>
+				</label><br><br>
 				<div class="invalid-feedback">
 				Acepta términos y condiciones para registrarte.
 				</div>
 			  </div>
 			</div>
+
 			<div class="col-12">
 				<a href="/products/productAdd/:id" class="btn btn-primary" type="submit">
 				Enviar
@@ -68,6 +63,7 @@
 			</div>
 
 		</form>
+
 	</div>
 </div>
 
