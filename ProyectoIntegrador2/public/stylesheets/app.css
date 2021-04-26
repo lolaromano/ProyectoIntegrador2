@@ -554,7 +554,7 @@ display: grid;
 .form-label1 {
   font-size: 20px;
   margin: 0px ;
-
+  padding-right: 1500px;
   color: white;
   padding-bottom: 8px;
   font-family: 'Bebas Neue', cursive;
@@ -571,7 +571,7 @@ display: grid;
 
 #validationCustom03 {
   margin-left: 0px;
-  margin-right: 875px;
+  margin-right: 1055px;
 }
 
 #inputgroup1 {
@@ -579,7 +579,7 @@ display: grid;
 }
 
 #form-control1 {
-  width: 420px;
+  width: 505px;
   height: 40px;
 }
 
