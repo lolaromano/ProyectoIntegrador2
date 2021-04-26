@@ -3,7 +3,7 @@ let productos = {
         {
             id: 0,
             nombre: "JORDAN BLUE",
-            modelo: "Air Jordan 3 Retro",
+            modelo: "AIR JORDAN 3 RETRO",
             anio: 2019,
             color: "Azul",
             descripcion: "La Blue Jordan presenta una parte superior de cuero completamente azul con inserciones de cuero perforado gris en los cordones y el tobillo. Las insignias tradicionales de Jumpman cubren el talón.",
@@ -46,7 +46,7 @@ let productos = {
         {
             id: 1,
             nombre: "JORDAN CLASSIC",
-            modelo: "Pure Platinium",
+            modelo: "PURE PLATINUM",
             anio: 2019,
             color: "Blanco",
             descripcion: "Su diseño, clásico y sobrio, está hecho completamente en la parte superior de piel blanca y toques de 'plata pura' sobre el Swoosh, la plantilla y la suela. También cuenta con perforaciones de ventilación en la puntera, una lengüeta de malla transpirable y un acolchado alrededor del tobillo para mayor comodidad.",
@@ -87,7 +87,7 @@ let productos = {
         {
             id: 2,
             nombre: "JORDAN GREEN",
-            modelo: "Pro Green",
+            modelo: "PRO GREEN",
             anio: 2020,
             color: "Verde",
             descripcion: 'Esta edición canaliza el estilo de la vieja escuela con una silueta de corte alto y un look retro compuesto por un upper de piel de flor, una lengüeta de malla y una mediasuela de espuma que ofrece una amortiguación ligera y eficaz.',
@@ -128,7 +128,7 @@ let productos = {
         {
             id: 3,
             nombre: "JORDAN HIGH",
-            modelo: "High OG",
+            modelo: "HIGH OG",
             anio: 2019,
             color: "Verde Guerra",
             descripcion: "La puntera y la lengüeta tienen un color negro oscuro, que se acentúa aparte de los tonos blancos del perfil, la entresuela y el parche con la marca.",
@@ -169,7 +169,7 @@ let productos = {
         {
             id: 4,
             nombre: "JORDAN JBALVIN",
-            modelo: "Balvin",
+            modelo: "BALVIN",
             anio: 2019,
             color: "Multicolor",
             descripcion: "Los gráficos personalizables (incluida la cara sonriente característica de Balvin) le dan un giro distintivo a la lengüeta, con imágenes similares que adornan la plantilla y el talón del calzado.",
@@ -210,7 +210,7 @@ let productos = {
         {
             id: 5,
             nombre: "JORDAN PINK",
-            modelo: "Strawberry",
+            modelo: "STRAWBERRY",
             anio: 2020,
             color: "Rosa",
             descripcion: "Está detallado en la lengüeta y el interior con ilustraciones de fresas y limones que hacen alusión a su nombre. Además, proporciona la misma amortiguación ligera de las Pink Jordan gracias a la tecnología Air.",
@@ -251,7 +251,7 @@ let productos = {
         {
             id: 6,
             nombre: "JORDAN RETRO",
-            modelo: "Light Smoke",
+            modelo: "LIGHT SMOKE",
             anio: 2019,
             color: "Gris y Rojo",
             descripcion: "Las Retro Jordan estan compuestas por una parte superior de cuero blanco con superposiciones de gamuza gris y un panel de tobillo de cuero rojo.",
@@ -293,7 +293,7 @@ let productos = {
         {
             id: 7,
             nombre: "JORDAN SNAKE",
-            modelo: "Satin",
+            modelo: "SATIN",
             anio: 2021,
             color: "Rojo, Negro y Blanco",
             descripcion: "Este Jordan consta de una parte superior de cuero blanco y rojo con lengüeta y forro de satin rojo. Los detalles de piel de serpiente sintética negra también aparecen en la parte superior. Una entresuela blanca, suela roja y un gráfico tradicional de Jordan Wings en el tobillo completan el diseño.",
@@ -334,7 +334,7 @@ let productos = {
         {
             id: 8,
             nombre: "JORDAN VIOLETA",
-            modelo: "ACG Terra",
+            modelo: "ACG TERRA",
             anio: 2020,
             color: "Violeta",
             descripcion: "Las famosas líneas del calzado se han mantenido sin cambios desde su inicio en el 85, pero esta versión modificada del clásico tiene una unidad Zoom Air en el talón y una lengüeta acolchada para que puedas navegar cómodamente. Materiales de primera calidad y una combinación de colores de muselina añaden un elemento moderno a esta silueta baja.",
@@ -375,7 +375,7 @@ let productos = {
         {
             id: 9,
             nombre: "JORDAN YELLOW",
-            modelo: "Michigan",
+            modelo: "MICHIGAN",
             anio: 2021,
             color: "Amarillas",
             descripcion: "Inspiradas en uno de los equipos deportivos con más historia en el mundo universitario, estas zapatillas proporcionan el mejor estilo y comodidad a través de los colores insignia de los Wolverines y elementos clásicos de la serie Dunk, como la parte superior de piel ligera, la lengüeta de malla y la mediasuela de espuma.",
