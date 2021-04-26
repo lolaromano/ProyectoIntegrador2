@@ -275,7 +275,7 @@ a.main-header_credit-link {
   display: flex;
   align-items: center;
   color: rgb(73, 82, 82);
-  text-decoration: none;
+  text-decoration: underline var(--light-gray);
 }
 
 .product-box_data span {
@@ -295,7 +295,6 @@ a.main-header_credit-link {
   height: 0;
   transition: 300ms;
   overflow: hidden;
-  text-decoration: none;
 }
 
 .product-box_data i {
@@ -313,7 +312,6 @@ a.main-header_credit-link {
   justify-content: center;
   align-items: center;
   transition: 300ms;
-  text-decoration: none;
 }
 
 .noproducts {
@@ -328,7 +326,7 @@ a.main-header_credit-link {
 .product-box:hover p {
   height: 36px;
   margin-top: 15px;
-  text-decoration: none ;
+  text-decoration: underline var(--light-gray);
 }
 
 .product-box:hover i {
