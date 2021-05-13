@@ -1,5 +1,7 @@
 let productos = require ("../data/productos");
 let users = require ("../data/users");
+let db = require ('../database/models');
+const op = db.Sequelize.Op;
 
 let usersController = {
 
