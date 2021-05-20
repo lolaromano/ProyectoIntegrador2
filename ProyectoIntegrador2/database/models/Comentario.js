@@ -9,7 +9,7 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.INTEGER 
         },
         texto: {
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING,
         },
         creacion: {
             type: dataTypes.DATE,
@@ -29,7 +29,6 @@ module.exports = (sequelize, dataTypes)=>{
         timestamps: false, 
         underscored: true 
     }
-   
    
     const Comentario = sequelize.define (alias, cols, config)
     return Comentario;
