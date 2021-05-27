@@ -10,19 +10,19 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.INTEGER 
         },
         nombre: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
             
         },
         Email: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
            
         },
         Password: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
         
         },
         Telefono: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
            
         },
         Fecha_De_Nacimiento: {

@@ -10,13 +10,13 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.INTEGER
         },
         imagen: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
         },
         Nombre: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
         },
         descripcion: {
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
         },
         Fecha: {
             type: dataTypes.DATE,
