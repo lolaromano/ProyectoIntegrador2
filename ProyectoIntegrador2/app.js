@@ -53,6 +53,7 @@ app.use((req, res, next) => {
   })
   //si cierro el navegador y lo vuelvo a abrir, no me aparece mas mi usuario
 
+  
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
