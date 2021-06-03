@@ -11,7 +11,6 @@ module.exports = (sequelize, dataTypes) => {
         },
         nombre: {
             type: dataTypes.STRING,
-<<<<<<< HEAD
         },
         Email: {
             type: dataTypes.STRING,
@@ -22,21 +21,6 @@ module.exports = (sequelize, dataTypes) => {
         },
         Telefono: {
             type: dataTypes.STRING,
-=======
-            
-        },
-        Email: {
-            type: dataTypes.STRING,
-           
-        },
-        Password: {
-            type: dataTypes.STRING,
-        
-        },
-        Telefono: {
-            type: dataTypes.STRING,
-           
->>>>>>> a3c2d1152930ff6a89bf66ba34531b52a34784a7
         },
         Fecha_De_Nacimiento: {
             type: dataTypes.DATE,

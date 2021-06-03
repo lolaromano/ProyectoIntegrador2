@@ -9,6 +9,9 @@ var session = require('express-session') //requerimos session para configurarlo
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
+var loginRouter = require ('./routes/login');
+var registerRouter = require ('./routes/register');
+
 
 var db = require ('./database/models')
 
@@ -23,13 +26,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use (session({
-  secret: "nuestro mensaje secreto", //herramienta q hacemos secreta la info de mi cliente (metodo d seguridad)
+ secret: "nuestro mensaje secreto", //herramienta q hacemos secreta la info de mi cliente (metodo d seguridad)
   resave: false,
-  saveUnitialized: true //si no asignamos esto, va a aparecer un error porque son desactualizados
+  saveUninitialized: true //si no asignamos esto, va a aparecer un error porque son desactualizados
 }));
 
-//cofiguramos locals para pasar informacion a todas las vistas
+//configuramos locals para pasar informacion a todas las vistas
 app.use (function(req, res, next){
   if(req.session.user != undefined){ //valida que el usuario exista en sesion 
   res.locals = req.session.user //que guarde lo que teniamos en sesion 
@@ -57,6 +61,9 @@ app.use((req, res, next) => {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/login', loginRouter);
+app.use('/register', registerRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
