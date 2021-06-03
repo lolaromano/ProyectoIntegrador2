@@ -1,8 +1,35 @@
-<%- include("partials/head.ejs") %> 
+<!-- 
+<h1>Registrar</h1>
+<% if(locals.errors){ %>
+    <p class="alert" > <%= errors.register %><p>
+<% } %>
+
+<form action="/register" method="POST">
+<p>
+    <input type="text" name="name" value="" placeholder="Nombre" />
+</p>
+<p>
+    <input type="email" name="email" value="" placeholder="Email" />
+</p>
+<p>
+    <input type="password" name="password" value="" placeholder="Contraseña" />
+</p>
+
+<p>
+    <input type="password" name="repassword" value="" placeholder="Reescribir contraseña" />
+</p>
+
+<button type="submit">Registrarse</button>
+</form>
+
+ -->
+
+
+ <%- include("partials/head.ejs") %> 
 
 <%- include("partials/header.ejs") %> 
 
-	<!-- Registrarse -->
+	<!--Registrarse -->
 <div class="container products-wrapper">
 	<div class="row">
 
@@ -10,39 +37,60 @@
 			<h2 class="products-title">Registrate</h2>
 		</div> <br><br>
 
-	<!-- Formulario -->
-		<form class="row-g-3-needs-validation" novalidate>
+	<% if(locals.errors){ %>
+		<p class="alert" > <%= errors.register %><p>
+	<% } %>
+
+	 <!--Formulario -->
+		<!-- <form class="row-g-3-needs-validation" novalidate> -->
+		<form class="row-g-3-needs-validation" novalidate action="/register" method="POST">
 
 			<div class="col-md-4">
 			  <label for="validationCustom01" class="form-label">Nombre de usuario</label>
-			  <input type="text" class="form-control" id="validationCustom01" required>
+			  <input type="text" class="form-control" id="validationCustom01" name="name" value="" placeholder="Nombre" required>
 			  <div class="valid-feedback">
-				Nombre de usuario valido
+				Nombre de usuario válido
 				</div>
 			</div> <br><br>
 
+			<div class="col-md-4" id="col-md-4">
+				<label for="validationCustom04" class="form-label" id="formlabel2">Fecha de nacimiento</label> <br>
+				  <input type="date" id="form-control1" id="validationCustom03" required>
+				  <div class="invalid-feedback">
+					Elige una fecha de nacimiento.
+				  </div>
+			  </div> <br><br>
+
+			  <div class="input-group mb-3" id="telefono">
+				<label for="validationCustom03" class="form-label1">Teléfono</label><br>
+					<span class="input-group-text" id="inputgroup1">+</span>
+					<span class="input-group-text">54</span>
+				<input type="tel" class="form-control" id="validationCustom03"  required>
+			</div> <br>
+
+			<div class="col-md-4">
+				<label for="validationCustom01" class="form-label">Email</label>
+				<input type="email" class="form-control" id="validationCustom01" name="email" value="" placeholder="Email" required>
+				<div class="valid-feedback">
+				  Email válido
+				  </div>
+			  </div> <br><br>
+
 			<div class="col-md-4">
 			  <label for="validationCustom02" class="form-label">Contraseña</label>
-			  <input type="text" class="form-control" id="validationCustom02"  required>
+			  <input type="password" class="form-control" id="validationCustom02" name="password" value="" placeholder="Contraseña" required>
 			  <div class="valid-feedback">
 				Contraseña válida
 			  </div> <br><br>
 			</div>
 
-			<div class="input-group mb-3" id="telefono">
-				<label for="validationCustom03" class="form-label1">Teléfono</label><br>
-					<span class="input-group-text" id="inputgroup1">+</span>
-					<span class="input-group-text">54</span>
-				<input type="text" class="form-control" id="validationCustom03"  required>
-			</div> <br>
-
-			<div class="col-md-4" id="col-md-4">
-			  <label for="validationCustom04" class="form-label" id="formlabel2">Fecha de nacimiento</label> <br>
-				<input type="date" id="form-control1" id="validationCustom03" required>
-				<div class="invalid-feedback">
-				  Elige una fecha de nacimiento.
-				</div>
-			</div> <br><br>
+			<div class="col-md-4">
+				<label for="validationCustom02" class="form-label">Confirmar contraseña</label>
+				<input type="password" class="form-control" id="validationCustom02" name="repassword" value="" placeholder="Confirmar contraseña" required>
+				<div class="valid-feedback">
+				  Contraseña válida
+				</div> <br><br>
+			  </div>
 
 			<div class="col-12">
 			  <div class="form-check">
@@ -68,3 +116,4 @@
 </div>
 
 <%- include("partials/footer.ejs") %> 
+ 

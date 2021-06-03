@@ -27,7 +27,7 @@ let registerController = {
             res.locals.errors = errors
 
             return res.render('register')
-        }else if (req.body.password == ""){ // password no esta vacio
+        } else if (req.body.password == ""){ // password no esta vacio
             errors.register = "Password no puede estar vacio"
             res.locals.errors = errors
 
@@ -53,12 +53,11 @@ let registerController = {
                         res.locals.errors = errors
 
                         return res.render('register')
-                    }else{ //guardamos el usuario en la base de datos
+                    } else{ //guardamos el usuario en la base de datos
                         let user = {
-                            first_name: req.body.first_name,
-                            last_name: req.body.last_name,
-                            email: req.body.email,
-                            password: bcrypt.hashSync(req.body.password,10)
+                            nombre: req.body.nombre,
+                            Email: req.body.Email,
+                            Password: bcrypt.hashSync(req.body.Password,10)
                         }
                         users.create(user)
                             .then( user =>{
@@ -75,4 +74,4 @@ let registerController = {
 
 }
 
-module.exports = registerController;
+module.exports = registerController; 
