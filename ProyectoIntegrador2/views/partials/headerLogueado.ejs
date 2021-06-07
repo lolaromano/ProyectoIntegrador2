@@ -32,10 +32,12 @@
 				</ul>
 	
 				<ul class="right-navbar">
-					<li><a href="/users/profile">
-								HOLA LOLA ROMANO! 
-						</a>
-					</li>
+					<% if(locals.user){ %>
+						<h2>Hola: <%= user.nombre %></h2>
+						<form action="/logout" method="POST">
+						  <button type="submit">Logout</button>
+						</form>
+					  <% } %>
 					<li>
 					<a href="/">
 							CERRAR SESION

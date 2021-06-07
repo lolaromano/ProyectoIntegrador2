@@ -2,7 +2,7 @@ const bcrypt = require ('bcryptjs');
 const e = require('express');
 const db = require ('../database/models');
 //const bcrypt = require (bcrypt.js)
-const user = db.User
+const user = db.User;
 
 const op = db.Sequelize.Op; 
 
@@ -15,17 +15,17 @@ let registerController = {
             return res.render ('register')
         }
     },
-    register: (req,res)=>{
+  /*   register: (req,res)=>{
         res.render('register')
-    },
+    }, */
     //maneja el post 
     store: (req,res)=> {
+        console.log (req.body)
         let errors = {}; //objeto literal que contiene los errores
         //chequear los campos obligatorios
         if (req.body.email == "") {
             errors.register = "Email no puede estar vacio"
             res.locals.errors = errors
-
             return res.render('register')
         } else if (req.body.password == ""){ // password no esta vacio
             errors.register = "Password no puede estar vacio"
@@ -40,8 +40,9 @@ let registerController = {
             return res.render('register')
 
         } else {
-            users.findOne({
-                where: [{email: req.body.email}] //condicion
+            user.findOne({
+                where: [{email: req.body.email}]
+             }) //condicion
                 .then(user => {
                     if (user !=null) {
                         errors.register = "Email ya existe"
@@ -55,9 +56,9 @@ let registerController = {
                         return res.render('register')
                     } else{ //guardamos el usuario en la base de datos
                         let user = {
-                            nombre: req.body.nombre,
-                            Email: req.body.Email,
-                            Password: bcrypt.hashSync(req.body.Password,10)
+                            nombre: req.body.name,
+                            email: req.body.email,
+                            password: bcrypt.hashSync(req.body.password,10)
                         }
                         users.create(user)
                             .then( user =>{
@@ -67,7 +68,7 @@ let registerController = {
                     }
                 })
                 .catch (err => console.log (err))
-            })
+         
             }
            
     },

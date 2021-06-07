@@ -36,7 +36,7 @@ app.use (session({
 //configuramos locals para pasar informacion a todas las vistas
 app.use (function(req, res, next){
   if(req.session.user != undefined){ //valida que el usuario exista en sesion 
-  res.locals = req.session.user //que guarde lo que teniamos en sesion 
+  res.locals.user = req.session.user //que guarde lo que teniamos en sesion 
   console.log(res.locals)
   }
   return next(); // sirve para que se ejecute el codigo completo
@@ -45,11 +45,11 @@ app.use (function(req, res, next){
 // lo creamos para el autologueo. cuando el usuario cierra sesion la prox ves que entre no tenga que volver a usar sus credenciales
 // no jhace falta que se loguee, es automatico
 app.use((req, res, next) => {
-  if (req.cookies.userId && req.session.user == undefined){
+  if (req.cookies.userId != undefined && req.session.user == undefined){
     db.User.findByPk (req.cookies.userId) // que exista la cookie (que el usuario aprete 'recordame')
       .then(user=>{
         req.session.user = user //almacenamos en session el usuario encontrado
-        res.locals = req.session.user //guardamos en locals el contenido e info del usuario para usarla en las vistas
+        res.locals.user = req.session.user //guardamos en locals el contenido e info del usuario para usarla en las vistas
       })
       .catch(error => console.log(error))
   }

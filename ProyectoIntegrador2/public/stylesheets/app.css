@@ -150,7 +150,7 @@ div.col {
 }
 
 a.main-header_credit-link {
-  text-decoration: none;
+  text-decoration: none !important ;
   font-weight: bold;
   font-family: 'Bebas Neue', cursive;
   font-size: 35px;

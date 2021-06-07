@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = 'Usuario'; // lo vamos a llamar x el controlador
+    let alias = 'User'; // lo vamos a llamar x el controlador
 
     let cols = { //pones la data de cada columna
         id: {
@@ -12,23 +12,23 @@ module.exports = (sequelize, dataTypes) => {
         nombre: {
             type: dataTypes.STRING,
         },
-        Email: {
+        email: {
             type: dataTypes.STRING,
         },
-        Password: {
+        password: {
             type: dataTypes.STRING,
 
         },
-        Telefono: {
+        telefono: {
             type: dataTypes.STRING,
         },
-        Fecha_De_Nacimiento: {
+        fechadenacimiento: {
             type: dataTypes.DATE,
         },
     }; //van las columnas
 
     let config = {
-        tableName: "Usuarios", //nombre de la tabla
+        //tableName: "Usuarios", //nombre de la tabla
         timestamps: false,
         underscored: true // si los nombres de los campos se estan usando con guiones bajos
     }
