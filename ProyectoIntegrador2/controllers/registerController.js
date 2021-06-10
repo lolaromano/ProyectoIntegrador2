@@ -2,7 +2,7 @@ const bcrypt = require ('bcryptjs');
 const e = require('express');
 const db = require ('../database/models');
 //const bcrypt = require (bcrypt.js)
-const user = db.User;
+const users = db.Usuario;
 
 const op = db.Sequelize.Op; 
 
@@ -40,25 +40,30 @@ let registerController = {
             return res.render('register')
 
         } else {
-            user.findOne({
+            users.findOne({
                 where: [{email: req.body.email}]
              }) //condicion
                 .then(user => {
+                    console.log (user)
                     if (user !=null) {
                         errors.register = "Email ya existe"
                         res.locals.errors = errors
-
+console.log ('paso por el if')
                         return res.render('register')
-                    } else if (req.body.password != req.body.repassword) {
+                    
+                    } else if (req.body.password != req.body.rePassword) {
                         errors.register =            "Los password no coinciden"
                         res.locals.errors = errors
-
+console.log ('paso por el else if')
                         return res.render('register')
                     } else{ //guardamos el usuario en la base de datos
+                        console.log ('pasa por el else')
                         let user = {
                             nombre: req.body.name,
-                            email: req.body.email,
-                            password: bcrypt.hashSync(req.body.password,10)
+                            Email: req.body.email,
+                            Password: bcrypt.hashSync(req.body.password,10),
+                            Telefono: req.body.telefono,
+                            FechaDeNacimiento: req.body.fechadenacimiento
                         }
                         users.create(user)
                             .then( user =>{

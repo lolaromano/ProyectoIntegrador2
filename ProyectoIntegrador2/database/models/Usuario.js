@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
         Telefono: {
             type: dataTypes.STRING,
         },
-        Fecha_De_Nacimiento: {
+        FechaDeNacimiento: {
             type: dataTypes.DATE,
         },
     }; //van las columnas
@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         tableName: "Usuarios", //nombre de la tabla
         timestamps: false,
-        underscored: true // si los nombres de los campos se estan usando con guiones bajos
+        underscored: false // si los nombres de los campos se estan usando con guiones bajos
     }
 
     const Usuario = sequelize.define(alias, cols, config)

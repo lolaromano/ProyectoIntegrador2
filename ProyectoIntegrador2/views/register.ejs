@@ -15,27 +15,10 @@
 	<% } %> -->
 
 	 <!--Formulario -->
-		<!-- <form class="row-g-3-needs-validation" novalidate> -->
-	<!-- <form class="row-g-3-needs-validation" novalidate action="/register" method="POST" enctype="multipart/form-data"> -->
-		<form action="/register" method="POST" enctype="multipart/form-data">
-		<p>
-				<input type="text" name="name" value="" placeholder="nombre">
-			  </p>
-			  <p>
-				<input type="text" name="email" value="" placeholder="email">
-			  </p>
-			  <p>
-				<input type="password" name="password" value="" placeholder="contraseña">
-			  </p>
-			  <p>
-				<input type="password" name="rePassword" value="" placeholder="contraseña">
-			  </p>
-			  <p>
-				<input type="file" name="avatar">
-			  </p>
-			  <button type="submit"> Registrate </button>
 
-			<!-- <div class="col-md-4">
+<form class="row-g-3-needs-validation" novalidate action="/register" method="POST" > 
+
+		<div class="col-md-4">
 			  <label for="validationCustom01" class="form-label">Nombre de usuario</label>
 			  <input type="text" class="form-control" id="validationCustom01" name="name" placeholder="Nombre" required>
 			  <div class="valid-feedback">
@@ -45,7 +28,7 @@
 
 			<div class="col-md-4" id="col-md-4">
 				<label for="validationCustom04" class="form-label" id="formlabel2">Fecha de nacimiento</label> <br>
-				  <input type="date" id="form-control1" id="validationCustom03" required>
+				  <input type="date" id="form-control1" id="validationCustom03"  name= "fechadenacimiento " required>
 				  <div class="invalid-feedback">
 					Elige una fecha de nacimiento.
 				  </div>
@@ -55,7 +38,7 @@
 				<label for="validationCustom03" class="form-label1">Teléfono</label><br>
 					<span class="input-group-text" id="inputgroup1">+</span>
 					<span class="input-group-text">54</span>
-				<input type="tel" class="form-control" id="validationCustom03"  required>
+				<input type="tel" class="form-control" id="validationCustom03" name="telefono"  required>
 			</div> <br>
 
 			<div class="col-md-4">
@@ -102,7 +85,7 @@
 				<button class="btn btn-primary" type="submit">
 				Enviar
 				</button>
-			</div> -->
+			</div> 
 
 		</form>
 
