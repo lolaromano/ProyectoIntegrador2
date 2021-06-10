@@ -1,5 +1,5 @@
 let db = require ('../database/models');
-const users = db.users
+const users = db.Usuario
 //necesito comparar la contra con la de la base de datos (la guardamos con hash)
 const bcrypt = require ('bcryptjs'); 
 const op = db.Sequelize.Op;
@@ -18,7 +18,7 @@ let loginController = {
 
         //buscar el usuario x medio del mail
         users.findOne({
-            where: [{Email: req.body.email}] //coincidir con login.ejs (email)
+            where: [{nombre: req.body.name}] //coincidir con login.ejs (email)
         }) 
         //devuelve promesa
         .then (user => {
