@@ -51,7 +51,7 @@ let registerController = {
 console.log ('paso por el if')
                         return res.render('register')
                     
-                    } else if (req.body.password != req.body.rePassword) {
+                    } else if (req.body.password != req.body.repassword) {
                         errors.register =            "Los password no coinciden"
                         res.locals.errors = errors
 console.log ('paso por el else if')
@@ -65,6 +65,10 @@ console.log ('paso por el else if')
                             Telefono: req.body.telefono,
                             FechaDeNacimiento: req.body.fechadenacimiento
                         }
+                        console.log(req.body.fechadenacimiento);
+                        console.log(user.FechaDeNacimiento);
+
+
                         users.create(user)
                             .then( user =>{
                                 return res.redirect('/login')

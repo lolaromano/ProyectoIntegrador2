@@ -31,6 +31,16 @@ module.exports = (sequelize, dataTypes)=>{
     }
    
     const Comentario = sequelize.define (alias, cols, config)
+
+    Comentario.associate = (models)=> {
+        //relacion de muchos a 1 'has many'
+        Comentario.hasMany(models.Usuario, {
+            as:'Usuarios', //nombre que querramos
+            foreignKey: 'usuario_id'
+        })
+
+    }
+
     return Comentario;
 
 }

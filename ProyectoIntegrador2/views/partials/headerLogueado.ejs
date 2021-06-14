@@ -33,7 +33,7 @@
 	
 				<ul class="right-navbar">
 					<% if(locals.user){ %>
-						<h2>Hola: <%= user.nombre %></h2>
+						<h2>Hola: <%= user.name %></h2>
 						<form action="/logout" method="POST">
 						  <button type="submit">Logout</button>
 						</form>
