@@ -12,4 +12,15 @@ router.get ('/productAdd/:id', productosController.productAdd); //devuelve el fo
 router.get ('/allProducts/:id', productosController.allProducts); //devuelve todos los productos
 
 
+//router.get('/', productosController.index);
+//router.get('/detalle/:id', productosController.show);
+router.post('/detalle/:id', productosController.destroy);
+//router.get('/search', productosController.search)
+router.get('/create', productosController.productAdd);
+router.post('/create', productosController.store);
+router.get('/borrar/:id', productosController.borrar);
+//router.get('/sql', productosController.sql);
+router.get('/edit/:id', productosController.edit);
+router.post('/edit/:id', productosController.update);
+
 module.exports = router;

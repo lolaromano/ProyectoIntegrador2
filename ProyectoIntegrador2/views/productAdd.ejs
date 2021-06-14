@@ -10,35 +10,25 @@
 			<h2 class="products-title">Agregar producto</h2>
 		</div> <br><br>
 
-	<!-- Formulario agregar producto -->
-		<h2 class="col-12">
+		<%- include('partials/header.ejs') %>
 
-			<div class="col">
-				<input type="text" class="form-control" placeholder="Nombre del usuario" aria-label="First name">
-		  </div> <br>
+	<!-- Formulario de agregar producto -->
+<form action="/products/create" method="POST">
+    <p>
+        <input type="text" class="form-control"  name="usuario_id" placeholder="Usuario">
+    </p>
+    <p>
+        <input type="text" class="form-control"  name="nombre" placeholder="Nombre del producto">
+    </p>
+    <p>
+        <input type="text" class="form-control"  name="descripcion" placeholder="Descripcion del producto">
+	</p>
+    <p>
+        <input type="number" class="form-control"  name="fecha" placeholder="Fecha de publicación">
+    </p>
 
-			<div class="col">
-   				 <input type="text" class="form-control" placeholder="Nombre del producto" aria-label="First name">
-  			</div> <br>
+	<button type="submit" class="btn btn-primary">Guardar</button>
 
-				<div class="input-group mb-3">
-					<input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
-				</div> <br>
-
-				<div class="form-floating">
-					<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-					<label for="floatingTextarea">Descripcion del producto</label>
-				</div> <br>
-
-				<div class="col-12">
-					<a href="/users/profile" class="btn btn-primary" type="submit">
-					Enviar
-					</a>
-				</div>
-
-		</h2>
-	
-	</div>
-</div>
+</form>
 
 <%- include("partials/footer.ejs") %> 

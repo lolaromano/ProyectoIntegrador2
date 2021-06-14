@@ -9,6 +9,14 @@ module.exports = (sequelize, dataTypes)=>{
             unsigned: true,
             type: dataTypes.INTEGER
         },
+        created_at: {
+            type: dataTypes.DATE,
+            allowNull: true,
+        },
+        updated_at: {
+            type: dataTypes.DATE,
+            allowNull: true,
+        },
         imagen: {
             type: dataTypes.STRING,
         },
