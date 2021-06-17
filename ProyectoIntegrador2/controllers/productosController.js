@@ -8,7 +8,7 @@ let productosController = {
 
     products: function (req, res) {
         let id = req.params.id;
-        return res.render ('products', {productos: productos.lista, idSearch: id, users: users.lista})
+        res.render ('products', {productos: productos.lista, idSearch: id, users: users.lista})
     },
 
     productAdd: (req, res) => {
@@ -99,18 +99,19 @@ let productosController = {
             .then(()=> res.redirect('/products'))
             .catch(err => console.log(err))
     },
-    search: (req,res)=> {
+     search: (req,res)=> {
         producto.findAll({
             where: [
-                { Nombre: {[op.like]: `%${req.params.search}%`}} 
+                { Nombre: {[op.like]: `%${req.query.search}%`}} 
              ]
         })//buscamos todas los productos que coinciden
-          .then(resultados => res.render('searchResults', {resultados}))
+          .then(productos => res.send(productos))
+          //productos => res.render('searchResults', {productos, idSearch: id})
           .catch (error => {
              console.log(error)
              res.send('error')
          })
-     }
+    } 
 
 
 }

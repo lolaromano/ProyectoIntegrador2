@@ -13,10 +13,10 @@
 	<!-- Show resultado de busqueda -->
 
 	<ul>
-		<% for(let i=0; i<resultados.length; i+=1) { %>
+		<% for(let i=0; i<productos.length; i+=1) { %>
 		<li>
-			<a href="/products/detail/<%=resultados[i].id%>">
-			<%= resultados[i].nombre%> 
+			<a href="/products/detail/<%=productos[i].id%>">
+			<%= productos[i].nombre%> 
 		</a> 
 		</li>
 	   <% } %>

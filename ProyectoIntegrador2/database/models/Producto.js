@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes)=>{
     
     let config = {
         table: "Productos", 
-        timestamps: false, 
+        timestamps: true, 
         underscored: true 
     }
    
@@ -52,7 +52,7 @@ module.exports = (sequelize, dataTypes)=>{
             through: 'Productos',
             foreignKey: 'producto_id',
             otherKey: 'usuario_id',
-            timestamps: false,
+            timestamps: true,
 
         })
 

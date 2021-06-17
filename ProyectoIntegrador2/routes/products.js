@@ -5,13 +5,13 @@ let productosController = require('../controllers/productosController');
 
 /* GET products */
 
-router.get ('/:id', productosController.products); //devuelve el index
+router.get ('/products/:id', productosController.products); //devuelve el index
 
 router.get ('/productAdd/:id', productosController.productAdd); //devuelve el form de agregar productos
 
 router.get ('/allProducts/:id', productosController.allProducts); //devuelve todos los productos
 
-router.get('/search/:search', productosController.search); 
+router.get('/search', productosController.search); 
 
 router.get('/create', productosController.productAdd);
 
