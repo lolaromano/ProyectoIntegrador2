@@ -8,9 +8,9 @@ let indexController = {
         return res.render ('index', { productos: data})
     },
 
-    search : function(req, res) {
+/*     search : function(req, res) {
         res.render ('searchResults')
-    }
+    } */
 
 }
 

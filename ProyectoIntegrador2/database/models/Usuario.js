@@ -37,8 +37,8 @@ module.exports = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "Usuarios", //nombre de la tabla
-        timestamps: false,
-        underscored: false // si los nombres de los campos se estan usando con guiones bajos
+        timestamps: true,
+        underscored: true // si los nombres de los campos se estan usando con guiones bajos
     }
 
     const Usuario = sequelize.define(alias, cols, config)
@@ -55,7 +55,7 @@ module.exports = (sequelize, dataTypes) => {
             through: 'Usuarios',
             foreignKey: 'usuario_id',
             otherKey: 'producto_id',
-            timestamps: false,
+            timestamps: true,
 
         })
     
