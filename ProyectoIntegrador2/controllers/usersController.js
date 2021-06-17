@@ -1,6 +1,7 @@
 let productos = require ("../data/productos");
 let users = require ("../data/users");
 let db = require ('../database/models');
+const Usuario = db.Usuario;
 const op = db.Sequelize.Op;
 
 let usersController = {
@@ -12,10 +13,9 @@ let usersController = {
 
    profile: (req, res) => {
         let primaryKey = req.params.id;
-            profile.findbyPK (primaryKey)
+            Usuario.findByPk (primaryKey)
             .then((productos)=> res.render('profile', {productos: productos.lista, idSearch: id}))
-            console.log (productos)
-            .catch((err)=> `Error: ${err}`)
+            .catch((err)=> console.log(err));
     },
 
  /*   profileOthers: function (req, res) {
@@ -25,7 +25,7 @@ let usersController = {
     
     profileOthers: (req, res) => {
         let primaryKey = req.params.id;
-            profile.findbyPK (primaryKey)
+            Usuario.findByPk (primaryKey)
             .then((users)=> res.render('profileOthers', {users: users.lista, productos: productos.lista, idSearch: id }))
             .catch((err)=> `Error: ${err}`)
     },

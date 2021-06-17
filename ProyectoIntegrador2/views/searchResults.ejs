@@ -11,7 +11,29 @@
 		</div>
 
 	<!-- Show resultado de busqueda -->
-		<h2 class="col-12"> 
+
+	<ul>
+		<% for(let i=0; i<resultados.length; i+=1) { %>
+		<li>
+			<a href="/products/detail/<%=resultados[i].id%>">
+			<%= resultados[i].nombre%> 
+		</a> 
+		</li>
+	   <% } %>
+	</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- <h2 class="col-12"> 
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
 					
@@ -30,6 +52,6 @@
 		</h2>
 
 	</div>
-</div>
+</div> -->
 
 <%- include("partials/footer.ejs") %> 
