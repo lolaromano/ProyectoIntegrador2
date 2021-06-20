@@ -6,6 +6,12 @@ let producto = db.Producto
 
 let productosController = {
 
+    index: (req,res) => {
+        producto.findAll()
+        .then((resultados)=> res.render('products', { resultados }))
+        .catch((err)=> `Error: ${err}`)
+    },
+
     products: function (req, res) {
         let id = req.params.id;
         res.render ('products', {productos: productos.lista, idSearch: id, users: users.lista})
@@ -22,13 +28,13 @@ let productosController = {
 
     show: (req, res) =>{
         let primaryKey = req.params.id;
-         producto.findByPK(primaryKey, {
+         producto.findByPk(primaryKey, { //devuelve promesa
              include: [
                  {association: 'Usuario'}, 
                  {association: 'Comentario'}
                 ] //datos de la tabla de usuario y comentario
          })
-            .then(resultados => res.render('producto', {resultados}))
+            .then(resultados => res.render('products', {resultados})) //me lleva a la vista producto
             .catch (error => {
                 console.log(error)
                 res.send('error')
@@ -37,7 +43,7 @@ let productosController = {
     },
 
     detail: (req,res)=> {
-        db.Producto.findByPK (req.params.id)
+        db.Producto.findByPk (req.params.id)
             .then (resultado => {
                 res.send (resultado)
             })
@@ -48,8 +54,7 @@ let productosController = {
     },
 
     add: (req,res)=> {
-        return res.render('productAdd')
-          
+        return res.render('productAdd')    
     },
 
     store: (req, res)=>{
@@ -63,7 +68,7 @@ let productosController = {
         } 
 
         db.Producto.create(producto)
-            .then(() => res.redirect('/productAdd'))
+            .then(() => res.redirect('/products'))
             .catch(err => console.log(err))
     },
 
@@ -81,36 +86,33 @@ let productosController = {
     edit: (req, res)=>{
         let primaryKey = req.params.id;
         producto.findByPk(primaryKey)
-            .then(resultados => res.render('profileEdit', { resultados }))
+            .then(resultados => res.render('productEdit', {resultados}))
             .catch(err => console.log(err))
     }, 
 
     update: (req, res)=>{   
-        let primaryKey = req.params.id;
-        let productoActualizar = req.body
+        let primaryKey = req.params.id;//recibimos el id, porque es lo que queremos actualizar
+        let productoActualizar = req.body 
         producto.update(
             productoActualizar, 
             {
                 where: {
-                    id: primaryKey
+                    id: primaryKey 
                 }
             }
         )
             .then(()=> res.redirect('/products'))
             .catch(err => console.log(err))
+            
     },
      search: (req,res)=> {
         producto.findAll({
             where: [
-                { Nombre: {[op.like]: `%${req.query.search}%`}} 
+                { Nombre: {[op.like]: `%${req.query.search}%`}} //buscamos los productos x el nombre
              ]
         })//buscamos todas los productos que coinciden
-          .then(productos => res.send(productos))
-          //productos => res.render('searchResults', {productos, idSearch: id})
-          .catch (error => {
-             console.log(error)
-             res.send('error')
-         })
+          .then(productos => res.render('searchResults',{productos}))
+          .catch(err => console.log(err))
     } 
 
 
