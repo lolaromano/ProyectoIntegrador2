@@ -23,7 +23,7 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));//que acepte datos que vienen de un formulario
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

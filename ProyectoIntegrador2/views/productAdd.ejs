@@ -13,7 +13,7 @@
 		<%- include('partials/header.ejs') %>
 
 	<!-- Formulario de agregar producto -->
-<form action="/products/create" method="POST">
+<form action="/products/create" method="POST"> 
     <p>
         <input type="text" class="form-control"  name="usuario_id" placeholder="Usuario">
     </p>
@@ -28,6 +28,7 @@
     </p>
 
 	<button type="submit" class="btn btn-primary">Guardar</button>
+    <!--submit se redirige al action -->
 
 </form>
 
