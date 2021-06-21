@@ -37,23 +37,18 @@ module.exports = (sequelize, dataTypes)=>{
     
     let config = {
         table: "Productos", 
-        timestamps: true, 
-        underscored: true 
+        timestamps: false, 
+        underscored: false, 
     }
    
    
     const Producto = sequelize.define (alias, cols, config)
 
 
-    Producto.associate = (models)=> {
-        //relacion de muchos a muchos
-        Producto.belongsToMany(models.Usuario, {
-            as: 'Producto',
-            through: 'Productos',
-            foreignKey: 'producto_id',
-            otherKey: 'usuario_id',
-            timestamps: true,
-
+    Producto.associate = (models)=> { //relacion de muchos a 1 'has many'
+        Producto.belongsTo(models.Usuario, {
+            as: 'Usuario',
+            foreignKey: 'usuario_id',
         })
 
     }

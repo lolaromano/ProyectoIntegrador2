@@ -37,8 +37,8 @@ module.exports = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "Usuarios", //nombre de la tabla
-        timestamps: true,
-        underscored: true // si los nombres de los campos se estan usando con guiones bajos
+        timestamps: false,
+        underscored: false // si los nombres de los campos se estan usando con guiones bajos
     }
 
     const Usuario = sequelize.define(alias, cols, config)
@@ -49,14 +49,9 @@ module.exports = (sequelize, dataTypes) => {
             as:'Comentarios', 
             foreignKey: 'usuario_id'
         })
-         //relacion de muchos a muchos 
-        Usuario.belongsToMany(models.Producto, {
+        Usuario.hasMany(models.Producto, { //relacion de muchos a 1 'has many'
             as: 'Productos',
-            through: 'Usuarios',
             foreignKey: 'usuario_id',
-            otherKey: 'producto_id',
-            timestamps: true,
-
         })
     
 

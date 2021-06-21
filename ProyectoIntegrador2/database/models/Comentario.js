@@ -34,14 +34,14 @@ module.exports = (sequelize, dataTypes)=>{
     
     let config = {
         table: "Comentarios", 
-        timestamps: true, 
-        underscored: true 
+        timestamps: false, 
+        underscored: false, 
     }
    
     const Comentario = sequelize.define (alias, cols, config)
     
-    Comentario.associate = (models)=> {        //relacion de muchos a 1 'has many'
-        Comentario.hasMany(models.Usuario, {
+    Comentario.associate = (models)=> { //relacion de muchos a 1 'has many'
+        Comentario.belongsTo(models.Usuario, {
             as:'Usuarios', //nombre que querramos
             foreignKey: 'usuario_id'
         })

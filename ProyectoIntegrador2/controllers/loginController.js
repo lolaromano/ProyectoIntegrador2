@@ -26,7 +26,7 @@ let loginController = {
                 errors.login = "Email es incorrecto";
                 res.locals.error = errors;
                 return res.render ('login') //lo devolvemos al login para q vuelva a escribir usuario y contra
-            } else if (bcrypt.compareSync(req.body.password, user.password)==false){
+            } else if (bcrypt.compareSync(req.body.password, user.Password)==false){
                 errors.login = "Contrasenia incorrecta";
                 res.locals.error = errors;
                 return res.render ('login')
@@ -41,7 +41,6 @@ let loginController = {
         })
         .catch (error => {
             console.log(error)
-            res.render('error')
         })
     },
     logout: (req,res)=>{
