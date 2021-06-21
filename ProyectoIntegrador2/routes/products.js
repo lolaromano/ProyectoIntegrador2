@@ -5,7 +5,7 @@ let productosController = require('../controllers/productosController');
 
 /* GET products */
 
-router.get ('/products/:id', productosController.products); //devuelve el index
+router.get ('/id/:id', productosController.products); //devuelve el index
 
 router.get ('/productAdd/:id', productosController.productAdd); //devuelve el form de agregar productos
 
