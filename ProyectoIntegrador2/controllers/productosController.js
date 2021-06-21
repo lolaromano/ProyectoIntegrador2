@@ -110,8 +110,7 @@ let productosController = {
                 { Nombre: {[op.like]: `%${req.query.search}%`}} //buscamos los productos x el nombre
              ]
         })//buscamos todas los productos que coinciden
-          .then(productos => res.send(productos))
-            //res.render('searchResults',{productos}))
+          .then(productos => res.render('searchResults',{productos}))
           .catch(err => console.log(err))
     } 
 
