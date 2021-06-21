@@ -13,7 +13,7 @@ router.get ('/allProducts/:id', productosController.allProducts); //devuelve tod
 
 router.get('/search', productosController.search); 
 
-router.get('/create', productosController.add); //nos dirige a un formulario
+router.get('/create', productosController.add); //nos dirige a un formulario de productAdd
 
 router.post('/create', productosController.store); //cuando guardo mi producto en product add, se guardan x aca
 
@@ -29,7 +29,6 @@ router.post('/edit/:id', productosController.update);//una vez que hago los camb
 
 module.exports = router;
 
-//router.get('/', productosController.index);
 //router.get('/detalle/:id', productosController.show);
 
 //router.get('/search', productosController.search)

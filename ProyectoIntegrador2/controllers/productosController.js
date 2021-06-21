@@ -17,10 +17,10 @@ let productosController = {
         res.render ('products', {productos: productos.lista, idSearch: id, users: users.lista})
     },
 
-    productAdd: (req, res) => {
-        let id = req.params.id;
+     productAdd: (req, res) => {
+         let id = req.params.id;
         res.render ('productAdd', {productos: productos.lista, idSearch: id, users: users.lista})
-    },
+     },
 
     allProducts: (req,res) => {
         return res.render ('allProducts', {productos: productos.lista})
@@ -35,10 +35,7 @@ let productosController = {
                 ] //datos de la tabla de usuario y comentario
          })
             .then(resultados => res.render('products', {resultados})) //me lleva a la vista producto
-            .catch (error => {
-                console.log(error)
-                res.send('error')
-            })
+            .catch(err => console.log(err))
         
     },
 
@@ -47,14 +44,16 @@ let productosController = {
             .then (resultado => {
                 res.send (resultado)
             })
-            .catch (error => {
-                console.log(error)
-                res.send('error')
-            })
+            .catch(err => console.log(err))
     },
 
     add: (req,res)=> {
-        return res.render('productAdd')    
+        db.Producto.findAll()
+        .then(function(Productos){
+            return res.render('productAdd', {Productos}) 
+        })
+        .catch(err => console.log(err))
+           
     },
 
     store: (req, res)=>{
@@ -67,7 +66,7 @@ let productosController = {
             fecha: req.body.fecha,
         } 
 
-        db.Producto.create(producto)
+        db.Producto.create(producto) //crea el producto y lo redirecciona a productos
             .then(() => res.redirect('/products'))
             .catch(err => console.log(err))
     },
@@ -111,7 +110,8 @@ let productosController = {
                 { Nombre: {[op.like]: `%${req.query.search}%`}} //buscamos los productos x el nombre
              ]
         })//buscamos todas los productos que coinciden
-          .then(productos => res.render('searchResults',{productos}))
+          .then(productos => res.send(productos))
+            //res.render('searchResults',{productos}))
           .catch(err => console.log(err))
     } 
 
