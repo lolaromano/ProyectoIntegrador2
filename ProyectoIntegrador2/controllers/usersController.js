@@ -16,7 +16,7 @@ let usersController = {
     profileOthers: (req, res) => {
         let primaryKey = req.params.id;
             Usuario.findByPk (primaryKey)
-            .then((users)=> res.render('profileOthers', {users: users.lista, productos: productos.lista, idSearch: id }))
+            .then((users)=> res.render('profileOthers', {users}))
             .catch((err)=> `Error: ${err}`)
     },
 

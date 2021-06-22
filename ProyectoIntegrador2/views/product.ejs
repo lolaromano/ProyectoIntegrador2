@@ -38,15 +38,15 @@
 				<div class="col-12 col-lg-4">
 
 					<section class="comments">
-						<% for (i = 0; i < productos[idSearch].comentarios.length; i++ ) { %>
+						<% for (i = 0; i < producto.Comentarios.length; i++ ) { %>
 							<article>
-								<a href="/users/profileOthers/<%= productos.comentarios[i].id %> ">
-								<img src="<%= productos[idSearch].comentarios[i].imagenUsuario %>" alt="">
+								<a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> ">
+							<!-- <img src="" alt=""> -->	
 								</a>
 								<div class="data">
 									<p class="user">
-										<strong> <a href="/users/profileOthers/<%= producto[i].id %> " > <%= producto[i].Nombre %></a> </strong>
-										<%= productos[idSearch].comentarios[i].comentario %> 
+										<strong> <a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> " > <%= producto.Comentarios[i].Usuarios.nombre %></a> </strong>
+										<%= producto.Comentarios[i].texto %> 
 									</p>
 								</div>
 							</article>

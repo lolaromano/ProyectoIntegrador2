@@ -49,6 +49,10 @@ module.exports = (sequelize, dataTypes)=>{
         Producto.belongsTo(models.Usuario, {
             as: 'Usuario',
             foreignKey: 'usuario_id',
+        }),
+        Producto.hasMany(models.Comentario, {
+            as: 'Comentarios',
+            foreignKey: 'producto_id',
         })
 
     }//muchos productos pueden pertenecer a 1 usuario
