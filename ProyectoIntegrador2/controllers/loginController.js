@@ -6,6 +6,7 @@ const op = db.Sequelize.Op;
 
 
 let loginController = {
+
     index: (req,res)=>{
         if (req.session.user != undefined) {
             return res.redirect ('/')
@@ -13,13 +14,14 @@ let loginController = {
             return res.render ('login')
         }
     },
+
     login: (req,res)=>{
         let errors = {}; //guardar los errores en objeto vacio
-
         //buscar el usuario x medio del mail
         users.findOne({
             where: [{nombre: req.body.name}] //coincidir con login.ejs (email)
         }) 
+
         //devuelve promesa
         .then (user => {
             if (user==null){
@@ -39,18 +41,17 @@ let loginController = {
             }
             return res.redirect('/')
         })
+
         .catch (error => {
             console.log(error)
         })
     },
+    
     logout: (req,res)=>{
         req.session.destroy()
         res.clearCookie('userId')
-
         return res.redirect ('/')
     },
 }
-
-
 
 module.exports = loginController;

@@ -8,6 +8,7 @@ let productosController = {
 
     index: (req,res) => {
         producto.findAll()
+        
         .then((resultados)=> res.render('products', { resultados }))
         .catch((err)=> `Error: ${err}`)
     },
@@ -34,6 +35,7 @@ let productosController = {
                  {association: 'Comentario'}
                 ] //datos de la tabla de usuario y comentario
          })
+
             .then(resultados => res.render('products', {resultados})) //me lleva a la vista producto
             .catch(err => console.log(err))
         
@@ -41,6 +43,7 @@ let productosController = {
 
     detail: (req,res)=> {
         db.Producto.findByPk (req.params.id)
+
             .then (resultado => {
                 res.send (resultado)
             })
@@ -49,6 +52,7 @@ let productosController = {
 
     add: (req,res)=> {
         db.Producto.findAll()
+
         .then(function(Productos){
             return res.render('productAdd', {Productos}) 
         })
@@ -67,6 +71,7 @@ let productosController = {
         } 
 
         db.Producto.create(producto) //crea el producto y lo redirecciona a productos
+
             .then(() => res.redirect('/products'))
             .catch(err => console.log(err))
     },
@@ -78,6 +83,7 @@ let productosController = {
                 id: primaryKey
             }
         })
+
         .then(()=> res.redirect('/products'))
         .catch(err=> console.log(err))
     },
@@ -85,6 +91,7 @@ let productosController = {
     edit: (req, res)=>{
         let primaryKey = req.params.id;
         producto.findByPk(primaryKey)
+
             .then(resultados => res.render('productEdit', {resultados}))
             .catch(err => console.log(err))
     }, 
@@ -98,18 +105,21 @@ let productosController = {
                 where: {
                     id: primaryKey 
                 }
-            }
-        )
+            })
+
             .then(()=> res.redirect('/products'))
             .catch(err => console.log(err))
             
     },
+
      search: (req,res)=> {
+
         producto.findAll({
-            where: [
+        where: [
                 { Nombre: {[op.like]: `%${req.query.search}%`}} //buscamos los productos x el nombre
              ]
         })//buscamos todas los productos que coinciden
+
           .then(productos => res.render('searchResults',{productos}))
           .catch(err => console.log(err))
     } 

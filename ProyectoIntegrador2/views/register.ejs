@@ -1,7 +1,7 @@
-<!--  <%- include("partials/head.ejs") %> 
+<%- include("partials/head.ejs") %> 
 
 <%- include("partials/header.ejs") %> 
- -->
+
 	<!--Registrarse -->
 <div class="container products-wrapper">
 	<div class="row">
@@ -10,29 +10,28 @@
 			<h2 class="products-title">Registrate</h2>
 		</div> <br><br>
 
-<!-- 	<% if(locals.errors){ %>
+	<% if(locals.errors){ %>
 		<p class="alert" > <%= errors.register %><p>
-	<% } %> -->
+	<% } %> 
 
-	 <!--Formulario -->
-
+	<!-- Formulario registrarse -->
 <form class="row-g-3-needs-validation" novalidate action="/register" method="POST" > 
 
-		<div class="col-md-4">
-			  <label for="validationCustom01" class="form-label">Nombre de usuario</label>
-			  <input type="text" class="form-control" id="validationCustom01" name="name" placeholder="Nombre" required>
-			  <div class="valid-feedback">
-				Nombre de usuario válido
-				</div>
+			<div class="col-md-4">
+				<label for="validationCustom01" class="form-label">Nombre de usuario</label>
+				<input type="text" class="form-control" id="validationCustom01" name="name" placeholder="Nombre" required>
+			  		<div class="valid-feedback">
+					Nombre de usuario válido
+					</div>
 			</div> <br><br>
 
 			<div class="col-md-4" id="col-md-4">
 				<label for="validationCustom04" class="form-label" id="formlabel2">Fecha de nacimiento</label> <br>
-				  <input type="date" id="form-control1" id="validationCustom03"  name= "fechadenacimiento" required>
-				  <div class="invalid-feedback">
+				<input type="date" id="form-control1" id="validationCustom03"  name= "fechadenacimiento" required>
+					<div class="invalid-feedback">
 					Elige una fecha de nacimiento.
-				  </div>
-			  </div> <br><br>
+				  	</div>
+			</div> <br><br>
 
 			  <div class="input-group mb-3" id="telefono">
 				<label for="validationCustom03" class="form-label1">Teléfono</label><br>
@@ -44,26 +43,26 @@
 			<div class="col-md-4">
 				<label for="validationCustom01" class="form-label">Email</label>
 				<input type="email" class="form-control" id="validationCustom01" name="email" placeholder="Email" required>
-				<div class="valid-feedback">
-				  Email válido
-				  </div>
-			  </div> <br><br>
+					<div class="valid-feedback">
+				  	Email válido
+				  	</div>
+			</div> <br><br>
 
 			<div class="col-md-4">
-			  <label for="validationCustom02" class="form-label">Contraseña</label>
-			  <input type="password" class="form-control" id="validationCustom02" name="password" placeholder="Contraseña" required>
-			  <div class="valid-feedback">
-				Contraseña válida
-			  </div> <br><br>
+				<label for="validationCustom02" class="form-label">Contraseña</label>
+				<input type="password" class="form-control" id="validationCustom02" name="password" placeholder="Contraseña" required>
+					<div class="valid-feedback">
+					Contraseña válida
+			  		</div> <br><br>
 			</div>
 
 			<div class="col-md-4">
 				<label for="validationCustom02" class="form-label">Confirmar contraseña</label>
 				<input type="password" class="form-control" id="validationCustom02" name="repassword" placeholder="Confirmar contraseña" required>
-				<div class="valid-feedback">
-				  Contraseña válida
-				</div> <br><br>
-			  </div>
+					<div class="valid-feedback">
+				  	Contraseña válida
+					</div> <br><br>
+			</div>
 			
 			<div>
 				<input type="file" name="avatar">
@@ -72,12 +71,12 @@
 			<div class="col-12">
 			  <div class="form-check">
 				<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-				<label class="form-check-label" for="invalidCheck">
-				Acepta términos y condiciones para registrarte.
-				</label><br><br>
-				<div class="invalid-feedback">
-				Acepta términos y condiciones para registrarte.
-				</div>
+					<label class="form-check-label" for="invalidCheck">
+					Acepta términos y condiciones para registrarte.
+					</label><br><br>
+					<div class="invalid-feedback">
+					Acepta términos y condiciones para registrarte.
+					</div>
 			  </div>
 			</div>
 

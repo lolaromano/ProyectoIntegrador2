@@ -6,22 +6,12 @@ const op = db.Sequelize.Op;
 
 let usersController = {
 
-/*   profile: (req, res) => {
-       let id = req.params.id;
-       return res.render ('profile', {productos: productos.lista, idSearch: id})
-    }, */
-
    profile: (req, res) => {
         let primaryKey = req.params.id;
             Usuario.findByPk (primaryKey)
             .then((productos)=> res.render('profile', {productos: productos.lista, idSearch: id}))
             .catch((err)=> console.log(err));
     },
-
- /*   profileOthers: function (req, res) {
-        let id = req.params.id;
-        return res.render ('profileOthers', {users: users.lista, productos: productos.lista, idSearch: id })
-    }, */
     
     profileOthers: (req, res) => {
         let primaryKey = req.params.id;
