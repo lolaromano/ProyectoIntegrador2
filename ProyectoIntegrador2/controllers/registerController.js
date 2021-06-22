@@ -6,7 +6,7 @@ const users = db.Usuario;
 const op = db.Sequelize.Op; 
 
 let registerController = {
-    
+
     index: (req,res) =>{
         if (req.session.user != undefined) {
             return res.redirect ('/')
@@ -58,10 +58,11 @@ let registerController = {
                             Email: req.body.email,
                             Password: bcrypt.hashSync(req.body.password,10),
                             Telefono: req.body.telefono,
-                            FechaDeNacimiento: req.body.fechadenacimiento
+                            FechaDeNacimiento: req.body.fechadenacimiento,
+                            avatar: req.file.filename
                         }
-
-                        users.create(user)
+                        
+                        users.create(user) //creacion del usuario 
                             .then( user =>{
                                 return res.redirect('/login')
                             })
