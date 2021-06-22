@@ -1,6 +1,10 @@
 <%- include("partials/head.ejs") %> 
 
-<%- include("partials/header.ejs") %> 
+<% if (locals.user) { %>
+	<%- include("partials/headerLogueado.ejs") %> 
+	<% } else { %>
+	<%- include("partials/header.ejs") %>  
+	<% } %> 
 
 	<!-- Resultados de busqueda -->
 <div class="container products-wrapper">
@@ -16,7 +20,10 @@
 		<% for(let i=0; i<productos.length; i+=1) { %>
 		<li>
 			<a href="/products/id/<%=productos[i].id%>">
-			<%= productos[i].nombre%> 
+			<%=productos[i].nombre%> 
+			<%= productos[i].imagen%> 
+			<%= productos[i].descripcion%> 
+
 		</a> 
 		</li>
 	   <% } %>

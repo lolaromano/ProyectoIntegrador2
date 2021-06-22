@@ -1,6 +1,10 @@
 <%- include("partials/head.ejs") %> 
 
-<%- include("partials/header.ejs") %> 
+<% if (locals.user) { %>
+    <%- include("partials/headerLogueado.ejs") %> 
+    <% } else { %>
+    <%- include("partials/header.ejs") %>  
+    <% } %> 
 
 <div class="card" style="width: 18rem;">
     <!--     <img src="..." class="card-img-top" alt="..."> -->
@@ -9,7 +13,7 @@
             <p class="card-text"><span class="badge bg-primary">Descripcion: <%= resultados.descripcion %></span></p>
             <%for(let i = 0; i<resultados.Productos.length; i+=1){ %>
                 <p class="card-text"></span class="badge bg-info"><%= resultados.Productos[i].Nombre %></span></p>
-            <% } %>
+             <% } %> <!--muestro los Productos -->
     
     
             <a href="/products" class="btn btn-primary">Volver</a>

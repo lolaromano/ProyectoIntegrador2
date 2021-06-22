@@ -17,7 +17,7 @@ let productosController = {
         res.render ('products', {productos: productos.lista, idSearch: id, users: users.lista})
     },
 
-     productAdd: (req, res) => {
+    productAdd: (req, res) => {
          let id = req.params.id;
         res.render ('productAdd', {productos: productos.lista, idSearch: id, users: users.lista})
      },
@@ -28,7 +28,7 @@ let productosController = {
 
     show: (req, res) =>{
         let primaryKey = req.params.id;
-         producto.findByPk(primaryKey, { //devuelve promesa
+         producto.findByPk(primaryKey, { //devuelve promesa con resultados
              include: [
                  {association: 'Usuario'}, 
                  {association: 'Comentario'}
@@ -107,8 +107,9 @@ let productosController = {
      search: (req,res)=> {
         producto.findAll({
             where: [
-                { Nombre: {[op.like]: `%${req.query.search}%`}} //buscamos los productos x el nombre
-             ]
+                { Nombre: {[op.like]: `%${req.query.search}%`}}, //buscamos los productos x el nombre
+                { descripcion: {[op.like]: `%${req.query.search}`}} 
+            ]
         })//buscamos todas los productos que coinciden
           .then(productos => res.render('searchResults',{productos}))
           .catch(err => console.log(err))

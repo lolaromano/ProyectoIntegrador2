@@ -45,13 +45,13 @@ module.exports = (sequelize, dataTypes)=>{
     const Producto = sequelize.define (alias, cols, config)
 
 
-    Producto.associate = (models)=> { //relacion de muchos a 1 'has many'
+    Producto.associate = (models)=> { //relacion de 1 a muchos
         Producto.belongsTo(models.Usuario, {
             as: 'Usuario',
             foreignKey: 'usuario_id',
         })
 
-    }
+    }//muchos productos pueden pertenecer a 1 usuario
 
     return Producto;
 

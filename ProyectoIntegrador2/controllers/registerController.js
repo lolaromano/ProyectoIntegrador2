@@ -48,28 +48,24 @@ let registerController = {
                     if (user !=null) {
                         errors.register = "Email ya existe"
                         res.locals.errors = errors
-console.log ('paso por el if')
                         return res.render('register')
                     
                     } else if (req.body.password != req.body.repassword) {
-                        errors.register =            "Los password no coinciden"
+                        errors.register =  "Los password no coinciden"
                         res.locals.errors = errors
-console.log ('paso por el else if')
                         return res.render('register')
                     } else{ //guardamos el usuario en la base de datos
-                        console.log ('pasa por el else')
+            
                         let user = {
                             nombre: req.body.name,
                             Email: req.body.email,
                             Password: bcrypt.hashSync(req.body.password,10),
                             Telefono: req.body.telefono,
-                            FechaDeNacimiento: req.body.fechadenacimiento
+                            FechaDeNacimiento: req.body.fechadenacimiento,
+                            avatar: req.file.filename
                         }
-                        console.log(req.body.fechadenacimiento);
-                        console.log(user.FechaDeNacimiento);
-
-
-                        users.create(user)
+                        
+                        users.create(user) //creacion del usuario 
                             .then( user =>{
                                 return res.redirect('/login')
                             })

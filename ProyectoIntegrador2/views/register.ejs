@@ -1,6 +1,10 @@
 <!--  <%- include("partials/head.ejs") %> 
 
-<%- include("partials/header.ejs") %> 
+	<% if (locals.user) { %>
+		<%- include("partials/headerLogueado.ejs") %> 
+		<% } else { %>
+		<%- include("partials/header.ejs") %>  
+		<% } %> 
  -->
 	<!--Registrarse -->
 <div class="container products-wrapper">
@@ -16,7 +20,7 @@
 
 	 <!--Formulario -->
 
-<form class="row-g-3-needs-validation" novalidate action="/register" method="POST" > 
+<form class="row-g-3-needs-validation" novalidate action="/register" method="POST" enctype="multipart/form-data" > 
 
 		<div class="col-md-4">
 			  <label for="validationCustom01" class="form-label">Nombre de usuario</label>
