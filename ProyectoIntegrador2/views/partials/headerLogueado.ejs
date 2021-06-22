@@ -35,8 +35,11 @@
 					<% if(locals.user){ %>
 						<li><h2 class="hola">Hola <%= user.nombre %></h2></li>
 						<li><img src="/images/avatar/<%=user.avatar%>" /> </li>
-						<li><form action="/logout" method="POST">
-							<a href="/logout">CERRAR SESION</a> </form></li>
+						<li>
+							<form action="/login/logout" method="POST">
+								<button type="submit">CERRAR SESION</button>
+							</form>
+						</li>
 						
 					  <% } %>
 				</ul>

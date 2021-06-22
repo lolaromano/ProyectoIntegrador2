@@ -59,7 +59,7 @@ let registerController = {
                             Password: bcrypt.hashSync(req.body.password,10),
                             Telefono: req.body.telefono,
                             FechaDeNacimiento: req.body.fechadenacimiento,
-                            avatar: req.file.filename
+                            //avatar: req.file.filename
                         }
                         
                         users.create(user) //creacion del usuario 

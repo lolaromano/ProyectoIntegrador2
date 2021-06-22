@@ -1,7 +1,7 @@
 <%- include("partials/head.ejs") %> 
 
 <% if (locals.user) { %>
-    <%- include("partials/headerLogueado.ejs") %> 
+    <%- include("partials/headerLogueado.ejs") %>   
     <% } else { %>
     <%- include("partials/header.ejs") %>  
     <% } %> 
@@ -13,8 +13,6 @@
 		<div class="col-12">
 			<h2 class="products-title">Agregar producto</h2>
 		</div> <br><br>
-
-		<%- include('partials/header.ejs') %>
 
 	<!-- Formulario de agregar producto -->
 <form action="/products/create" method="POST"> 

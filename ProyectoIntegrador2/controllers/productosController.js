@@ -1,5 +1,3 @@
-let productos = require ('../data/productos');
-const users = require('../data/users');
 let db = require ('../database/models');
 const op = db.Sequelize.Op;
 let producto = db.Producto
@@ -9,13 +7,8 @@ let productosController = {
     index: (req,res) => {
         producto.findAll()
 
-        .then((resultados)=> res.render('products', { resultados }))
+        .then((productos)=> res.render('product', { productos }))
         .catch((err)=> `Error: ${err}`)
-    },
-
-    products: function (req, res) {
-        let id = req.params.id;
-        res.render ('products', {productos: productos.lista, idSearch: id, users: users.lista})
     },
 
     productAdd: (req, res) => {
@@ -36,7 +29,7 @@ let productosController = {
                 ] //datos de la tabla de usuario y comentario
          })
 
-            .then(resultados => res.render('products', {resultados})) //me lleva a la vista producto
+            .then(producto => res.render('product', {producto})) //me lleva a la vista producto
             .catch(err => console.log(err))
         
     },
@@ -72,7 +65,7 @@ let productosController = {
 
         db.Producto.create(producto) //crea el producto y lo redirecciona a productos
 
-            .then(() => res.redirect('/products'))
+            .then(() => res.redirect('/product'))
             .catch(err => console.log(err))
     },
 
@@ -84,7 +77,7 @@ let productosController = {
             }
         })
 
-        .then(()=> res.redirect('/products'))
+        .then(()=> res.redirect('/product'))
         .catch(err=> console.log(err))
     },
 
@@ -107,7 +100,7 @@ let productosController = {
                 }
             })
 
-            .then(()=> res.redirect('/products'))
+            .then(()=> res.redirect('/product'))
             .catch(err => console.log(err))
             
     },

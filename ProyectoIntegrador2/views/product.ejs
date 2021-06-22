@@ -1,31 +1,74 @@
 <%- include("partials/head.ejs") %> 
 
 <% if (locals.user) { %>
-    <%- include("partials/headerLogueado.ejs") %> 
-    <% } else { %>
-    <%- include("partials/header.ejs") %>  
-    <% } %> 
+	<%- include("partials/headerLogueado.ejs") %> 
+	<% } else { %>
+	<%- include("partials/header.ejs") %>  
+<% } %> 
+	<div class="container products-wrapper">
 
-	<!-- Detalles del producto -->
-<div class="card" style="width: 18rem;">
-    <!--     <img src="..." class="card-img-top" alt="..."> -->
-        <div class="card-body">
-            
-            <h5 class="card-title"><%= resultados.Nombre %></h5>
-            <p class="card-text"><span class="badge bg-primary">Descripcion: <%= resultados.descripcion %></span></p>
-            <%for(let i = 0; i<resultados.Productos.length; i+=1){ %>
-                <p class="card-text"></span class="badge bg-info"><%= resultados.Productos[i].Nombre %></span></p>
-            <% } %> <!--muestro los Productos -->
-    
-    
-            <a href="/products" class="btn btn-primary">Volver</a>
-            <a href="/products/edit/<%= resultados.id %>" class="btn btn-info">Editar</a>
-            <a href="/products/borrar/<%= resultados.id %>" class="btn btn-danger">Borrar</a> 
-            <form style="display: inline;" action="/products/detail<%=resultados.id %>" method="POST">
-                <button class="btn btn-danger" type="submit">Borrar</button>
-            </form>
+		<div class="d-flex align-items-center">
+			<h2 class="products-title">
+				<%= producto.Nombre + ' ' %> Modelo <%= producto.descripcion %>
+			</h2> 
 
-        </div>
-    </div>
+			<% if (locals.user) { %>
+				<p class="product-detail-description">
+					<a href="/products/create">Agregar producto</a>
+					<!-- <a href="/products/productAdd/:id">Agregar producto</a> -->
+				</p>
+			<% } %> 
+
+		</div>
+	</div>
+
+	<div class="container products-wrapper">
+		
+		<div class="product-detail">
+			<div class="row">
+
+				<article class="col-12 col-lg-8 product-detail-info">
+					<img src="<%= producto.imagen %>"  alt="" class="product-detail-img">
+					<p class="product-detail-description"> 
+					<%= producto.descripcion %>
+					</p> 
+				</article>
+
+	<!-- Comentarios -->
+				<div class="col-12 col-lg-4">
+
+					<section class="comments">
+						<% for (i = 0; i < productos[idSearch].comentarios.length; i++ ) { %>
+							<article>
+								<a href="/users/profileOthers/<%= productos.comentarios[i].id %> ">
+								<img src="<%= productos[idSearch].comentarios[i].imagenUsuario %>" alt="">
+								</a>
+								<div class="data">
+									<p class="user">
+										<strong> <a href="/users/profileOthers/<%= producto[i].id %> " > <%= producto[i].Nombre %></a> </strong>
+										<%= productos[idSearch].comentarios[i].comentario %> 
+									</p>
+								</div>
+							</article>
+						<% } %>
+					</section>
+					
+					<% if (locals.user) { %>
+						<form class="form" action="" method="POST">
+							<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+							<br>
+							<a href="/users/profile" class="btn btn-primary" type="submit">
+								AGREGAR COMENTARIO
+							</a>
+						</form> <br>
+					<% } %> 
+					
+
+				</div>
+
+			</div>		
+		</div>
+
+	</div>
 
 <%- include("partials/footer.ejs") %> 

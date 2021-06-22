@@ -1,11 +1,13 @@
-let data = require ('../data/productos');
 let db = require ('../database/models');
+const productos = require('../data/productos');
 const op = db.Sequelize.Op; 
 
 let indexController = {
 
     index : function(req, res) {
-        return res.render ('index', { productos: data})
+        db.Producto.findAll()
+        .then (productos => res.render ('index', { productos})) 
+        .catch((err)=> `Error: ${err}`)
     },
     
 }
