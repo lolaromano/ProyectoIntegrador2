@@ -171,6 +171,28 @@ a.main-header_credit-link {
 .right-navbar ul {
   display: flex;
   justify-content: space-between;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+
+}
+
+ul.right-navbar {
+  padding-left: 0px !important ;
+  padding-right: 35px;
+}
+
+.right-navbar h2 {
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+.left-navbar ul {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .logout{
@@ -190,6 +212,7 @@ a.main-header_credit-link {
   display: block;
   padding: 5px 0;
   border-bottom: solid 1px var(--gray);
+
 }
 
 .unite {

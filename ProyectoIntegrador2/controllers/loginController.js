@@ -4,7 +4,6 @@ const users = db.Usuario
 const bcrypt = require ('bcryptjs'); 
 const op = db.Sequelize.Op;
 
-
 let loginController = {
     index: (req,res)=>{ 
         if (req.session.user != undefined) {//verificar si hay un usuario en sesion

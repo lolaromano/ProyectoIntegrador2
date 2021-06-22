@@ -8,9 +8,8 @@
 				</div>
 	
 				<div class="col-7 col-md-6">
-					<form action="/searchResults" method="GET" class="search-form">
-						<input type="text" name="search" placeholder="Buscar" class="search-form_input">
-						
+					<form action="/products/search" method="GET" class="search-form">
+						<input type="search" name="search" placeholder="Buscar" class="search-form_input">
 					</form>
 				</div>
 	
@@ -31,20 +30,15 @@
 					<li><a href="/products/add">Cargar productos</a></li>
 				</ul>
 
-				<ul class="right-navbar">
+			<nav class="main-navbar">
+				<ul class="right-navbar">	
 					<% if(locals.user){ %>
-						<h2 class="left-navbar">Hola <%= user.nombre %></h2>
-						<img src="/images/avatar/<%=user.avatar%>" />
-						<form action="/logout" method="POST">
-								<nav class="main-navbar">
-								<ul class="left-navbar">
-								<li><a href="/logout">CERRAR SESION</a></li>
-								</ul>
-						</form>
+						<li><h2 class="hola">Hola <%= user.nombre %></h2></li>
+						<li><img src="/images/avatar/<%=user.avatar%>" /> </li>
+						<li><form action="/logout" method="POST">
+							<a href="/logout">CERRAR SESION</a> </form></li>
+						
 					  <% } %>
-					<li>
-				
-					</li> 
 				</ul>
 			</nav>
 		</div>
