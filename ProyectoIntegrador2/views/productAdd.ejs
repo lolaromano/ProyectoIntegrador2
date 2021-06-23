@@ -14,6 +14,7 @@
             <h2 class="products-title">Agregar producto</h2>
         </div> <br><br>
 
+<<<<<<< HEAD
         <!-- Formulario de agregar producto -->
         <form action="/products/create" method="POST">
             <p>
@@ -28,6 +29,28 @@
             <p>
                 <input type="number" class="form-control" name="fecha" placeholder="Fecha de publicación">
             </p>
+=======
+	<!-- Formulario de agregar producto -->
+<form action="/products/create" method="POST"> 
+    <p>
+        <input type="text" class="form-control"  name="usuario_id" placeholder="Usuario">
+    </p>
+    <p>
+        <input type="text" class="form-control"  name="nombre" placeholder="Nombre del producto">
+    </p>
+    <p>
+        <input type="text" class="form-control"  name="descripcion" placeholder="Descripcion del producto">
+	</p>
+    <p>
+        <input type="number" class="form-control"  name="fecha" placeholder="Fecha de publicación">
+    </p>
+    <p>
+        <input type="file" class="form-control"  name="imagen" placeholder="Imagen">
+    </p>
+
+    
+	<button type="submit" class="btn btn-primary">Guardar</button> <!--submit se redirige al action -->
+>>>>>>> 6efb6157da2accbe917f38090f93295edb4a9533
 
             <button type="submit" class="btn btn-primary">Guardar</button> <!--submit se redirige al action -->
         </form>

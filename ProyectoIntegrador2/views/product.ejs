@@ -32,6 +32,7 @@
 				<img src="<%= producto.imagen %>" alt="" class="product-detail-img">
 				<p class="product-detail-description">
 					<%= producto.descripcion %>
+<<<<<<< HEAD
 				</p>
 			</article>
 
@@ -64,6 +65,43 @@
 					</a>
 				</form> <br>
 				<% } %>
+=======
+					</p> 
+				</article>
+
+	<!-- Comentarios -->
+				<div class="col-12 col-lg-4">
+
+					<section class="comments">
+						<% for (i = 0; i < producto.Comentarios.length; i++ ) { %>
+							<article>
+								<a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> ">
+							<!-- <img src="" alt=""> -->	
+								</a>
+								<div class="data">
+									<p class="user">
+										<strong> <a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> " > <%= producto.Comentarios[i].Usuarios.nombre %></a> </strong>
+										<%= producto.Comentarios[i].texto %> 
+									</p>
+								</div>
+							</article>
+						<% } %>
+					</section>
+					
+					<% if (locals.user) { %>
+						<form class="form" action="/products/comentario/<%= producto.id %>" method="POST"  >
+							<input class="form-input" name="texto" type="text"  placeholder="Agregar comentario">
+							<br>
+							<button type="submit">AGREGAR COMENTARIO </button>
+						</form> <br>
+					<% } %> 
+					
+
+				</div>
+
+			</div>		
+		</div>
+>>>>>>> 6efb6157da2accbe917f38090f93295edb4a9533
 
 
 			</div>

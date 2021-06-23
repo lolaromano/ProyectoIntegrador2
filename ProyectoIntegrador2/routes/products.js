@@ -14,5 +14,24 @@ router.post('/detail/:id', productosController.borrar);
 router.get('/edit/:id', productosController.edit);
 router.post('/edit/:id', productosController.update); //una vez que hago los cambios
 
+router.post('/comentario/:id', productosController.comentario);
+
+// let storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, 'public/images/jordan')
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+//     },
+// });
+
+// let upload = multer({
+//     storage: storage
+// })
+
+// router.post('/', upload.single('jordan'), productosController.add);
+
+
+
 module.exports = router;
 
