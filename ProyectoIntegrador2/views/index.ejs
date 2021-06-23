@@ -1,17 +1,17 @@
-<%- include("partials/head.ejs") %> 
+<%- include("partials/head.ejs") %>
 
 <% if (locals.user) { %>
-<%- include("partials/headerLogueado.ejs") %> 
+<%- include("partials/headerLogueado.ejs") %>
 <% } else { %>
-<%- include("partials/header.ejs") %>  
-<% } %>  
+<%- include("partials/header.ejs") %>
+<% } %>
 
-	<!-- Index-->
+<!-- Index-->
 <div class="banner">
-	<img src="images/jordan/bannerNuevo.jpg" alt="Banner de ofertas"> 
+	<img src="images/jordan/bannerNuevo.jpg" alt="Banner de ofertas">
 </div> <br><br><br><br><br><br><br>
 
-	<!-- Novedades -->
+<!-- Novedades -->
 <div class="container products-wrapper">
 	<div class="row">
 
@@ -19,27 +19,27 @@
 			<h2 class="products-title">NOVEDADES</h2>
 		</div>
 
-	<!-- Show novedades -->
+		<!-- Show novedades -->
 		<% for (let i=0; i < 4; i+=1 ) { %>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/products/detail/<%= productos[i].id %>">
-						<figure class="product-box_image">
-							<img src="<%= productos[i].imagen %>">
-						</figure> 
-						<article class="product-box_data">
-							<h2> <%= productos[i].Nombre %> </h2>
-							<p> <%= productos[i].descripcion %> </p> 
-						</article>
-					</a>
-				</section> 
-			</div> 
-		<% } %> 
-	
+		<div class="col-12 col-sm-6 col-lg-3">
+			<section class="product-box">
+				<a href="/products/detail/<%= productos[i].id %>">
+					<figure class="product-box_image">
+						<img src="<%= productos[i].imagen %>">
+					</figure>
+					<article class="product-box_data">
+						<h2> <%= productos[i].Nombre %> </h2>
+						<p> <%= productos[i].descripcion %> </p>
+					</article>
+				</a>
+			</section>
+		</div>
+		<% } %>
+
 	</div>
 </div>
 
-	<!-- Más comentados -->
+<!-- Más comentados -->
 <div class="container products-wrapper">
 	<div class="row">
 
@@ -47,25 +47,24 @@
 			<h2 class="products-title">MÁS COMENTADOS</h2>
 		</div>
 
-	<!-- Show mas comentados -->
+		<!-- Show mas comentados -->
 		<% for (let i=4; i < 8; i+=1 ) { %>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
 				<a href="/products/detail/<%= productos[i].id %>">
 					<figure class="product-box_image">
 						<img src="<%= productos[i].imagen %>">
-					</figure> 
+					</figure>
 					<article class="product-box_data">
 						<h2> <%= productos[i].Nombre %> </h2>
-						<p> <%= productos[i].descripcion %> </p> 
+						<p> <%= productos[i].descripcion %> </p>
 					</article>
 				</a>
-			</section> 
-		</div> 
+			</section>
+		</div>
 		<%}%> 
 
 	</div>
 </div> 
 
-<%- include("partials/footer.ejs") %> 
-
+<%- include("partials/footer.ejs") %>

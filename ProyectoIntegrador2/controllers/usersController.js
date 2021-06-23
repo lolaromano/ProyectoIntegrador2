@@ -1,35 +1,39 @@
-let productos = require ("../data/productos");
-let users = require ("../data/users");
-let db = require ('../database/models');
+let productos = require("../data/productos");
+let users = require("../data/users");
+let db = require('../database/models');
 const Usuario = db.Usuario;
 const op = db.Sequelize.Op;
 
 let usersController = {
 
-   profile: (req, res) => {
+    profile: (req, res) => {
         let primaryKey = req.params.id;
-            Usuario.findByPk (primaryKey)
-            .then((productos)=> res.render('profile', {productos: productos.lista, idSearch: id}))
-            .catch((err)=> console.log(err));
+        Usuario.findByPk(primaryKey)
+            .then((productos) => res.render('profile', {
+                productos
+            }))
+            .catch((err) => console.log(err));
     },
-    
+
     profileOthers: (req, res) => {
         let primaryKey = req.params.id;
-            Usuario.findByPk (primaryKey)
-            .then((users)=> res.render('profileOthers', {users}))
-            .catch((err)=> `Error: ${err}`)
+        Usuario.findByPk(primaryKey)
+            .then((users) => res.render('profileOthers', {
+                users
+            }))
+            .catch((err) => `Error: ${err}`)
     },
 
     register: (req, res) => {
-        res.render ('register')
+        res.render('register')
     },
 
     profileEdit: (req, res) => {
-        res.render ('profileEdit')
+        res.render('profileEdit')
     },
 
     login: (req, res) => {
-        res.render ('login')
+        res.render('login')
     }
 
 }

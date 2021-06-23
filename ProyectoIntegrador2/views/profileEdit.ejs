@@ -1,12 +1,12 @@
-<%- include("partials/head.ejs") %> 
+<%- include("partials/head.ejs") %>
 
 <% if (locals.user) { %>
-	<%- include("partials/headerLogueado.ejs") %> 
-	<% } else { %>
-	<%- include("partials/header.ejs") %>  
-	<% } %> 
+<%- include("partials/headerLogueado.ejs") %>
+<% } else { %>
+<%- include("partials/header.ejs") %>
+<% } %>
 
-	<!-- Editar perfil -->
+<!-- Editar perfil -->
 <div class="container products-wrapper">
 	<div class="row">
 
@@ -14,18 +14,18 @@
 			<h2 class="products-title">Editar mi perfil</h2>
 		</div>
 
-	<!-- Formulario editar perfil -->
+		<!-- Formulario editar perfil -->
 		<form> <br>
 
 			<div class="mb-3">
-			  <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-			  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-			  <div id="emailHelp" class="form-text">No compartiremos tu correo electronico con nadie.</div>
+				<label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<div id="emailHelp" class="form-text">No compartiremos tu correo electronico con nadie.</div>
 			</div>
 
 			<div class="mb-3">
-			  <label for="exampleInputPassword1" class="form-label">Contraseña </label>
-			  <input type="password" class="form-control" id="exampleInputPassword1">
+				<label for="exampleInputPassword1" class="form-label">Contraseña </label>
+				<input type="password" class="form-control" id="exampleInputPassword1">
 			</div> <br>
 
 			<div class="mb-3">
@@ -34,13 +34,13 @@
 			</div>
 
 			<div class="mb-3 form-check">
-			  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-			  <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones.</label>
+				<input type="checkbox" class="form-check-input" id="exampleCheck1">
+				<label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones.</label>
 			</div>
 
 			<div class="col-12" id="enviar2">
 				<a href="/users/profile" class="btn btn-primary" type="submit">
-				Enviar
+					Enviar
 				</a>
 			</div>
 
@@ -49,4 +49,4 @@
 	</div>
 </div>
 
-<%- include("partials/footer.ejs") %> 
+<%- include("partials/footer.ejs") %>

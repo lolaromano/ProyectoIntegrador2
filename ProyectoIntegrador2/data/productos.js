@@ -1,21 +1,19 @@
 let productos = {
-    lista: [
-        {
+    lista: [{
             id: 0,
             nombre: "JORDAN BLUE",
             modelo: "AIR JORDAN 3 RETRO",
             anio: 2019,
             color: "Azul",
             descripcion: "La Blue Jordan presenta una parte superior de cuero completamente azul con inserciones de cuero perforado gris en los cordones y el tobillo. Las insignias tradicionales de Jumpman cubren el talón.",
-            fecha_creacion: 2019-01-01,
+            fecha_creacion: 2019 - 01 - 01,
 
-            describirse: function(){
+            describirse: function () {
                 return `Hola soy ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
 
             imagen: "/images/jordan/jordan-blue.png",
-            comentarios: [
-                {
+            comentarios: [{
                     idUsuario: 0,
                     usuario: 'M. Ramirez',
                     comentario: 'Compré medio punto más de lo que calzo porque tengo otras air max que cuando camino me toca el dedo en la punta y es doloroso. Con medio punto más quedan perfectas! son menos rosadas que en la foto pero hermosasss!!!.',
@@ -50,38 +48,37 @@ let productos = {
             anio: 2019,
             color: "Blanco",
             descripcion: "Su diseño, clásico y sobrio, está hecho completamente en la parte superior de piel blanca y toques de 'plata pura' sobre el Swoosh, la plantilla y la suela. También cuenta con perforaciones de ventilación en la puntera, una lengüeta de malla transpirable y un acolchado alrededor del tobillo para mayor comodidad.",
-            fecha_creacion: 2019-02-01,
+            fecha_creacion: 2019 - 02 - 01,
 
-            describirse: function(){
+            describirse: function () {
                 return `Hola soy ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
 
             imagen: "/images/jordan/jordan-classic.png",
-            comentarios: [
-            {
-                idUsuario: 4,
-                usuario: 'J. Cukier Holmberg',
-                comentario: 'En la publicación las zapatillas aparecen con la capellána color beige y la goma de la planta amarilla y me gustó esa combinación pero resulta que cuando recibí y vi el calzado vinieron con zuela. Color beige también no me gustó para nada.',
-                imagenUsuario: "/images/users/imagenUsuario4.png",
-            },
-            {
-                idUsuario: 5,
-                usuario: 'M. Campitelli',
-                comentario: 'Hola, buenas noches. Tradeas? Si te interesa tengo unas Yeezy 380 Onyx, 10us, que sería aprox el mismo calce en cm. También soy de Ros, saludos',
-                imagenUsuario: "/images/users/imagenUsuario0.png",
-            },
-            {
-                idUsuario: 6,
-                usuario: 'D. Cardona',
-                comentario: 'Hola como va consulta, como viene el productos?. Con la caja original, y los sellos en la misma caja, que dicta la serie del producto y eso?. Desde ya gracias.',
-                imagenUsuario: "/images/users/imagenUsuario1.png",
-            },
-            {
-                idUsuario: 7,
-                usuario: 'T. Del Pino',
-                comentario: 'Hola cuantos cm son? donde nos podemos encontrar?',
-                imagenUsuario: "/images/users/imagenUsuario2.png",
-            },
+            comentarios: [{
+                    idUsuario: 4,
+                    usuario: 'J. Cukier Holmberg',
+                    comentario: 'En la publicación las zapatillas aparecen con la capellána color beige y la goma de la planta amarilla y me gustó esa combinación pero resulta que cuando recibí y vi el calzado vinieron con zuela. Color beige también no me gustó para nada.',
+                    imagenUsuario: "/images/users/imagenUsuario4.png",
+                },
+                {
+                    idUsuario: 5,
+                    usuario: 'M. Campitelli',
+                    comentario: 'Hola, buenas noches. Tradeas? Si te interesa tengo unas Yeezy 380 Onyx, 10us, que sería aprox el mismo calce en cm. También soy de Ros, saludos',
+                    imagenUsuario: "/images/users/imagenUsuario0.png",
+                },
+                {
+                    idUsuario: 6,
+                    usuario: 'D. Cardona',
+                    comentario: 'Hola como va consulta, como viene el productos?. Con la caja original, y los sellos en la misma caja, que dicta la serie del producto y eso?. Desde ya gracias.',
+                    imagenUsuario: "/images/users/imagenUsuario1.png",
+                },
+                {
+                    idUsuario: 7,
+                    usuario: 'T. Del Pino',
+                    comentario: 'Hola cuantos cm son? donde nos podemos encontrar?',
+                    imagenUsuario: "/images/users/imagenUsuario2.png",
+                },
             ]
         },
         {
@@ -91,15 +88,14 @@ let productos = {
             anio: 2020,
             color: "Verde",
             descripcion: 'Esta edición canaliza el estilo de la vieja escuela con una silueta de corte alto y un look retro compuesto por un upper de piel de flor, una lengüeta de malla y una mediasuela de espuma que ofrece una amortiguación ligera y eficaz.',
-            fecha_creacion: 2020-03-01,
+            fecha_creacion: 2020 - 03 - 01,
 
-            describirse: function(){
+            describirse: function () {
                 return `Hola soy ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
 
             imagen: "/images/jordan/jordan-green.png",
-            comentarios: [
-                {
+            comentarios: [{
                     idUsuario: 8,
                     usuario: 'G. Corti',
                     comentario: 'Hola permutas por un Ferrari? Si me quedo corto le puedo sumar un una RAM',
@@ -132,15 +128,14 @@ let productos = {
             anio: 2019,
             color: "Verde Guerra",
             descripcion: "La puntera y la lengüeta tienen un color negro oscuro, que se acentúa aparte de los tonos blancos del perfil, la entresuela y el parche con la marca.",
-            fecha_creacion: 2019-04-01,
+            fecha_creacion: 2019 - 04 - 01,
 
-            describirse: function(){
+            describirse: function () {
                 return `Hola soy ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
 
             imagen: "/images/jordan/jordan-high.png",
-            comentarios: [
-                {
+            comentarios: [{
                     idUsuario: 12,
                     usuario: 'L. Romano',
                     comentario: 'Muy buen producto, unico que la caja estaba en mal estado.',
@@ -173,15 +168,14 @@ let productos = {
             anio: 2019,
             color: "Multicolor",
             descripcion: "Los gráficos personalizables (incluida la cara sonriente característica de Balvin) le dan un giro distintivo a la lengüeta, con imágenes similares que adornan la plantilla y el talón del calzado.",
-            fecha_creacion: 2019-05-01,
+            fecha_creacion: 2019 - 05 - 01,
 
-            describirse: function(){
+            describirse: function () {
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
 
             imagen: "/images/jordan/jordan-jbalvin.png",
-            comentarios: [
-                {
+            comentarios: [{
                     idUsuario: 16,
                     usuario: 'S. De Pellegrin',
                     comentario: 'Hola ayer te hable por las zapatillas las voy a comprar tenes un numero como para comunicarme asi arreglamos lo del talle',
@@ -214,15 +208,14 @@ let productos = {
             anio: 2020,
             color: "Rosa",
             descripcion: "Está detallado en la lengüeta y el interior con ilustraciones de fresas y limones que hacen alusión a su nombre. Además, proporciona la misma amortiguación ligera de las Pink Jordan gracias a la tecnología Air.",
-            fecha_creacion: 2020-06-01,
+            fecha_creacion: 2020 - 06 - 01,
 
-            describirse: function(){
+            describirse: function () {
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
 
             imagen: "/images/jordan/jordan-pink.png",
-            comentarios: [
-                {
+            comentarios: [{
                     idUsuario: 20,
                     usuario: 'J. Perez',
                     comentario: 'Hola que talle seria?',
@@ -255,15 +248,14 @@ let productos = {
             anio: 2019,
             color: "Gris y Rojo",
             descripcion: "Las Retro Jordan estan compuestas por una parte superior de cuero blanco con superposiciones de gamuza gris y un panel de tobillo de cuero rojo.",
-            fecha_creacion: 2019-07-01,
+            fecha_creacion: 2019 - 07 - 01,
 
-            describirse: function(){
+            describirse: function () {
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
 
             imagen: "/images/jordan/jordan-retro.png",
-            comentarios: [
-                {
+            comentarios: [{
                     idUsuario: 24,
                     usuario: 'C. Ferroni',
                     comentario: 'Yo tengo un par de esas del mismo modelo y me gustaría venderlas , si te interesa avísame',
@@ -297,15 +289,14 @@ let productos = {
             anio: 2021,
             color: "Rojo, Negro y Blanco",
             descripcion: "Este Jordan consta de una parte superior de cuero blanco y rojo con lengüeta y forro de satin rojo. Los detalles de piel de serpiente sintética negra también aparecen en la parte superior. Una entresuela blanca, suela roja y un gráfico tradicional de Jordan Wings en el tobillo completan el diseño.",
-            fecha_creacion: 2021-08-01,
+            fecha_creacion: 2021 - 08 - 01,
 
-            describirse: function(){
+            describirse: function () {
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
 
             imagen: "/images/jordan/jordan-snake.png",
-            comentarios: [
-                {
+            comentarios: [{
                     idUsuario: 28,
                     usuario: 'L. Patiño',
                     comentario: 'hola tenes dos pares?',
@@ -338,15 +329,14 @@ let productos = {
             anio: 2020,
             color: "Violeta",
             descripcion: "Las famosas líneas del calzado se han mantenido sin cambios desde su inicio en el 85, pero esta versión modificada del clásico tiene una unidad Zoom Air en el talón y una lengüeta acolchada para que puedas navegar cómodamente. Materiales de primera calidad y una combinación de colores de muselina añaden un elemento moderno a esta silueta baja.",
-            fecha_creacion: 2020-09-01,
+            fecha_creacion: 2020 - 09 - 01,
 
-            describirse: function(){
+            describirse: function () {
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
 
             imagen: "/images/jordan/jordan-violeta.png",
-            comentarios: [
-                {
+            comentarios: [{
                     idUsuario: 32,
                     usuario: 'F. Taboada',
                     comentario: 'Hola buenas noches quiero las zapatillas Me las puedo probar??',
@@ -379,15 +369,14 @@ let productos = {
             anio: 2021,
             color: "Amarillas",
             descripcion: "Inspiradas en uno de los equipos deportivos con más historia en el mundo universitario, estas zapatillas proporcionan el mejor estilo y comodidad a través de los colores insignia de los Wolverines y elementos clásicos de la serie Dunk, como la parte superior de piel ligera, la lengüeta de malla y la mediasuela de espuma.",
-            fecha_creacion: 2021-10-01,
+            fecha_creacion: 2021 - 10 - 01,
 
-            describirse: function(){
+            describirse: function () {
                 return `Hola soy la Jordan ${productos.lista[0].nombre}, modelo ${productos.lista[0].modelo}, fabricado en el año ${productos.lista[0].anio} y de color ${productos.lista[0].color}`
             },
 
             imagen: "/images/jordan/jordan-yellow.png",
-            comentarios: [
-                {
+            comentarios: [{
                     idUsuario: 36,
                     usuario: 'M. Gomes',
                     comentario: 'los q critican no entienden nd de zapas, me imagino si les pones una jordan 1 de off white o unas dior xd',
@@ -413,7 +402,7 @@ let productos = {
                 },
             ]
         },
-        
+
     ]
 }
 

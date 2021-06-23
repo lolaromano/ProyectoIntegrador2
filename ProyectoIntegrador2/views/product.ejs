@@ -1,74 +1,76 @@
-<%- include("partials/head.ejs") %> 
+<%- include("partials/head.ejs") %>
 
 <% if (locals.user) { %>
-	<%- include("partials/headerLogueado.ejs") %> 
-	<% } else { %>
-	<%- include("partials/header.ejs") %>  
-<% } %> 
-	<div class="container products-wrapper">
+<%- include("partials/headerLogueado.ejs") %>
+<% } else { %>
+<%- include("partials/header.ejs") %>
+<% } %>
 
-		<div class="d-flex align-items-center">
-			<h2 class="products-title">
-				<%= producto.Nombre + ' ' %> Modelo <%= producto.descripcion %>
-			</h2> 
+<div class="container products-wrapper">
 
-			<% if (locals.user) { %>
+	<div class="d-flex align-items-center">
+		<h2 class="products-title">
+			<%= producto.Nombre + ' ' %> Modelo <%= producto.descripcion %>
+		</h2>
+
+		<% if (locals.user) { %>
+		<p class="product-detail-description">
+			<a href="/products/create">Agregar producto</a>
+			<!-- <a href="/products/productAdd/:id">Agregar producto</a> -->
+		</p>
+		<% } %>
+
+	</div>
+</div>
+
+<div class="container products-wrapper">
+
+	<div class="product-detail">
+		<div class="row">
+
+			<article class="col-12 col-lg-8 product-detail-info">
+				<img src="<%= producto.imagen %>" alt="" class="product-detail-img">
 				<p class="product-detail-description">
-					<a href="/products/create">Agregar producto</a>
-					<!-- <a href="/products/productAdd/:id">Agregar producto</a> -->
-				</p>
-			<% } %> 
-
-		</div>
-	</div>
-
-	<div class="container products-wrapper">
-		
-		<div class="product-detail">
-			<div class="row">
-
-				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= producto.imagen %>"  alt="" class="product-detail-img">
-					<p class="product-detail-description"> 
 					<%= producto.descripcion %>
-					</p> 
-				</article>
+				</p>
+			</article>
 
-	<!-- Comentarios -->
-				<div class="col-12 col-lg-4">
+			<!-- Comentarios -->
+			<div class="col-12 col-lg-4">
 
-					<section class="comments">
-						<% for (i = 0; i < producto.Comentarios.length; i++ ) { %>
-							<article>
-								<a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> ">
-							<!-- <img src="" alt=""> -->	
-								</a>
-								<div class="data">
-									<p class="user">
-										<strong> <a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> " > <%= producto.Comentarios[i].Usuarios.nombre %></a> </strong>
-										<%= producto.Comentarios[i].texto %> 
-									</p>
-								</div>
-							</article>
-						<% } %>
-					</section>
-					
-					<% if (locals.user) { %>
-						<form class="form" action="" method="POST">
-							<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-							<br>
-							<a href="/users/profile" class="btn btn-primary" type="submit">
-								AGREGAR COMENTARIO
-							</a>
-						</form> <br>
-					<% } %> 
-					
+				<section class="comments">
+					<% for (i = 0; i < producto.Comentarios.length; i++ ) { %>
+					<article>
+						<a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> ">
+							<!-- <img src="" alt=""> -->
+						</a>
+						<div class="data">
+							<p class="user">
+								<strong> <a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> ">
+										<%= producto.Comentarios[i].Usuarios.nombre %></a> </strong>
+								<%= producto.Comentarios[i].texto %>
+							</p>
+						</div>
+					</article>
+					<% } %>
+				</section>
 
-				</div>
+				<% if (locals.user) { %>
+				<form class="form" action="" method="POST">
+					<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+					<br>
+					<a href="/users/profile" class="btn btn-primary" type="submit">
+						AGREGAR COMENTARIO
+					</a>
+				</form> <br>
+				<% } %>
 
-			</div>		
+
+			</div>
+
 		</div>
-
 	</div>
 
-<%- include("partials/footer.ejs") %> 
+</div>
+
+<%- include("partials/footer.ejs") %>

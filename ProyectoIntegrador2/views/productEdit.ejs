@@ -1,33 +1,37 @@
-<%- include("partials/head.ejs") %> 
+<%- include("partials/head.ejs") %>
 
 <% if (locals.user) { %>
-    <%- include("partials/headerLogueado.ejs") %> 
-    <% } else { %>
-    <%- include("partials/header.ejs") %>  
-    <% } %> 
+<%- include("partials/headerLogueado.ejs") %>
+<% } else { %>
+<%- include("partials/header.ejs") %>
+<% } %>
 
-	<!-- Agregar producto -->
-    <p>Editando el producto: <%= resultados.Nombre%></p>
+<!-- Agregar producto -->
+<p>Editando el producto: <%= resultados.Nombre%></p>
 
-		<%- include('partials/header.ejs') %>
+<%- include('partials/header.ejs') %>
 
-	<!-- Formulario de agregar producto -->
-<form action="/products/edit/<%= resultados.id %>" method="POST"> 
+<!-- Formulario de agregar producto -->
+<form action="/products/edit/<%= resultados.id %>" method="POST">
     <p>
-        <input type="text" class="form-control" value="<%= resultados.usuario_id %>"  name="usuario_id" placeholder="Usuario">
+        <input type="text" class="form-control" value="<%= resultados.usuario_id %>" name="usuario_id"
+            placeholder="Usuario">
     </p>
     <p>
-        <input type="text" class="form-control" value="<%= resultados.nombre %>"  name="nombre" placeholder="Nombre del producto">
+        <input type="text" class="form-control" value="<%= resultados.nombre %>" name="nombre"
+            placeholder="Nombre del producto">
     </p>
     <p>
-        <input type="text" class="form-control" value="<%= resultados.descripcion %>"  name="descripcion" placeholder="Descripcion del producto">
-	</p>
+        <input type="text" class="form-control" value="<%= resultados.descripcion %>" name="descripcion"
+            placeholder="Descripcion del producto">
+    </p>
     <p>
-        <input type="number" class="form-control" value="<%= resultados.fecha %>"   name="fecha" placeholder="Fecha de publicación">
+        <input type="number" class="form-control" value="<%= resultados.fecha %>" name="fecha"
+            placeholder="Fecha de publicación">
     </p>
 
-	<button type="submit" class="btn btn-primary">Guardar</button> <!--submit se redirige al action -->
+    <button type="submit" class="btn btn-primary">Guardar</button> <!--submit se redirige al action -->
 
 </form>
 
-<%- include("partials/footer.ejs") %> 
+<%- include("partials/footer.ejs") %>
