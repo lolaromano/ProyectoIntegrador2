@@ -19,7 +19,7 @@ let indexController = {
                             { association: "Usuario" },
                             { association: "Comentarios" }
                         ],
-                        order:[["Comentarios", "updated_at","desc"]], //1 = string,  3 = se refiere a la tabla
+                        order:[["Comentarios", "updated_at","desc"]], //Cuando hay 3 strings el 1 se refiere a la tabla 
                     } 
                 )
                 .then(comentarios => { //comentarios tiene todos los productos ordenados por el ult comentado

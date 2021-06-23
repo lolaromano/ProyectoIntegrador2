@@ -33,11 +33,16 @@ let productosController = {
 
     show: (req, res) => {
         let primaryKey = req.params.id;
-         producto.findByPk(primaryKey, { //devuelve promesa con resultados
-             include: [
-                 {association: 'Usuario'}, 
-                 {association: 'Comentarios', 
-                 include: [{association: "Usuarios"}] }
+        producto.findByPk(primaryKey, { //devuelve promesa con resultados
+                include: [{
+                        association: 'Usuario'
+                    },
+                    {
+                        association: 'Comentarios',
+                        include: [{
+                            association: "Usuarios"
+                        }]
+                    }
                 ] //datos de la tabla de usuario y comentario
             })
 
@@ -49,7 +54,7 @@ let productosController = {
     },
 
     detail: (req, res) => {
-        db.Producto.findByPk(req.params.id)
+        producto.findByPk(req.params.id)
 
             .then(resultado => {
                 res.send(resultado)
@@ -58,7 +63,7 @@ let productosController = {
     },
 
     add: (req, res) => {
-        let producto = {  
+        let producto = {
             Nombre: req.body.Nombre,
             descripcion: req.body.descripcion,
             Fecha: req.body.Fecha,
@@ -68,7 +73,7 @@ let productosController = {
             usuario_id: req.session.user.id
         }
 
-        db.Producto.create(producto) //crea el producto y lo redirecciona a productos
+        producto.create(producto) //crea el producto y lo redirecciona a productos
 
             .then(() => res.redirect('/'))
             .catch(err => console.log(err))
@@ -76,13 +81,21 @@ let productosController = {
 
     borrar: (req, res) => {
         let primaryKey = req.params.id;
-        producto.destroy({
-            where: {
-                id: primaryKey
-            }
-        })
+        db.Comentario.destroy({
+                where: {
+                    producto_id: primaryKey
+                }
+            })
+            .then(() =>
+                producto.destroy({
+                    where: {
+                        id: primaryKey
+                    }
+                })
 
-            .then(() => res.redirect('/'))
+                .then(() => res.redirect('/'))
+            )
+
             .catch(err => console.log(err))
     },
 
@@ -112,7 +125,6 @@ let productosController = {
     },
 
     search: (req, res) => {
-
         producto.findAll({
                 where: {
                     [op.or]: [{
@@ -130,11 +142,13 @@ let productosController = {
             })
             //buscamos todas los productos que coinciden
 
-          .then(productos => res.render('searchResults',{productos}))
-          .catch(err => console.log(err))
+            .then(productos => res.render('searchResults', {
+                productos
+            }))
+            .catch(err => console.log(err))
     },
 
-    comentario: (req,res) => {
+    comentario: (req, res) => {
         let comentario = {
             texto: req.body.texto,
             usuario_id: req.session.user.id, //fk
@@ -142,11 +156,11 @@ let productosController = {
             created_at: new Date(),
             updated_at: new Date(), //forma de decirle que es la fecha actual
             creacion: new Date(),
-        } 
+        }
         db.Comentario.create(comentario)
 
-        .then(() => res.redirect(`/products/detail/${req.params.id}`))
-        .catch(err => console.log(err))
+            .then(() => res.redirect(`/products/detail/${req.params.id}`))
+            .catch(err => console.log(err))
 
     }
 

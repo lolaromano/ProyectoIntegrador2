@@ -20,9 +20,6 @@ let upload = multer({
 })
 
 router.post('/productAdd', upload.single('jordan'), productosController.add); //upload.single -> solo suban una foto // 'jordan' -> va a la carpeta jordan
-
-
-
 router.get('/id/:id', productosController.index); //devuelve el index
 router.get('/productAdd', productosController.productAdd); //devuelve el form de agregar productos
 router.get('/allProducts', productosController.allProducts); //devuelve todos los productos
@@ -32,7 +29,6 @@ router.get('/detail/:id', productosController.show);
 router.post('/detail/:id', productosController.borrar);
 router.get('/edit/:id', productosController.edit);
 router.post('/edit/:id', productosController.update); //una vez que hago los cambios
-
 router.post('/comentario/:id', productosController.comentario);
 
 
