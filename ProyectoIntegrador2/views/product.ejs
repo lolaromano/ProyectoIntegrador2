@@ -54,12 +54,10 @@
 					</section>
 					
 					<% if (locals.user) { %>
-						<form class="form" action="" method="POST">
-							<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+						<form class="form" action="/products/comentario/<%= producto.id %>" method="POST"  >
+							<input class="form-input" name="texto" type="text"  placeholder="Agregar comentario">
 							<br>
-							<a href="/users/profile" class="btn btn-primary" type="submit">
-								AGREGAR COMENTARIO
-							</a>
+							<button type="submit">AGREGAR COMENTARIO </button>
 						</form> <br>
 					<% } %> 
 					

@@ -30,7 +30,7 @@ let productosController = {
          producto.findByPk(primaryKey, { //devuelve promesa con resultados
              include: [
                  {association: 'Usuario'}, 
-                 {association: 'Comentarios',
+                 {association: 'Comentarios', 
                  include: [{association: "Usuarios"}] }
                 ] //datos de la tabla de usuario y comentario
          })
@@ -77,7 +77,7 @@ let productosController = {
 
     borrar: (req, res)=>{
         let primaryKey = req.params.id;
-        producto.borrar({
+        producto.destroy({
             where: {
                 id: primaryKey
             }
@@ -125,11 +125,31 @@ let productosController = {
 
           .then(productos => res.render('searchResults',{productos}))
           .catch(err => console.log(err))
-    } 
+    },
+
+    comentario: (req,res) => {
+        let comentario = {
+            texto: req.body.texto,
+            usuario_id: req.session.user.id, //fk
+            producto_id: req.params.id, //fk
+            created_at: new Date(),
+            updated_at: new Date(), //forma de decirle que es la fecha actual
+            creacion: new Date(),
+        } 
+        db.Comentario.create(comentario)
+
+        .then(() => res.redirect(`/products/detail/${req.query.search}`))
+        .catch(err => console.log(err))
+
+    }
 
 
 }
 
+//body en el post (oculto)
+//params en get (url)
 
+//render: recorra los datos de la vista
+//redirect: redireccione a la ruta
 
 module.exports = productosController;

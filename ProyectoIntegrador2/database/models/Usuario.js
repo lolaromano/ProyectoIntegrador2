@@ -31,7 +31,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
         },
         FechaDeNacimiento: {
-            type: dataTypes.DATE,
+            type: dataTypes.DATEONLY,
         },
     }; //van las columnas
 
