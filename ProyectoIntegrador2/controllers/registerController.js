@@ -61,21 +61,18 @@ let registerController = {
                             Password: bcrypt.hashSync(req.body.password, 10),
                             Telefono: req.body.telefono,
                             FechaDeNacimiento: req.body.fechadenacimiento,
+                            imagen: `/images/users/${req.file.filename}`,
                             //avatar: req.file.filename
                         }
 
                         users.create(user) //creacion del usuario 
-                            .then(user => {
-                                return res.redirect('/login')
-                            })
+                            .then(user => res.redirect('/login'))
                             .catch(err => console.log(err))
                     }
                 })
                 .catch(err => console.log(err))
-
         }
     },
-
 }
 
 module.exports = registerController;

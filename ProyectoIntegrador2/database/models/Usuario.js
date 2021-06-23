@@ -33,6 +33,9 @@ module.exports = (sequelize, dataTypes) => {
         FechaDeNacimiento: {
             type: dataTypes.DATEONLY,
         },
+        imagen: {
+            type: dataTypes.STRING,
+        }
     }; //van las columnas
 
     let config = {
