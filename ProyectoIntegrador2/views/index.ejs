@@ -48,16 +48,16 @@
 		</div>
 
 		<!-- Show mas comentados -->
-		<% for (let i=4; i < 8; i+=1 ) { %>
+		<% for (let i=0; i < 4; i+=1 ) { %>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="/products/detail/<%= productos[i].id %>">
+				<a href="/products/detail/<%= comentarios[i].id %>">
 					<figure class="product-box_image">
-						<img src="<%= productos[i].imagen %>">
+						<img src="<%= comentarios[i].imagen %>">
 					</figure>
 					<article class="product-box_data">
-						<h2> <%= productos[i].Nombre %> </h2>
-						<p> <%= productos[i].descripcion %> </p>
+						<h2> <%= comentarios[i].Nombre %> </h2>
+						<p> <%= comentarios[i].descripcion %> </p>
 					</article>
 				</a>
 			</section>

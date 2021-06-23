@@ -58,30 +58,19 @@ let productosController = {
     },
 
     add: (req, res) => {
-        db.Producto.findAll()
-
-            .then(function (Productos) {
-                return res.render('productAdd', {
-                    Productos
-                })
-            })
-            .catch(err => console.log(err))
-
-    },
-
-    store: (req, res) => {
-
-        let producto = {
-            imagen: req.body.imagen,
-            usuario_id: req.body.usuario_id,
-            nombre: req.body.nombre,
+        let producto = {  
+            Nombre: req.body.Nombre,
             descripcion: req.body.descripcion,
-            fecha: req.body.fecha,
+            Fecha: req.body.Fecha,
+            imagen: `/images/jordan/${req.file.filename}`,
+            created_at: new Date(),
+            updated_at: new Date(),
+            usuario_id: req.session.user.id
         }
 
         db.Producto.create(producto) //crea el producto y lo redirecciona a productos
 
-            .then(() => res.redirect('/product'))
+            .then(() => res.redirect('/'))
             .catch(err => console.log(err))
     },
 
@@ -93,7 +82,7 @@ let productosController = {
             }
         })
 
-            .then(() => res.redirect('/product'))
+            .then(() => res.redirect('/'))
             .catch(err => console.log(err))
     },
 
@@ -156,7 +145,7 @@ let productosController = {
         } 
         db.Comentario.create(comentario)
 
-        .then(() => res.redirect(`/products/detail/${req.query.search}`))
+        .then(() => res.redirect(`/products/detail/${req.params.id}`))
         .catch(err => console.log(err))
 
     }
