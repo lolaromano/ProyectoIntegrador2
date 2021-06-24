@@ -11,22 +11,33 @@
 	<div class="row">
 
 		<div class="img-container offset-3 col-2">
-			<img src="<%= users.imagen %>" alt="foto de perfil" class="foto-perfil">
+			<img src="<%=user.imagen%>"
+				alt="foto de perfil" class="foto-perfil">
 		</div>
 
 		<div class="data-container col-6">
 
 			<div class="d-flex align-items-center ">
-				<h1 class="profileinfo"> <%= users.nombre %> 
-				</h1 >
-				<a class="btn mt-3 ml-4" id="profileinfo" href="">SEGUIR</a>
+				<h1 class="profileinfo"> <%= user.nombre %>
+					<a href="/users/profileEdit">
+						<i class="fas fa-cog"></i>
+					</a>
+				</h1>
 			</div>
 
 			<div>
 				<ul class="profileinfo">
-					<li>4 productos</li>
-					<li>250 seguidores</li>
-					<li>100 comentarios</li>
+					<% if(user.Productos==0){%>
+                        <li>0 productos creados</li>
+                    <% }else{%>
+						<li><%= user.Productos.length%> productos creados</li>
+                        <% }%>
+                    <%if(user.Comentarios==0){%>
+                        <li>0 comentarios creados</li>
+                    <% }else{%>
+						<li><%= user.Comentarios.length%> comentarios creados</li>
+                        <% }%>
+				
 				</ul>
 			</div>
 
@@ -35,50 +46,38 @@
 	</div>
 </section>
 
-<!-- Sus productos -->
+<!-- Mis productos -->
 <div class="container products-wrapper">
 	<div class="row">
 
 		<div class="col-12">
 			<h2 class="products-title">Sus productos</h2>
 		</div>
-
-		<!-- Show sus productos -->
-		<% for (i = 4; i < 8; i++ ) { %>
-<<<<<<< HEAD
-		<div class="col-12 col-sm-6 col-lg-3">
-			<section class="product-box">
-				<a href="/products/<%= productos[i].id %>">
-					<figure class="product-box_image">
-						<img src="<%= productos[i].imagen %>">
-					</figure>
-					<article class="product-box_data">
-						<h2> <%= productos[i].nombre %> </h2>
-						<p> <%= productos[i].modelo %> </p>
-
-
-					</article>
-				</a>
-			</section>
-		</div>
-=======
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/products/<%= productos[i].id %>">
-						<figure class="product-box_image">
-							<img src="<%= productos[i].imagen %>">
-						</figure> 
-						<article class="product-box_data">
-							<h2> <%= productos[i].nombre %> </h2>
-							<p> <%= productos[i].descripcion %> </p> 
-						
+	
+		<%console.log (user.Productos[0])%>
+		<!-- Show mis productos -->
+		<% if (user.Productos.length != 0) { %>
 		
-						</article>
-					</a>
-				</section> 
-			</div> 
->>>>>>> 6efb6157da2accbe917f38090f93295edb4a9533
-		<%}%> 
+			<% for (i = 0; i < user.Productos.length; i++ ) { %>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<section class="product-box">
+						<a href="/products/<%= user.Productos[i].id %>">
+							<figure class="product-box_image">
+								<img src="<%= user.Productos[i].imagen %>">
+							</figure> 
+							<article class="product-box_data">
+								<h2> <%= user.Productos[i].nombre %> </h2>
+								<p> <%= user.Productos[i].descripcion %> </p> 
+							
+			
+							</article>
+						</a>
+					</section> 
+				</div> 
+			<%}%> 
+			<% } else { %>
+	<h1>No tiene productos.</h1>
+			<% } %>
 					
 	</div>
 </div>

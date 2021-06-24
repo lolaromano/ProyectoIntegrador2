@@ -24,29 +24,29 @@ let loginController = {
         //devuelve promesa
         .then (user => {
             if (user==null){
-                errors.login = "Email es incorrecto"; //empezamos a llenar nuestro errors de arriba
+                errors.login = "Usuario es incorrecto"; //empezamos a llenar nuestro errors de arriba
                 res.locals.error = errors;
                 return res.render ('login') //lo devolvemos al login para q vuelva a escribir usuario y contra
             } else if (bcrypt.compareSync(req.body.password, user.Password)==false){//comparo contrasenia que escribo con la qu tengo en la base de datos
                 if (req.body.password == user.Password) {
                     req.session.user = user; //si entro sesion correctamente 
 
-                if (req.body.rememberme != undefined) {
-                    res.cookies ('userId', user.id, {maxAge: 1000 * 60 * 10});
-                }//nombre de la cookie, valor, tiempo de vigencia
-                return res.redirect('/')
-            }else{
-                errors.login = "Contraseña incorrecta"; //comparamos lo del formulario y user.Password de la base de datos
-                res.locals.error = errors;
-                return res.render ('login')
-            }
+                    if (req.body.rememberme != undefined) {
+                        res.cookies ('userId', user.id, {maxAge: 1000 * 60 * 10});
+                    }//nombre de la cookie, valor, tiempo de vigencia
+                    return res.redirect('/')
+                    }else{ //fallo contrasenia hasheada y sin hashear
+                        errors.login = "Contraseña incorrecta"; //comparamos lo del formulario y user.Password de la base de datos
+                        res.locals.error = errors;
+                        return res.render ('login')
+                    }
            
-            } else{
+            } else{ //para los usuarios creados x nosotras
                 req.session.user = user; //si entro sesion correctamente 
 
                 if (req.body.rememberme != undefined) {
                     res.cookies ('userId', user.id, {maxAge: 1000 * 60 * 10});
-                }//nombre de la cookie, valor, tiempo de vigencia
+                }//nombre de la cookie, valor, tiempo de vigencia 
             }
             return res.redirect('/')
         })

@@ -39,8 +39,9 @@ let productosController = {
                     },
                     {
                         association: 'Comentarios',
-                        include: [{
-                            association: "Usuarios"
+                            include: [{
+                                association: "Usuarios",
+                                order: [["Comentarios","updated_at", "desc"]]
                         }]
                     }
                 ] //datos de la tabla de usuario y comentario
@@ -51,15 +52,6 @@ let productosController = {
             })) //me lleva a la vista producto
             .catch(err => console.log(err))
 
-    },
-
-    detail: (req, res) => {
-        producto.findByPk(req.params.id)
-
-            .then(resultado => {
-                res.send(resultado)
-            })
-            .catch(err => console.log(err))
     },
 
     add: (req, res) => {
@@ -73,7 +65,7 @@ let productosController = {
             usuario_id: req.session.user.id
         }
 
-        producto.create(producto) //crea el producto y lo redirecciona a productos
+        db.Producto.create(producto) //crea el producto y lo redirecciona a productos
 
             .then(() => res.redirect('/'))
             .catch(err => console.log(err))
