@@ -34,24 +34,47 @@ let productosController = {
     show: (req, res) => {
         let primaryKey = req.params.id;
         producto.findByPk(primaryKey, { //devuelve promesa con resultados
+            include: [{
+                association: 'Usuario'
+            },
+
+            {
+                association: 'Comentarios',
+                order: ["Comentarios", "updated_at", "desc"],
                 include: [{
-                        association: 'Usuario'
-                    },
-                    {
-                        association: 'Comentarios', order: ["Comentarios","updated_at", "desc"],
-                            include: [{
-                                association: 'Usuarios',
-                        }]
-                    }
-                ] //datos de la tabla de usuario y comentario
-            })
+                    association: 'Usuarios',
+                }]
+            }
+        ]
+    })
+            .then(producto => {
+                db.Comentario.findAll({
+                        where: {
+                            producto_id: primaryKey,
+                        },
+                        include: [{
+                            association: "Usuarios"
+                        }, ],
+                        order: [
+                            ['updated_at', 'DESC']
+                        ],
 
-            .then(producto => res.render('product', {
-                producto
-            })) //me lleva a la vista producto
+                    })
+
+
+                    //datos de la tabla de usuario y comentario
+
+                    .then(comentario => {
+                        res.render('product', {
+                                producto,
+                                comentario
+                            })
+                        });
+                    })
+            }) //me lleva a la vista producto
             .catch(err => console.log(err))
-
     },
+
 
     add: (req, res) => {
         let producto = {
@@ -72,45 +95,59 @@ let productosController = {
 
     borrar: (req, res) => {
         let primaryKey = req.params.id;
-        db.Comentario.destroy({
-                where: {
-                    producto_id: primaryKey
-                }
-            })
-            .then(() =>
-                producto.destroy({
-                    where: {
-                        id: primaryKey
-                    }
-                })
-
-                .then(() => res.redirect('/'))
-            )
-
-            .catch(err => console.log(err))
-    },
-
-    edit: (req, res) => {
-        let primaryKey = req.params.id;
-        producto.findByPk(primaryKey) 
+        producto.findByPk(primaryKey) //busque producto x pk
 
             .then(resultados => {
-                if (req.session.user == undefined) {
-                    return res.redirect('/')
-        
+                if (req.session.user == undefined) { //si no tiene sesion, no puede borrar 
+                    return res.redirect(`/products/detail/${primaryKey}`)
+
                 } else if (req.session.user.id == resultados.usuario_id) {
-                    res.render('productEdit', {resultados})
+                    db.Comentario.destroy({
+                            where: {
+                                producto_id: primaryKey
+                            }
+                        })
+                        .then(() =>
+                            producto.destroy({
+                                where: {
+                                    id: primaryKey
+                                }
+                            })
+
+                            .then(() => res.redirect('/'))
+                        )
+
                 } else {
                     return res.redirect('/')
                 }
             })
-    
+            .catch(err => console.log(err))
+
+    },
+
+    edit: (req, res) => {
+        let primaryKey = req.params.id;
+        producto.findByPk(primaryKey)
+
+            .then(resultados => {
+                if (req.session.user == undefined) {
+                    return res.redirect('/')
+
+                } else if (req.session.user.id == resultados.usuario_id) {
+                    res.render('productEdit', {
+                        resultados
+                    })
+                } else {
+                    return res.redirect('/')
+                }
+            })
+
             .catch(err => console.log(err))
     },
 
     update: (req, res) => {
         let primaryKey = req.params.id; //recibimos el id, porque es lo que queremos actualizar
-        
+
         let productoActualizar = {
             id: primaryKey,
             Nombre: req.body.Nombre,
@@ -119,13 +156,17 @@ let productosController = {
             usuario_id: req.session.user.id, //session te guarda los datos del usuario cuando el ingresa. en session se guarda el usuario completo (con .id nos referimos al usuario)
         }
 
-        producto.update (productoActualizar, { where: {id: primaryKey}})
+        producto.update(productoActualizar, {
+                where: {
+                    id: primaryKey
+                }
+            })
 
             .then(() => res.redirect('/users/profile'))
             .catch(err => console.log(err))
 
     },
-    
+
     search: (req, res) => {
         producto.findAll({
                 where: {
@@ -151,17 +192,23 @@ let productosController = {
     },
 
     comentario: (req, res) => {
-        let comentario = {
-            texto: req.body.texto,
-            usuario_id: req.session.user.id, //fk
-            producto_id: req.params.id, //fk
-            created_at: new Date(),
-            updated_at: new Date(), //forma de decirle que es la fecha actual
-        }
-        db.Comentario.create(comentario)
+        if (req.session.user == undefined) {
+            res.redirect('/login')
 
-            .then(() => res.redirect(`/products/detail/${req.params.id}`))
-            .catch(err => console.log(err))
+        } else {
+            let comentario = {
+                texto: req.body.texto,
+                usuario_id: req.session.user.id, //fk
+                producto_id: req.params.id, //fk
+                created_at: new Date(),
+                updated_at: new Date(), //forma de decirle que es la fecha actual
+            }
+            db.Comentario.create(comentario)
+
+                .then(() => res.redirect(`/products/detail/${req.params.id}`))
+                .catch(err => console.log(err))
+        }
+
 
     }
 
