@@ -6,6 +6,8 @@
 <%- include("partials/header.ejs") %>
 <% } %>
 
+<%console.log(producto.Comentarios[0])%>
+
 <div class="container products-wrapper">
 
 	<div class="d-flex align-items-center">
@@ -15,7 +17,7 @@
 
 		<% if (locals.user) { %>
 		<p class="product-detail-description">
-			<a href="/products/productAdd">Agregar producto</a>
+			<a href="/products/productAdd">AGREGAR PRODUCTO</a>
 			<!-- <a href="/products/productAdd/:id">Agregar producto</a> -->
 		</p>
 		<% } %>

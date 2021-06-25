@@ -26,9 +26,6 @@ module.exports = (sequelize, dataTypes)=>{
         descripcion: {
             type: dataTypes.STRING,
         },
-        Fecha: {
-            type: dataTypes.DATEONLY,
-        },
         usuario_id: {
             type: dataTypes.INTEGER,
             unsigned: true,

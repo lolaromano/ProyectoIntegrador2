@@ -1,6 +1,6 @@
 let db = require('../database/models');
 const op = db.Sequelize.Op;
-let producto = db.Producto
+const producto = db.Producto;
 
 let productosController = {
 
@@ -38,10 +38,9 @@ let productosController = {
                         association: 'Usuario'
                     },
                     {
-                        association: 'Comentarios',
+                        association: 'Comentarios', order: ["Comentarios","updated_at", "desc"],
                             include: [{
-                                association: "Usuarios",
-                                order: [["Comentarios","updated_at", "desc"]]
+                                association: 'Usuarios',
                         }]
                     }
                 ] //datos de la tabla de usuario y comentario
@@ -93,36 +92,40 @@ let productosController = {
 
     edit: (req, res) => {
         let primaryKey = req.params.id;
-        producto.findByPk(primaryKey)
+        producto.findByPk(primaryKey) 
 
-            .then(resultados => res.render('productEdit', {
-                resultados
-            }))
+            .then(resultados => {
+                if (req.session.user == undefined) {
+                    return res.redirect('/')
+        
+                } else if (req.session.user.id == resultados.usuario_id) {
+                    res.render('productEdit', {resultados})
+                } else {
+                    return res.redirect('/')
+                }
+            })
+    
             .catch(err => console.log(err))
     },
 
     update: (req, res) => {
-        let errors = {}; //objeto literal que contiene los errores
         let primaryKey = req.params.id; //recibimos el id, porque es lo que queremos actualizar
-        let productoActualizar = req.body
+        
+        let productoActualizar = {
+            id: primaryKey,
+            Nombre: req.body.Nombre,
+            descripcion: req.body.descripcion,
+            imagen: `/images/jordan/${req.file.filename}`,
+            usuario_id: req.session.user.id, //session te guarda los datos del usuario cuando el ingresa. en session se guarda el usuario completo (con .id nos referimos al usuario)
+        }
 
-            let producto = {
-                id: req.session.user.id,
-                Nombre: req.body.Nombre,
-                descripcion: req.body.descripcion,
-                Fecha: req.body.Fecha,
-                imagen: `/images/producto/${req.file.filename}`,
-            }
-        producto.update(
-                productoActualizar, { where: {id: primaryKey}})
+        producto.update (productoActualizar, { where: {id: primaryKey}})
 
-            .then(() => res.redirect('/product'))
+            .then(() => res.redirect('/users/profile'))
             .catch(err => console.log(err))
 
     },
-
-
-
+    
     search: (req, res) => {
         producto.findAll({
                 where: {

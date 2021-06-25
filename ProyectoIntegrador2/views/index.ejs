@@ -20,7 +20,7 @@
 		</div>
 
 		<!-- Show novedades -->
-		<% for (let i=0; i < 4; i+=1 ) { %>
+ 		<% for (let i=0; i < 4; i+=1 ) { %>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
 				<a href="/products/detail/<%= productos[i].id %>">
@@ -28,7 +28,8 @@
 						<img src="<%= productos[i].imagen %>">
 					</figure>
 					<article class="product-box_data">
-						<h2> <%= productos[i].Nombre %> </h2>
+						<h2> <%= productos[i].Nombre %> </h2> 
+						<a href="users/profileOthers/<%= productos[i].Usuario.id %>">CREADO POR : <%= productos[i].Usuario.nombre %></a>
 						<p> <%= productos[i].descripcion %> </p>
 					</article>
 				</a>
@@ -57,6 +58,7 @@
 					</figure>
 					<article class="product-box_data">
 						<h2> <%= comentarios[i].Nombre %> </h2>
+						<a href="users/profileOthers/<%= productos[i].Usuario.id %>">CREADO POR : <%= productos[i].Usuario.nombre %></a>
 						<p> <%= comentarios[i].descripcion %> </p>
 					</article>
 				</a>
