@@ -20,5 +20,5 @@ let upload = multer({
 router.get('/profileOthers/:id', usersController.profileOthers); //devuelve el perfil de los comentarios
 router.get('/profile', usersController.profile); //devuelve el perfil del usuario logeado
 router.get('/profileEdit', usersController.profileEdit); //devuelve el form para editar informacion del usuario logeado
-router.post('/profileEdit', upload.single('users'), usersController.profileEditPost); 
+router.post('/profileEdit', upload.single('producto'), usersController.profileEditPost); 
 module.exports = router;

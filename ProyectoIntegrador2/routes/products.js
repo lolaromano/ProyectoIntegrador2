@@ -28,7 +28,7 @@ router.get('/borrar/:id', productosController.borrar); //para borrar los id
 router.get('/detail/:id', productosController.show);
 router.post('/detail/:id', productosController.borrar);
 router.get('/edit/:id', productosController.edit);
-router.post('/edit/:id', productosController.update); //una vez que hago los cambios
+router.post('/edit/:id', upload.single('producto'), productosController.update); //una vez que hago los cambios
 router.post('/comentario/:id', productosController.comentario);
 
 

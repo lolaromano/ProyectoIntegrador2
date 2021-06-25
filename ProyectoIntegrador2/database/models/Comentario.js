@@ -19,9 +19,6 @@ module.exports = (sequelize, dataTypes)=>{
         texto: {
             type: dataTypes.STRING,
         },
-        creacion: {
-            type: dataTypes.DATE,
-        },
         usuario_id: {
             type: dataTypes.INTEGER,
             unsigned: true,

@@ -62,7 +62,6 @@ let usersController = {
                 Telefono: req.body.Telefono,
                 FechaDeNacimiento: req.body.FechaDeNacimiento,
                 imagen: `/images/users/${req.file.filename}`,
-                //avatar: req.file.filename
             }
 
             Usuario.update(user, {where:{id:primaryKey}})//creacion del usuario 

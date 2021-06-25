@@ -102,19 +102,26 @@ let productosController = {
     },
 
     update: (req, res) => {
+        let errors = {}; //objeto literal que contiene los errores
         let primaryKey = req.params.id; //recibimos el id, porque es lo que queremos actualizar
         let productoActualizar = req.body
+
+            let producto = {
+                id: req.session.user.id,
+                Nombre: req.body.Nombre,
+                descripcion: req.body.descripcion,
+                Fecha: req.body.Fecha,
+                imagen: `/images/producto/${req.file.filename}`,
+            }
         producto.update(
-                productoActualizar, {
-                    where: {
-                        id: primaryKey
-                    }
-                })
+                productoActualizar, { where: {id: primaryKey}})
 
             .then(() => res.redirect('/product'))
             .catch(err => console.log(err))
 
     },
+
+
 
     search: (req, res) => {
         producto.findAll({
@@ -147,7 +154,6 @@ let productosController = {
             producto_id: req.params.id, //fk
             created_at: new Date(),
             updated_at: new Date(), //forma de decirle que es la fecha actual
-            creacion: new Date(),
         }
         db.Comentario.create(comentario)
 

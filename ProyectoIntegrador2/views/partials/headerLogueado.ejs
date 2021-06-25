@@ -29,17 +29,19 @@
 					<li><a href="/products/allProducts">Todos los productos</a></li>
 					<li><a href="/products/productAdd">Cargar productos</a></li>
 					<li><a href="/users/profile">Mi perfil</a></li>
+
 				</ul>
 
 				<nav class="main-navbar">
 					<ul class="right-navbar">
 						<% if(locals.user){ %>
+						<div class="foto-perfil">
+							<img src="<%=user.imagen%>" alt="foto de perfil" class="foto-perfil">
+						</div>
 						<li>
 							<h2 class="unite2">Hola <%=user.nombre%></h2>
 						</li>
-						<div class="img-container offset-3 col-2">
-							<img src="<%=user.imagen%>" alt="foto de perfil" class="foto-perfil">
-						</div>
+						
 						<li>
 							<form action="/login/logout" method="POST">
 								<button class="unite2" type="submit">CERRAR SESION</button>

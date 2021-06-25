@@ -7,31 +7,66 @@
 <% } %>
 
 <!-- Agregar producto -->
-<p>Editando el producto: <%= resultados.Nombre%></p>
 
-<%- include('partials/header.ejs') %>
+<div class="container products-wrapper">
+	<div class="row">
+
+		<div class="col-12">
+			<h2 class="products-title">Editando el producto: <%= resultados.Nombre%> </h2>
+		</div> <br><br>
 
 <!-- Formulario de agregar producto -->
-<form action="/products/edit/<%= resultados.id %>" method="POST">
-    <p>
-        <input type="text" class="form-control" value="<%= resultados.usuario_id %>" name="usuario_id"
-            placeholder="Usuario">
-    </p>
-    <p>
-        <input type="text" class="form-control" value="<%= resultados.nombre %>" name="nombre"
-            placeholder="Nombre del producto">
-    </p>
-    <p>
-        <input type="text" class="form-control" value="<%= resultados.descripcion %>" name="descripcion"
-            placeholder="Descripcion del producto">
-    </p>
-    <p>
-        <input type="number" class="form-control" value="<%= resultados.fecha %>" name="fecha"
-            placeholder="Fecha de publicación">
-    </p>
+				<form class="row-g-3-needs-validation" novalidate action="/products/productEdit" method="POST" enctype="multipart/form-data">
 
-    <button type="submit" class="btn btn-primary">Guardar</button> <!--submit se redirige al action -->
+					<div class="col-md-4">
+						<label for="validationCustom01" class="form-label">Nombre de usuario</label>
+						<input type="text" class="form-control" id="validationCustom01" name="usuario_id" value="<%= resultados.usuario_id %>" required>
+						<div class="valid-feedback">
+							Nombre de usuario válido
+						</div>
+					</div> <br><br>
 
-</form>
+					<div class="col-md-4" id="col-md-4">
+						<label for="validationCustom04" class="form-label" id="formlabel2">Nombre de producto</label><br>
+						<input type="text" id="form-control1" id="validationCustom03" name="Nombre" value="<%= resultados.nombre %>" required>
+						<div class="invalid-feedback">
+							Elige el nombre del producto.
+						</div>
+					</div> <br><br>
+
+                    <div class="col-md-4" id="col-md-4">
+						<label for="validationCustom04" class="form-label" id="formlabel2">Descripcion del producto</label><br>
+						<input type="text" id="form-control1" id="validationCustom03" name="descripcion" value="<%= resultados.descripcion %>" required>
+						<div class="invalid-feedback">
+							Escriba una descripcion.
+						</div>
+					</div> <br><br>
+
+                    <div class="col-md-4" id="col-md-4">
+						<label for="validationCustom04" class="form-label" id="formlabel2">Fecha de publicación</label><br>
+						<input type="date" id="form-control1" id="validationCustom03" name="Fecha" value="<%= resultados.fecha %>"required>
+						<div class="invalid-feedback">
+							Elige una fecha de publicación.
+						</div>
+					</div> <br><br>
+
+                    <div class="col-md-4">
+						<label for="validationCustom02" class="form-label">Seleccione su nueva foto del producto</label>
+						<input type="file" class="form-control" name="producto" value="<%= resultados.imagen%>" required>
+						<div class="valid-feedback">
+							Foto de producto valida
+						</div> <br><br>
+					</div>
+
+					<div class="col-12">
+						<button class="btn btn-primary" type="submit">
+							Enviar
+						</button>
+					</div>
+
+				</form>
+
+	</div>
+</div>
 
 <%- include("partials/footer.ejs") %>
