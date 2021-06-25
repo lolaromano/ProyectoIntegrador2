@@ -262,6 +262,7 @@ ul.right-navbar {
 .product-box a {
   display: block;
   text-decoration: none;
+  color: black;
 }
 
 .product-box_image {

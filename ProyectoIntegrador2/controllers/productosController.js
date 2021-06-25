@@ -34,47 +34,24 @@ let productosController = {
     show: (req, res) => {
         let primaryKey = req.params.id;
         producto.findByPk(primaryKey, { //devuelve promesa con resultados
-            include: [{
-                association: 'Usuario'
-            },
-
-            {
-                association: 'Comentarios',
-                order: ["Comentarios", "updated_at", "desc"],
                 include: [{
-                    association: 'Usuarios',
-                }]
-            }
-        ]
-    })
-            .then(producto => {
-                db.Comentario.findAll({
-                        where: {
-                            producto_id: primaryKey,
-                        },
-                        include: [{
-                            association: "Usuarios"
-                        }, ],
-                        order: [
-                            ['updated_at', 'DESC']
-                        ],
+                        association: 'Usuario'
+                    },
+                    {
+                        association: 'Comentarios', order: ["Comentarios","updated_at", "desc"],
+                            include: [{
+                                association: 'Usuarios',
+                        }]
+                    }
+                ] //datos de la tabla de usuario y comentario
+            })
 
-                    })
-
-
-                    //datos de la tabla de usuario y comentario
-
-                    .then(comentario => {
-                        res.render('product', {
-                                producto,
-                                comentario
-                            })
-                        });
-                    })
-            }) //me lleva a la vista producto
+            .then(producto => res.render('product', {
+                producto
+            })) //me lleva a la vista producto
             .catch(err => console.log(err))
-    },
 
+    },
 
     add: (req, res) => {
         let producto = {

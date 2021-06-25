@@ -44,11 +44,12 @@
 					<% for (i = 0; i < producto.Comentarios.length; i++ ) { %>
 					<article>
 						<a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> ">
-							<!-- <img src="" alt=""> -->
+							<img src="<%producto.Comentarios[i].imagen%>" alt="">
 						</a>
 						<div class="data">
 							<p class="user">
-								<strong> <a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> ">
+								<strong>
+									<a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> ">
 										<%= producto.Comentarios[i].Usuarios.nombre %></a> </strong>
 								<%= producto.Comentarios[i].texto %>
 							</p>
