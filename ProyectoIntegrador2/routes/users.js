@@ -4,7 +4,6 @@ let usersController = require('../controllers/usersController');
 let multer = require('multer')
 let path = require('path');
 
-
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'public/images/users')

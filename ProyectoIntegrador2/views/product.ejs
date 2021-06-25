@@ -12,7 +12,7 @@
 
 	<div class="d-flex align-items-center">
 		<h2 class="products-title">
-			<%= producto.Nombre + ' ' %> 
+			<%= producto.Nombre + ' ' %>
 		</h2>
 
 	</div>
@@ -51,13 +51,13 @@
 					<% } %>
 				</section>
 
-			
-					<form class="form" action="/products/comentario/<%=producto.id%>" method="POST">
-						<input class="form-input" type="text" name="texto" value="" placeholder="Agregar comentario">
-						<br>
+
+				<form class="form" action="/products/comentario/<%=producto.id%>" method="POST">
+					<input class="form-input" type="text" name="texto" value="" placeholder="Agregar comentario">
+					<br>
 					<button type="submit">AGREGAR COMENTARIO</button>
-					</form> <br>
-			
+				</form> <br>
+
 
 			</div>
 

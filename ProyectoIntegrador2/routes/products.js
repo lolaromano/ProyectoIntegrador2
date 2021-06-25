@@ -4,8 +4,6 @@ let productosController = require('../controllers/productosController');
 let multer = require('multer');
 let path = require('path'); //busca cosas x url
 
-
-
 let storage = multer.diskStorage({ //guarda dentro de storage una ruta (destino, filename)
     destination: (req, file, cb) => {
         cb(null, 'public/images/jordan') //destino

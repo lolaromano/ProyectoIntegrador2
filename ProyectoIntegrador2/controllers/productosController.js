@@ -34,17 +34,19 @@ let productosController = {
     show: (req, res) => {
         let primaryKey = req.params.id;
         producto.findByPk(primaryKey, { //devuelve promesa con resultados
-            include: [{
+                include: [{
                         association: 'Usuario'
                     },
                     {
                         association: 'Comentarios',
-                            include: [{
-                                association: "Usuarios",}],
-                                
-                                order: [["Comentarios","updated_at", "desc"]]
-                        
+                        include: [{
+                            association: "Usuarios",
+                        }],
+
                     }
+                ],
+                order: [
+                    ["Comentarios", "created_at", "desc"]
                 ] //datos de la tabla de usuario y comentario
             })
 
@@ -52,7 +54,6 @@ let productosController = {
                 producto
             })) //me lleva a la vista producto
             .catch(err => console.log(err))
-
     },
 
     add: (req, res) => {
@@ -107,15 +108,19 @@ let productosController = {
         let primaryKey = req.params.id; //recibimos el id, porque es lo que queremos actualizar
         let productoActualizar = req.body
 
-            let producto = {
-                id: req.session.user.id,
-                Nombre: req.body.Nombre,
-                descripcion: req.body.descripcion,
-                Fecha: req.body.Fecha,
-                imagen: `/images/producto/${req.file.filename}`,
-            }
+        let producto = {
+            id: req.session.user.id,
+            Nombre: req.body.Nombre,
+            descripcion: req.body.descripcion,
+            Fecha: req.body.Fecha,
+            imagen: `/images/producto/${req.file.filename}`,
+        }
         producto.update(
-                productoActualizar, { where: {id: primaryKey}})
+                productoActualizar, {
+                    where: {
+                        id: primaryKey
+                    }
+                })
 
             .then(() => res.redirect('/product'))
             .catch(err => console.log(err))
@@ -124,10 +129,13 @@ let productosController = {
 
     search: (req, res) => {
         producto.findAll({
-            include:[
-                { association: "Usuario" },
-                { association: "Comentarios"}
-            ],
+                include: [{
+                        association: "Usuario"
+                    },
+                    {
+                        association: "Comentarios"
+                    }
+                ],
                 where: {
                     [op.or]: [{
                             Nombre: {
@@ -169,7 +177,8 @@ let productosController = {
         }
 
 
-}}
+    }
+}
 
 //body en el post (oculto)
 //params en get (url)

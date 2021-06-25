@@ -11,8 +11,7 @@
 	<div class="row">
 
 		<div class="foto-perfil2">
-			<img src="<%=user.imagen%>"
-				alt="foto de perfil" class="foto-perfil2">
+			<img src="<%=user.imagen%>" alt="foto de perfil" class="foto-perfil2">
 		</div>
 
 		<div class="data-container col-6">
@@ -29,16 +28,16 @@
 			<div>
 				<ul class="profileinfo">
 					<% if(user.Productos==0){%>
-                        <li>0 productos creados</li>
-                    <% }else{%>
-						<li><%= user.Productos.length%> productos creados</li>
-                        <% }%>
-                    <%if(user.Comentarios==0){%>
-                        <li>0 comentarios creados</li>
-                    <% }else{%>
-						<li><%= user.Comentarios.length%> comentarios creados</li>
-                        <% }%>
-				
+					<li>0 productos creados</li>
+					<% }else{%>
+					<li><%= user.Productos.length%> productos creados</li>
+					<% }%>
+					<%if(user.Comentarios==0){%>
+					<li>0 comentarios creados</li>
+					<% }else{%>
+					<li><%= user.Comentarios.length%> comentarios creados</li>
+					<% }%>
+
 				</ul>
 			</div>
 
@@ -54,34 +53,33 @@
 		<div class="col-12">
 			<h2 class="products-title">MIS PRODUCTOS</h2>
 		</div>
-	
-		<%console.log (user.Productos[0])%>
+
 		<!-- Show mis productos -->
 		<% if (user.Productos.length != 0) { %>
-		
-			<% for (i = 0; i < user.Productos.length; i++ ) { %>
-				<div class="col-12 col-sm-6 col-lg-3">
-					<section class="product-box">
-						<a href="/products/detail/<%= user.Productos[i].id %>">
-							<figure class="product-box_image">
-								<img src="<%= user.Productos[i].imagen %>">
-							</figure> 
-							<article class="product-box_data">
-								<h2> <%= user.Productos[i].Nombre %> </h2>
-								<p> <%= user.Productos[i].descripcion %> </p> 
-							
-			
-							</article>
-						</a>
-					</section> 
-					<a href="/products/edit/<%= user.Productos[i].id %>">EDITAR PRODUCTO</a>
-					<a href="/products/borrar/<%= user.Productos[i].id %>">BORRAR PRODUCTO</a>
-				</div> 
-			<%}%> 
+
+		<% for (i = 0; i < user.Productos.length; i++ ) { %>
+		<div class="col-12 col-sm-6 col-lg-3">
+			<section class="product-box">
+				<a href="/products/detail/<%= user.Productos[i].id %>">
+					<figure class="product-box_image">
+						<img src="<%= user.Productos[i].imagen %>">
+					</figure>
+					<article class="product-box_data">
+						<h2> <%= user.Productos[i].Nombre %> </h2>
+						<p> <%= user.Productos[i].descripcion %> </p>
+
+
+					</article>
+				</a>
+			</section>
+			<a href="/products/edit/<%= user.Productos[i].id %>">EDITAR PRODUCTO</a>
+			<a href="/products/borrar/<%= user.Productos[i].id %>">BORRAR PRODUCTO</a>
+		</div>
+		<%}%> 
 			<% } else { %>
-	<h1 class="noproductos">No tienes productos. Agregalos y se parte de nuestra comunidad!</h1>
-			<% } %>
-					
+		<h1 class="noproductos">No tienes productos. Agregalos y se parte de nuestra comunidad!</h1>
+		<% } %>
+
 	</div>
 </div>
 

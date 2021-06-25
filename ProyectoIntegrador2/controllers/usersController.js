@@ -64,10 +64,14 @@ let usersController = {
                 imagen: `/images/users/${req.file.filename}`,
             }
 
-            Usuario.update(user, {where:{id:primaryKey}})//creacion del usuario 
-                .then(()=> res.redirect('/users/profile'))
+            Usuario.update(user, {
+                    where: {
+                        id: primaryKey
+                    }
+                }) //creacion del usuario 
+                .then(() => res.redirect('/users/profile'))
                 .catch(err => console.log(err))
-            }
+        }
     },
 }
 

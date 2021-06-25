@@ -15,22 +15,27 @@
 		</div> <br><br>
 
 		<% if(locals.errors){ %>
-			<p class="alert"> <%= errors.register %><p>
-		<% } %>
+		<p class="alert"> <%= errors.register %><p>
+				<% } %>
+				
 				<!-- Formulario editar perfil -->
-				<form class="row-g-3-needs-validation" novalidate action="/users/profileEdit" method="POST" enctype="multipart/form-data">
+				<form class="row-g-3-needs-validation" novalidate action="/users/profileEdit" method="POST"
+					enctype="multipart/form-data">
 
 					<div class="col-md-4">
 						<label for="validationCustom01" class="form-label">Nombre de usuario</label>
-						<input type="text" class="form-control" id="validationCustom01" name="nombre" value="<%= locals.user.nombre%>" required>
+						<input type="text" class="form-control" id="validationCustom01" name="nombre"
+							value="<%= locals.user.nombre%>" required>
 						<div class="valid-feedback">
 							Nombre de usuario válido
 						</div>
 					</div> <br><br>
 
 					<div class="col-md-4" id="col-md-4">
-						<label for="validationCustom04" class="form-label" id="formlabel2">Fecha de nacimiento</label><br>
-						<input type="date" id="form-control1" id="validationCustom03" name="FechaDeNacimiento" value="<%= locals.user.FechaDeNacimiento%>" required>
+						<label for="validationCustom04" class="form-label" id="formlabel2">Fecha de
+							nacimiento</label><br>
+						<input type="date" id="form-control1" id="validationCustom03" name="FechaDeNacimiento"
+							value="<%= locals.user.FechaDeNacimiento%>" required>
 						<div class="invalid-feedback">
 							Elige una fecha de nacimiento.
 						</div>
@@ -40,12 +45,14 @@
 						<label for="validationCustom03" class="form-label1">Teléfono</label><br>
 						<span class="input-group-text" id="inputgroup1">+</span>
 						<span class="input-group-text">54</span>
-						<input type="tel" class="form-control" id="validationCustom03" name="Telefono" value="<%= locals.user.Telefono%>" required>
+						<input type="tel" class="form-control" id="validationCustom03" name="Telefono"
+							value="<%= locals.user.Telefono%>" required>
 					</div> <br>
 
 					<div class="col-md-4">
 						<label for="validationCustom01" class="form-label">Email</label>
-						<input type="email" class="form-control" id="validationCustom01" name="Email" value="<%= locals.user.Email%>" required>
+						<input type="email" class="form-control" id="validationCustom01" name="Email"
+							value="<%= locals.user.Email%>" required>
 						<div class="valid-feedback">
 							Email válido
 						</div>

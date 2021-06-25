@@ -11,16 +11,16 @@
 	<img src="images/jordan/bannerNuevo.jpg" alt="Banner de ofertas">
 </div> <br><br><br><br><br><br><br>
 
-<!-- Novedades -->
+<!-- Ultimos lanzamientos -->
 <div class="container products-wrapper">
 	<div class="row">
 
 		<div class="col-12">
-			<h2 class="products-title">NOVEDADES</h2>
+			<h2 class="products-title">ULTIMOS LANZAMIENTOS</h2>
 		</div>
 
-		<!-- Show novedades -->
- 		<% for (let i=0; i < 4; i+=1 ) { %>
+		<!-- Show ultimos lanzamientos -->
+		<% for (let i=0; i < 4; i+=1 ) { %>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
 				<a href="/products/detail/<%= productos[i].id %>">
@@ -28,8 +28,9 @@
 						<img src="<%= productos[i].imagen %>">
 					</figure>
 					<article class="product-box_data">
-						<h2> <%= productos[i].Nombre %> </h2> 
-						<a class="creadopor" href="users/profileOthers/<%= productos[i].Usuario.id %>"> Creado por <%= productos[i].Usuario.nombre %></a>
+						<h2> <%= productos[i].Nombre %> </h2>
+						<a class="creadopor" href="users/profileOthers/<%= productos[i].Usuario.id %>"> Creado por
+							<%= productos[i].Usuario.nombre %></a>
 						<p> <%= productos[i].descripcion %> </p>
 					</article>
 				</a>
@@ -40,15 +41,15 @@
 	</div>
 </div>
 
-<!-- Más comentados -->
+<!-- Ultimos comentados -->
 <div class="container products-wrapper">
 	<div class="row">
 
 		<div class="col-12">
-			<h2 class="products-title">MÁS COMENTADOS</h2>
+			<h2 class="products-title">ULTIMOS COMENTADOS</h2>
 		</div>
 
-		<!-- Show mas comentados -->
+		<!-- Show ultimos comentados -->
 		<% for (let i=0; i < 4; i+=1 ) { %>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
@@ -58,7 +59,8 @@
 					</figure>
 					<article class="product-box_data">
 						<h2> <%= comentarios[i].Nombre %> </h2>
-						<a class="creadopor" href="users/profileOthers/<%= productos[i].Usuario.id %>"> Creado por <%= productos[i].Usuario.nombre %></a>
+						<a class="creadopor" href="users/profileOthers/<%= productos[i].Usuario.id %>"> Creado por
+							<%= productos[i].Usuario.nombre %></a>
 						<p> <%= comentarios[i].descripcion %> </p>
 					</article>
 				</a>

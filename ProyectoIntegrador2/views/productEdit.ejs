@@ -15,40 +15,43 @@
 			<h2 class="products-title">Editando el producto: <%= resultados.Nombre%> </h2>
 		</div> <br><br>
 
-<!-- Formulario de agregar producto -->
-				<form class="row-g-3-needs-validation" novalidate action="/products/edit/<%= resultados.id %>" method="POST" enctype="multipart/form-data">
+		<!-- Formulario de agregar producto -->
+		<form class="row-g-3-needs-validation" novalidate action="/products/edit/<%= resultados.id %>" method="POST"
+			enctype="multipart/form-data">
 
-					<div class="col-md-4" id="col-md-4">
-						<label for="validationCustom04" class="form-label" id="formlabel2">Nombre de producto</label><br>
-						<input type="text" id="form-control1" id="validationCustom03" name="Nombre" value="<%= resultados.Nombre %>" required>
-						<div class="invalid-feedback">
-							Elige el nombre del producto.
-						</div>
-					</div> <br><br>
+			<div class="col-md-4" id="col-md-4">
+				<label for="validationCustom04" class="form-label" id="formlabel2">Nombre de producto</label><br>
+				<input type="text" id="form-control1" id="validationCustom03" name="Nombre"
+					value="<%= resultados.Nombre %>" required>
+				<div class="invalid-feedback">
+					Elige el nombre del producto.
+				</div>
+			</div> <br><br>
 
-                    <div class="col-md-4" id="col-md-4">
-						<label for="validationCustom04" class="form-label" id="formlabel2">Descripcion del producto</label><br>
-						<input type="text" id="form-control1" id="validationCustom03" name="descripcion" value="<%= resultados.descripcion %>" required>
-						<div class="invalid-feedback">
-							Escriba una descripcion.
-						</div>
-					</div> <br><br>
+			<div class="col-md-4" id="col-md-4">
+				<label for="validationCustom04" class="form-label" id="formlabel2">Descripcion del producto</label><br>
+				<input type="text" id="form-control1" id="validationCustom03" name="descripcion"
+					value="<%= resultados.descripcion %>" required>
+				<div class="invalid-feedback">
+					Escriba una descripcion.
+				</div>
+			</div> <br><br>
 
-                    <div class="col-md-4">
-						<label for="validationCustom02" class="form-label">Seleccione su nueva foto del producto</label>
-						<input type="file" class="form-control" name="jordan" value="<%= resultados.imagen%>" required>
-						<div class="valid-feedback">
-							Foto de producto valida
-						</div> <br><br>
-					</div>
+			<div class="col-md-4">
+				<label for="validationCustom02" class="form-label">Seleccione su nueva foto del producto</label>
+				<input type="file" class="form-control" name="jordan" value="<%= resultados.imagen%>" required>
+				<div class="valid-feedback">
+					Foto de producto valida
+				</div> <br><br>
+			</div>
 
-					<div class="col-12">
-						<button class="btn btn-primary" type="submit">
-							Enviar
-						</button>
-					</div>
+			<div class="col-12">
+				<button class="btn btn-primary" type="submit">
+					Enviar
+				</button>
+			</div>
 
-				</form>
+		</form>
 
 	</div>
 </div>

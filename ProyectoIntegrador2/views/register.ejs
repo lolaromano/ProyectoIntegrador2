@@ -16,7 +16,7 @@
 
 		<% if(locals.errors){ %>
 		<p class="alert"> <%= errors.register %><p>
-		<% } %>
+				<% } %>
 
 				<!-- Formulario registrarse -->
 				<form class="row-g-3-needs-validation" novalidate action="/register" method="POST"
@@ -24,7 +24,8 @@
 
 					<div class="col-md-4">
 						<label for="validationCustom01" class="form-label">Nombre de usuario</label>
-						<input type="text" class="form-control" id="validationCustom01" name="name" placeholder="Nombre" required>
+						<input type="text" class="form-control" id="validationCustom01" name="name" placeholder="Nombre"
+							required>
 						<div class="valid-feedback">
 							Nombre de usuario válido
 						</div>
@@ -48,7 +49,8 @@
 
 					<div class="col-md-4">
 						<label for="validationCustom01" class="form-label">Email</label>
-						<input type="email" class="form-control" id="validationCustom01" name="email" placeholder="Email" required>
+						<input type="email" class="form-control" id="validationCustom01" name="email"
+							placeholder="Email" required>
 						<div class="valid-feedback">
 							Email válido
 						</div>
@@ -56,7 +58,8 @@
 
 					<div class="col-md-4">
 						<label for="validationCustom02" class="form-label">Contraseña</label>
-						<input type="password" class="form-control" id="validationCustom02" name="password" placeholder="Contraseña" required>
+						<input type="password" class="form-control" id="validationCustom02" name="password"
+							placeholder="Contraseña" required>
 						<div class="valid-feedback">
 							Contraseña válida
 						</div> <br><br>
@@ -64,7 +67,8 @@
 
 					<div class="col-md-4">
 						<label for="validationCustom02" class="form-label">Confirmar contraseña</label>
-						<input type="password" class="form-control" id="validationCustom02" name="repassword" placeholder="Confirmar contraseña" required>
+						<input type="password" class="form-control" id="validationCustom02" name="repassword"
+							placeholder="Confirmar contraseña" required>
 						<div class="valid-feedback">
 							Contraseña válida
 						</div> <br><br>
