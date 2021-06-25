@@ -15,6 +15,10 @@
 		</div>
 
 <!-- Show resultado de busqueda -->
+<%if (productos == undefined || productos==0) { %>
+	<p class="resultadosnulos"> No se han encontrado resultados para su busqueda. Ingrese un nombre o descripcion valida.</p>
+	<%}%>
+
 <% for(let i=0; i<productos.length; i+=1) { %>
 <div class="col-12 col-sm-6 col-lg-3">
 	<section class="product-box">
@@ -24,6 +28,7 @@
 			</figure>
 			<article class="product-box_data">
 				<h2> <%= productos[i].Nombre %> </h2>
+				<a class="creadopor" href="users/profileOthers/<%= productos[i].Usuario.id %>"> Creado por <%= productos[i].Usuario.nombre %></a>
 				<p> <%= productos[i].descripcion %> </p>
 			</article>
 		</a>

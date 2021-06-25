@@ -15,13 +15,6 @@
 			<%= producto.Nombre + ' ' %> 
 		</h2>
 
-		<% if (locals.user) { %>
-		<p class="product-detail-description">
-			<a href="/products/productAdd">AGREGAR PRODUCTO</a>
-			<!-- <a href="/products/productAdd/:id">Agregar producto</a> -->
-		</p>
-		<% } %>
-
 	</div>
 </div>
 
@@ -44,7 +37,7 @@
 					<% for (i = 0; i < producto.Comentarios.length; i++ ) { %>
 					<article>
 						<a href="/users/profileOthers/<%= producto.Comentarios[i].usuario_id %> ">
-							<img src="<%producto.Comentarios[i].imagen%>" alt="">
+							<img src="<%=producto.Comentarios[i].Usuarios.imagen%>" alt="">
 						</a>
 						<div class="data">
 							<p class="user">

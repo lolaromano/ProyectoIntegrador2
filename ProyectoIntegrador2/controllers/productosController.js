@@ -1,6 +1,6 @@
 let db = require('../database/models');
 const op = db.Sequelize.Op;
-const producto = db.Producto;
+let producto = db.Producto
 
 let productosController = {
 
@@ -34,14 +34,16 @@ let productosController = {
     show: (req, res) => {
         let primaryKey = req.params.id;
         producto.findByPk(primaryKey, { //devuelve promesa con resultados
-                include: [{
+            include: [{
                         association: 'Usuario'
                     },
                     {
-                        association: 'Comentarios', order: ["Comentarios","updated_at", "desc"],
+                        association: 'Comentarios',
                             include: [{
-                                association: 'Usuarios',
-                        }]
+                                association: "Usuarios",}],
+                                
+                                order: [["Comentarios","updated_at", "desc"]]
+                        
                     }
                 ] //datos de la tabla de usuario y comentario
             })
@@ -72,80 +74,60 @@ let productosController = {
 
     borrar: (req, res) => {
         let primaryKey = req.params.id;
-        producto.findByPk(primaryKey) //busque producto x pk
-
-            .then(resultados => {
-                if (req.session.user == undefined) { //si no tiene sesion, no puede borrar 
-                    return res.redirect(`/products/detail/${primaryKey}`)
-
-                } else if (req.session.user.id == resultados.usuario_id) {
-                    db.Comentario.destroy({
-                            where: {
-                                producto_id: primaryKey
-                            }
-                        })
-                        .then(() =>
-                            producto.destroy({
-                                where: {
-                                    id: primaryKey
-                                }
-                            })
-
-                            .then(() => res.redirect('/'))
-                        )
-
-                } else {
-                    return res.redirect('/')
+        db.Comentario.destroy({
+                where: {
+                    producto_id: primaryKey
                 }
             })
-            .catch(err => console.log(err))
+            .then(() =>
+                producto.destroy({
+                    where: {
+                        id: primaryKey
+                    }
+                })
 
+                .then(() => res.redirect('/'))
+            )
+
+            .catch(err => console.log(err))
     },
 
     edit: (req, res) => {
         let primaryKey = req.params.id;
         producto.findByPk(primaryKey)
 
-            .then(resultados => {
-                if (req.session.user == undefined) {
-                    return res.redirect('/')
-
-                } else if (req.session.user.id == resultados.usuario_id) {
-                    res.render('productEdit', {
-                        resultados
-                    })
-                } else {
-                    return res.redirect('/')
-                }
-            })
-
+            .then(resultados => res.render('productEdit', {
+                resultados
+            }))
             .catch(err => console.log(err))
     },
 
     update: (req, res) => {
+        let errors = {}; //objeto literal que contiene los errores
         let primaryKey = req.params.id; //recibimos el id, porque es lo que queremos actualizar
+        let productoActualizar = req.body
 
-        let productoActualizar = {
-            id: primaryKey,
-            Nombre: req.body.Nombre,
-            descripcion: req.body.descripcion,
-            imagen: `/images/jordan/${req.file.filename}`,
-            usuario_id: req.session.user.id, //session te guarda los datos del usuario cuando el ingresa. en session se guarda el usuario completo (con .id nos referimos al usuario)
-        }
+            let producto = {
+                id: req.session.user.id,
+                Nombre: req.body.Nombre,
+                descripcion: req.body.descripcion,
+                Fecha: req.body.Fecha,
+                imagen: `/images/producto/${req.file.filename}`,
+            }
+        producto.update(
+                productoActualizar, { where: {id: primaryKey}})
 
-        producto.update(productoActualizar, {
-                where: {
-                    id: primaryKey
-                }
-            })
-
-            .then(() => res.redirect('/users/profile'))
+            .then(() => res.redirect('/product'))
             .catch(err => console.log(err))
 
     },
 
     search: (req, res) => {
         producto.findAll({
+            include:[
+                { association: "Usuario" },
+                { association: "Comentarios"}
+            ],
                 where: {
                     [op.or]: [{
                             Nombre: {
@@ -187,10 +169,7 @@ let productosController = {
         }
 
 
-    }
-
-
-}
+}}
 
 //body en el post (oculto)
 //params en get (url)

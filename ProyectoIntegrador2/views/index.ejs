@@ -29,7 +29,7 @@
 					</figure>
 					<article class="product-box_data">
 						<h2> <%= productos[i].Nombre %> </h2> 
-						<a href="users/profileOthers/<%= productos[i].Usuario.id %>">CREADO POR : <%= productos[i].Usuario.nombre %></a>
+						<a class="creadopor" href="users/profileOthers/<%= productos[i].Usuario.id %>"> Creado por <%= productos[i].Usuario.nombre %></a>
 						<p> <%= productos[i].descripcion %> </p>
 					</article>
 				</a>
@@ -58,7 +58,7 @@
 					</figure>
 					<article class="product-box_data">
 						<h2> <%= comentarios[i].Nombre %> </h2>
-						<a href="users/profileOthers/<%= productos[i].Usuario.id %>">CREADO POR : <%= productos[i].Usuario.nombre %></a>
+						<a class="creadopor" href="users/profileOthers/<%= productos[i].Usuario.id %>"> Creado por <%= productos[i].Usuario.nombre %></a>
 						<p> <%= comentarios[i].descripcion %> </p>
 					</article>
 				</a>
