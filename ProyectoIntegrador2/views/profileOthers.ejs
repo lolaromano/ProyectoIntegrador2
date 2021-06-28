@@ -18,9 +18,6 @@
 
 			<div class="d-flex align-items-center ">
 				<h1 class="profileinfo1"> <%= user.nombre %>
-					<a href="/users/profileEdit">
-						<i class="fas fa-cog"></i>
-					</a>
 				</h1>
 			</div>
 
@@ -36,7 +33,6 @@
 					<% }else{%>
 					<li><%= user.Comentarios.length%> comentarios creados</li>
 					<% }%>
-
 				</ul>
 			</div>
 
@@ -50,7 +46,7 @@
 	<div class="row">
 
 		<div class="col-12">
-			<h2 class="products-title">Sus productos</h2>
+			<h2 class="products-title">SUS PRODUCTOS</h2>
 		</div>
 
 		<!-- Show sus productos -->
@@ -59,12 +55,12 @@
 		<% for (i = 0; i < user.Productos.length; i++ ) { %>
 		<div class="col-12 col-sm-6 col-lg-3">
 			<section class="product-box">
-				<a href="/products/<%= user.Productos[i].id %>">
+				<a href="/products/detail/<%= user.Productos[i].id %>">
 					<figure class="product-box_image">
 						<img src="<%= user.Productos[i].imagen %>">
 					</figure>
 					<article class="product-box_data">
-						<h2> <%= user.Productos[i].nombre %> </h2>
+						<h2> <%= user.Productos[i].Nombre %> </h2>
 						<p> <%= user.Productos[i].descripcion %> </p>
 
 

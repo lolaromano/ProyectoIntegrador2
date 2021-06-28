@@ -23,7 +23,14 @@ let productosController = {
     },
 
     allProducts: (req, res) => {
-        producto.findAll()
+        producto.findAll({
+            include: [{
+                    association: "Usuario"
+                },
+                {
+                    association: "Comentarios"
+                }
+            ],})
 
             .then((productos) => res.render('allProducts', {
                 productos

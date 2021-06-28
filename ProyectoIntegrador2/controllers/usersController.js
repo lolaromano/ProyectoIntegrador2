@@ -35,7 +35,7 @@ let usersController = {
             .then((user) => res.render('profileOthers', {
                 user
             }))
-            .catch((err) => `Error: ${err}`)
+            .catch((err) => console.log(err));
     },
 
     profileEdit: (req, res) => {
