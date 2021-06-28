@@ -648,6 +648,11 @@ div.col-12 {
   font-size: 1.4em;
 }
 
+.alert {
+  color: white;
+
+}
+
 
 
 /*====== Profile ======*/
@@ -703,6 +708,12 @@ div.col-12 {
   padding-top: 20px;
   font-size: 1em;
   font-weight: bolder;
+}
+
+.editarborrar {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9em;
 }
 
 

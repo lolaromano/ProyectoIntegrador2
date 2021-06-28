@@ -62,18 +62,16 @@
 			<section class="product-box">
 				<a href="/products/detail/<%= user.Productos[i].id %>">
 					<figure class="product-box_image">
-						<img src="<%= user.Productos[i].imagen %>">
+						<img class="productoperfil" src="<%= user.Productos[i].imagen %>">
 					</figure>
 					<article class="product-box_data">
 						<h2> <%= user.Productos[i].Nombre %> </h2>
 						<p> <%= user.Productos[i].descripcion %> </p>
-
-
 					</article>
 				</a>
 			</section>
-			<a href="/products/edit/<%= user.Productos[i].id %>">EDITAR PRODUCTO</a>
-			<a href="/products/borrar/<%= user.Productos[i].id %>">BORRAR PRODUCTO</a>
+			<a class="editarborrar" href="/products/edit/<%= user.Productos[i].id %>">EDITAR PRODUCTO ||</a> 
+			<a class="editarborrar" href="/products/borrar/<%= user.Productos[i].id %>">BORRAR PRODUCTO</a>
 		</div>
 		<%}%> 
 			<% } else { %>

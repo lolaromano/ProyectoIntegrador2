@@ -104,25 +104,24 @@ let productosController = {
     },
 
     update: (req, res) => {
-        let errors = {}; //objeto literal que contiene los errores
         let primaryKey = req.params.id; //recibimos el id, porque es lo que queremos actualizar
-        let productoActualizar = req.body
 
         let producto = {
-            id: req.session.user.id,
+            id: primaryKey,
             Nombre: req.body.Nombre,
             descripcion: req.body.descripcion,
             Fecha: req.body.Fecha,
-            imagen: `/images/producto/${req.file.filename}`,
+            imagen: `/images/jordan/${req.file.filename}`,
+            usuario_id: req.session.user.id,
         }
-        producto.update(
-                productoActualizar, {
+        db.Producto.update(
+                producto, {
                     where: {
                         id: primaryKey
                     }
                 })
 
-            .then(() => res.redirect('/product'))
+            .then(() => res.redirect(`/products/detail/${primaryKey}`))
             .catch(err => console.log(err))
 
     },
