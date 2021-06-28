@@ -2,7 +2,6 @@ let db = require('../database/models');
 const users = db.Usuario
 //necesito comparar la contra con la de la base de datos (la guardamos con hash)
 const bcrypt = require('bcryptjs');
-const op = db.Sequelize.Op;
 
 let loginController = {
     index: (req, res) => {
