@@ -32,8 +32,8 @@ let usersController = {
                     }
                 ] //datos de la tabla de usuario y comentario
             })
-            .then((user) => res.render('profileOthers', {
-                user
+            .then((users) => res.render('profileOthers', {
+                users
             }))
             .catch((err) => console.log(err));
     },
